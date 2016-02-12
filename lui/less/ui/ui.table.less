@@ -1,0 +1,101 @@
+/*
+
+TABLE
+- Responsive table
+
+*/
+.lui_table {
+	
+	border-collapse: collapse;
+	width: 100%;
+	padding: 5px;
+	overflow: hidden;
+
+	@media (min-width:992px){
+		background: white;
+		border-radius: 5px;
+	}
+
+	thead {
+		@media (max-width:991px){
+			display: none;
+		}
+
+		tr {
+			th {
+				text-align: left;
+				font-size: 14px;
+				padding: 10px;
+				border-bottom: 1px solid #F3F3F3;
+
+				&.options {
+					text-align: right;
+				}
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			border-bottom: 1px solid #F3F3F3;
+
+			@media (max-width:991px){
+				border-bottom-width: 0;
+			}
+
+			td {
+				padding: 10px;
+				text-align: left;
+
+				/* MOBILE VERSION */
+				@media (max-width:991px){
+					background: #fcfcfc;
+					border: 1px solid #ebebeb;
+					display: block;
+					padding: 15px;
+					margin-bottom: -1px;
+
+					&:last-child {
+						border-bottom-width: 15px;
+					}
+
+					/* LABEL TEXTS ON MOBILE VERSION <3 CSS3 */
+					&:before {
+						content:attr(data-title) " ";
+						font-weight: bold;
+					}
+					
+					&.block_title:before {
+						display: block;
+					}
+				}
+
+				/* TABLET+ */
+				@media (min-width:992px){
+					&.options {
+						padding: 6px 10px 0 10px;
+						text-align: right;
+						white-space: nowrap;
+					}
+				}
+			}
+
+			@media (min-width:992px){
+				&:nth-child(even) td{
+					background: #f8fbfd;
+				}	
+
+				&:hover > td {
+					background: #f2f6fa;
+				}
+			}
+
+			@media (max-width:991px){
+				&:last-child td:last-child {
+					border-bottom: 1px solid #ebebeb;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
