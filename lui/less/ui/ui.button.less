@@ -1,0 +1,150 @@
+/*
+
+BUTTON
+
+*/
+
+.lui_button {
+	.lui.box-sizing.border-box();
+	display: inline-block;
+	text-decoration: none;
+	position: relative;
+	line-height: 32px;
+	height: 32px;
+	padding: 0 15px;
+	margin: 0 2px 5px 0;
+	border: 0;
+	border-radius: 3px;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 13px;
+	overflow: hidden;
+	background: @btn_color_default;
+	color: white;
+	
+	@media (max-width:450px){
+		&.mobile_big {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	&.small {
+		padding: 0 10px;
+		line-height: 25px;
+		height: 25px;
+		font-size: 12px;
+	}
+
+	&:hover,
+	&:before {
+		background: darken(@btn_color_default,10%);
+	}
+
+	&.ico_b {
+		padding-left: 45px;
+	}
+
+	&.ico_b.small {
+		padding-left: 40px;
+	}
+
+	&.ico_a {
+		padding-right: 45px;
+	}
+
+	&.ico_a.small {
+		padding-right: 40px;
+	}
+
+	&.info {
+		background: @btn_color_info;
+
+		&:not(.inactive):hover,
+		&:before,
+		&:after {
+			background: darken(@btn_color_info,10%);
+		}
+	}
+
+	&.confirm {
+		background: @btn_color_confirm;
+
+		&:not(.inactive):hover,
+		&:before,
+		&:after {
+			background: darken(@btn_color_confirm,10%);
+		}
+	}
+
+	&.edit {
+		background: @btn_color_edit;
+
+		&:not(.inactive):hover,
+		&:before,
+		&:after {
+			background: darken(@btn_color_edit,10%);
+		}
+	}
+
+	&.delete {
+		background: @btn_color_delete;
+
+		&:not(.inactive):hover,
+		&:before,
+		&:after {
+			background: darken(@btn_color_delete,10%);
+		}
+	}
+
+	&.primary {
+		background: @btn_color_dark;
+
+		&:not(.inactive):hover,
+		&:before,
+		&:after {
+			background: darken(@btn_color_dark,10%);
+		}
+	}
+
+	&.inactive {
+		opacity: 0.5;
+		cursor: default;
+		outline: none;
+		pointer-events: none;
+	}
+
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 30px;
+		height: 32px;
+		line-height: 32px;
+		text-align: center;
+		font-family: FontAwesome;
+	}
+
+	&.small:before {
+		line-height: 25px;
+		font-size: 10px;
+	}
+
+	&:after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 30px;
+		height: 32px;
+		line-height: 32px;
+		text-align: center;
+		font-family: FontAwesome;
+	}
+
+	&.after:before {
+		line-height: 25px;
+		font-size: 10px;
+	}
+}
