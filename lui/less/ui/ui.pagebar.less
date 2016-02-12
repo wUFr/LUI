@@ -1,0 +1,74 @@
+/*
+
+PAGEBAR
+
+TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
+
+*/
+.lui_pagebar {
+	.lui.clear.before();
+	.lui.clear.after();
+
+	list-style: none; // IN CASE OF UL
+	font-size: 14px;
+	line-height: 14px;
+
+	&.left {
+		text-align: left;
+	}
+
+	&.center {
+		text-align: center;
+	}
+
+	&.right {
+		text-align: right;
+	}
+
+	& > * {
+		display: inline-block;
+		margin-bottom: 4px;
+
+		&.prev > a:before {
+			font-family: FontAwesome;
+			content: "\f053";
+		}
+
+		&.next > a:before {
+			font-family: FontAwesome;
+			content: "\f054";
+		}
+
+		& > a {
+			display: block;
+			padding: 10px 15px;
+			color: @pgb_dark_bg;
+			text-decoration: none;
+			background: @pgb_default_bg;
+			border-radius: 5px;
+		}
+
+		&:not(.inactive) > a {
+			cursor: pointer;
+
+			&:hover {
+				background: darken(@pgb_default_bg, 10%);
+			}
+		}
+
+		&.inactive > a {
+			cursor: default;
+		}
+	}
+
+	&.dark > * {
+		& > a {
+			background: @pgb_dark_bg;
+			color: @pgb_default_bg;
+
+			&:not(.inactive):hover {
+				background: darken(@pgb_dark_bg, 10%);
+			}
+		}
+	}
+}
