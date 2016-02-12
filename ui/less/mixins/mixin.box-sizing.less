@@ -1,0 +1,29 @@
+/*
+
+BOX SIZING
+
+*/
+
+.lui.box-sizing {
+	.this(@args){
+		-webkit-box-sizing: @args;
+		-moz-box-sizing: @args;
+		box-sizing: @args;
+	}
+
+	.border-box(){
+		.this(border-box);
+	}
+
+	.border(){
+		.border-box();
+	}
+
+	.content-box(){
+		.this(content-box);
+	}
+
+	.content(){
+		.content-box();
+	}
+}
