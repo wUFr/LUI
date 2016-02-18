@@ -30,7 +30,7 @@ BUTTON
 	}
 	
 	@media (max-width:550px){
-		&.mobile_big {
+		&.mobile_big when (@responsive = true){
 			display: block;
 			width: 100%;
 			line-height: @btn_mobile_height;
@@ -136,7 +136,7 @@ BUTTON
 	}
 
 	@media (max-width:550px){
-		&.mobile_big:before {
+		&.mobile_big:before when (@responsive = true){
 			height: @btn_mobile_height;
 			line-height: @btn_mobile_height;
 		}
@@ -160,7 +160,7 @@ BUTTON
 	}
 
 	@media (max-width:550px){
-		&.mobile_big:after {
+		&.mobile_big:after when (@responsive = true){
 			height: @btn_mobile_height;
 			line-height: @btn_mobile_height;
 		}

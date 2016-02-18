@@ -12,13 +12,17 @@ TABLE
 	overflow: hidden;
 
 	@media (min-width:992px){
-		background: white;
-		border-radius: 5px;
+		& when (@responsive = true){
+			background: white;
+			border-radius: 5px;
+		}
 	}
 
 	thead {
 		@media (max-width:991px){
-			display: none;
+			& when (@responsive = true){
+				display: none;
+			}
 		}
 
 		tr {
@@ -40,7 +44,9 @@ TABLE
 			border-bottom: 1px solid #F3F3F3;
 
 			@media (max-width:991px){
-				border-bottom-width: 0;
+				& when (@responsive = true){
+					border-bottom-width: 0;
+				}
 			}
 
 			td {
@@ -49,49 +55,64 @@ TABLE
 
 				/* MOBILE VERSION */
 				@media (max-width:991px){
-					background: #fcfcfc;
-					border: 1px solid #ebebeb;
-					display: block;
-					padding: 15px;
-					margin-bottom: -1px;
+					& when (@responsive = true){
+						background: #fcfcfc;
+						border: 1px solid #ebebeb;
+						display: block;
+						padding: 15px;
+						margin-bottom: -1px;
+					}
 
-					&:last-child {
+					&:last-child when (@responsive = true){
 						border-bottom-width: 15px;
 					}
 
 					/* LABEL TEXTS ON MOBILE VERSION <3 CSS3 */
-					&:before {
+					&:before when (@responsive = true){
 						content:attr(data-title) " ";
 						font-weight: bold;
 					}
-					
-					&.block_title:before {
+
+					&.block_title:before when (@responsive = true){
 						display: block;
 					}
 				}
 
 				/* TABLET+ */
 				@media (min-width:992px){
-					&.options {
+					&.options when (@responsive = true){
 						padding: 6px 10px 0 10px;
 						text-align: right;
 						white-space: nowrap;
+						
 					}
+				}
+
+				&.options when (@responsive = false){
+					padding: 6px 10px 0 10px;
+					text-align: right;
+					white-space: nowrap;
 				}
 			}
 
-			@media (min-width:992px){
-				&:nth-child(even) td{
-					background: #f8fbfd;
-				}	
+			&:nth-child(even) td{
+				background: #f8fbfd;
+			}	
 
-				&:hover > td {
-					background: #f2f6fa;
-				}
+			&:hover > td {
+				background: #f2f6fa;
 			}
 
 			@media (max-width:991px){
-				&:last-child td:last-child {
+				&:nth-child(even) td when (@responsive = true) {
+					background: #fcfcfc;
+				}
+
+				&:hover > td when (@responsive = true) {
+					background: #fcfcfc;
+				}
+
+				&:last-child td:last-child when (@responsive = true){
 					border-bottom: 1px solid #ebebeb;
 					margin-bottom: 0;
 				}
