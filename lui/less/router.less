@@ -1,24 +1,22 @@
 
-/* TURN ON RESPONSIDE */
+/* TURN ON RESPONSIVE */
 @responsive: true;
 
 
 /* UI MESSAGES */
-@default_ui_message_confirm_bg: 	#cdf6bf;
-@default_ui_message_confirm_color: 	#11420e;
+@default_ui_message_confirm_bg:    #cdf6bf;
+@default_ui_message_confirm_color: #11420e;
 
-@default_ui_message_error_bg: 		#f6bfbf;
-@default_ui_message_error_color: 	#420e0e;
+@default_ui_message_error_bg:      #f6bfbf;
+@default_ui_message_error_color:   #420e0e;
 
-@default_ui_message_warning_bg: 	#f6e6bf;
-@default_ui_message_warning_color: 	#42360e;
+@default_ui_message_warning_bg:    #f6e6bf;
+@default_ui_message_warning_color: #42360e;
 
-@default_ui_message_info_bg: 		#bfe6f6;
-@default_ui_message_info_color: 	#0e3542;
+@default_ui_message_info_bg:       #bfe6f6;
+@default_ui_message_info_color:    #0e3542;
 
-@default_ui_form_required_color: 	#AE0000;
-
-
+@default_ui_form_required_color:   #AE0000;
 
 
 /*
@@ -35,6 +33,7 @@ MIXINS
 @import "/lui/less/mixins/mixin.transition.less";
 @import "/lui/less/mixins/mixin.flexbox.less";
 
+
 /*
 
 UI COMPONENTS
@@ -43,19 +42,26 @@ UI COMPONENTS
 
 @import "/lui/less/ui/ui.fontawesome.less"; // must stay as first UI component
 
+/* GRID */
+@import "/lui/less/ui/ui.grid.less";
+
+/* BUTTONS */
 @btn_color_default: silver;
 @btn_color_confirm: #45bd0a;
-@btn_color_info: #34aaed;
-@btn_color_edit: #ee8e04;
-@btn_color_delete: #e60d0d;
-@btn_color_dark: #373737;
-@btn_mobile_height: 42px;
+@btn_color_info:    #34aaed;
+@btn_color_edit:    #ee8e04;
+@btn_color_delete:  #e60d0d;
+@btn_color_dark:    #373737;
+@btn_mobile_height:   42px;
 @import "/lui/less/ui/ui.button.less";
 
+/* FORMS */
 @import "/lui/less/ui/ui.form.less";
 
+/* PAGEBAR */
 @pgb_default_bg: #f2f2f2;
 @pgb_dark_bg: #515a5e;
 @import "/lui/less/ui/ui.pagebar.less";
 
+/* TABLES OR "LISTS" */
 @import "/lui/less/ui/ui.table.less";
