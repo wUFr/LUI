@@ -75,73 +75,42 @@ mb 0+ (mobiles)
 .row {
 	.lui.box-sizing.border-box();
 	.lui.clear.after();
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
+	.lui.flexbox.block();
+	.lui.flexbox.flex-direction(row);
+	.lui.flexbox.flex-wrap(wrap);
 
 	margin: 0 -@spacing_container;
-	
-	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
-	flex-direction: row;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	
+
 	&.va-top {
-		-webkit-align-content: flex-start;
-		-ms-flex-line-pack: start;
-		align-content: flex-start;
-		-webkit-align-items: flex-start;
-		-ms-flex-align: start;
-		align-items: flex-start;
+		.lui.flexbox.align-content(flex-start);
+		.lui.flexbox.align-items(flex-start);
 	}
 	
 	&.va-bottom {
-		-webkit-align-content: flex-start;
-		-ms-flex-line-pack: start;
-		align-content: flex-start;
-		-webkit-align-items: flex-end;
-		-ms-flex-align: end;
-		align-items: flex-end;
+		.lui.flexbox.align-content(flex-start);
+		.lui.flexbox.align-items(flex-end);
 	}
 	
 	&.va-middle,
 	&.va-center {
-		-webkit-align-content: flex-start;
-		-ms-flex-line-pack: start;
-		align-content: flex-start;
-		-webkit-align-items: center;
-		-ms-flex-align: center;
-		align-items: center;
+		.lui.flexbox.align-content(flex-start);
+		.lui.flexbox.align-items(center);
 	}
 	
 	&.a-left {
-		-webkit-justify-content: flex-start;
-		-ms-flex-pack: start;
-		justify-content: flex-start;
-		-webkit-align-content: flex-start;
-		-ms-flex-line-pack: start;
-		align-content: flex-start;
+		.lui.flexbox.justify-content(flex-start);
+		.lui.flexbox.align-content(flex-start);
 	}
 	
 	&.a-right {
-		-webkit-justify-content: flex-end;
-		-ms-flex-pack: end;
-		justify-content: flex-end;
-		-webkit-align-content: flex-start;
-		-ms-flex-line-pack: start;
-		align-content: flex-start;
+		.lui.flexbox.justify-content(flex-end);
+		.lui.flexbox.align-content(flex-start);
 	}
 	
 	&.a-middle,
 	&.a-center {
-		-webkit-justify-content: center;
-		-ms-flex-pack: center;
-		justify-content: center;
-		-webkit-align-content: flex-start;
-		-ms-flex-line-pack: start;
-		align-content: flex-start;
+		.lui.flexbox.justify-content(center);
+		.lui.flexbox.align-content(flex-start);
 	}
 }
 
@@ -211,6 +180,7 @@ mb 0+ (mobiles)
 .col-mb-11,
 .col-mb-12 {
 	.lui.box-sizing.border-box();
+	padding: @spacing_rows;
 }
 
 

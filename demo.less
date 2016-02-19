@@ -40,10 +40,12 @@ HEADER
 	padding-top: 15px;
 	padding-bottom: 15px;
 	background: #eff2f5;
+	min-height: 50px;
+	border: 1px dashed #aeaeae;
 }
 
 .demo_row {
-	min-height: 120px;
+	min-height: 50px;
 	margin: 0; /* NEED SPACE */
 }
 
@@ -60,6 +62,10 @@ HEADER
 	padding: 30px 15px;
 	margin: 0 auto;
 	max-width: 1200px;
+	
+	@media (max-width:767px){
+		padding: 30px 0;
+	}
 	
 	h1 {
 		padding: 20px 0;
