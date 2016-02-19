@@ -4,3 +4,568 @@ FORMS
 
 */
 
+.lui_form {
+	hr {
+		margin: 15px 0;
+		border: 0;
+		border-top: 2px solid #e2e2e2;
+	}
+
+	.item {
+		.lui.clear.after();
+		padding: 7.5px 0;
+		margin: 0 -15px;
+
+		.label {
+			display: block;
+			text-align: right;
+			padding: 7px 15px;
+			font-size: 14px;
+
+			&.required:after {
+				color: @color_delete;
+				content:" *";
+			}
+
+			
+			@media (max-width:@grid_tb_mw){
+				&.col-mb-12 {
+					text-align: left;
+					padding-bottom: 5px;
+				}
+			}
+
+			@media (max-width:@grid_ds_mw){
+				&.col-tb-12 {
+					text-align: left;
+					padding-bottom: 5px;
+				}
+			}
+
+			@media (max-width:@grid_nb_mw){
+				&.col-sd-12 {
+					text-align: left;
+					padding-bottom: 5px;
+				}
+			}
+
+			@media (max-width:@grid_hd_mw){
+				&.col-nb-12 {
+					text-align: left;
+					padding-bottom: 5px;
+				}
+			}
+			
+			@media (max-width:@grid_2k_mw){
+				&.col-hd-12 {
+					text-align: left;
+					padding-bottom: 5px;
+				}
+			}
+			@media (max-width:@grid_3k_mw){
+				&.col-2k-12 {
+					text-align: left;
+					padding-bottom: 5px;
+				}
+			}
+			@media (max-width:@grid_4k_mw){
+				&.col-3k-12 {
+					text-align: left;
+					padding-bottom: 5px;
+				}
+			}
+			@media (min-width:@grid_4k_w){
+				&.col-4k-12 {
+					text-align: left;
+					padding-bottom: 5px;
+				}
+			}
+		}
+
+		div.info {
+			padding: 11px 15px;
+			font-size: 12px;
+			color: gray;
+			padding-left: 0;
+
+			
+			@media (max-width:@grid_tb_mw){
+				&.col-mb-12 {
+					padding-left: 15px;
+					padding-top: 4px;
+				}
+			}
+
+			@media (max-width:@grid_ds_mw){
+				&.col-tb-12 {
+					padding-left: 15px;
+					padding-top: 4px;
+				}
+			}
+
+			@media (max-width:@grid_nb_mw){
+				&.col-sd-12 {
+					padding-left: 15px;
+					padding-top: 4px;
+				}
+			}
+
+			@media (max-width:@grid_hd_mw){
+				&.col-nb-12 {
+					padding-left: 15px;
+					padding-top: 4px;
+				}
+			}
+			
+			@media (max-width:@grid_2k_mw){
+				&.col-hd-12 {
+					padding-left: 15px;
+					padding-top: 4px;
+				}
+			}
+			@media (max-width:@grid_3k_mw){
+				&.col-2k-12 {
+					padding-left: 15px;
+					padding-top: 4px;
+				}
+			}
+			@media (max-width:@grid_4k_mw){
+				&.col-3k-12 {
+					padding-left: 15px;
+					padding-top: 4px;
+				}
+			}
+			@media (min-width:@grid_4k_w){
+				&.col-4k-12 {
+					padding-left: 15px;
+					padding-top: 4px;
+				}
+			}
+		}
+
+		.input {
+
+			&.postfix,
+			&.prefix {
+				position: relative;
+			}
+			
+			
+			.lui_postfix {
+				.lui.box-sizing.border-box();
+				position: absolute;
+				top: 0;
+				right: 0px;
+				display: block;
+				padding: 0 7px;
+				float: right;
+				line-height: 37px;
+				height: 37px;
+				background: #f2f2f2;
+				border: 1px solid #e2e2e2;
+				border-left: 0;
+				font-size: 13px;
+				color: gray;
+				border-radius: 0 3px 3px 0;
+			}
+			
+			.lui_prefix {
+				.lui.box-sizing.border-box();
+				position: absolute;
+				top: 0;
+				left:  0px;
+				display: block;
+				padding: 0 7px;
+				float: left;
+				line-height: 37px;
+				height: 37px;
+				background: #f2f2f2;
+				border: 1px solid #e2e2e2;
+				border-right: 0;
+				font-size: 13px;
+				color: gray;
+				border-radius: 3px 0 0 3px;
+			}
+			
+			
+			input {
+				width: 100%;
+				height: 37px;
+				border: 1px solid #e2e2e2;
+				border-radius: 3px;
+				padding: 10px;
+				font-family: inherit;
+				font-size: 13px;
+				color: #555555;
+
+				&:focus {
+					color: black;
+				}
+
+				&[disabled],
+				&[readonly]{
+					background:#f7f7f7;
+					cursor: text;
+					color: #5a5a5a;
+					
+
+					&:focus {
+						color: #5a5a5a;
+					}
+				}
+			}
+			
+			&.postfix input {
+				border-radius: 3px 0 0 3px;
+			}
+			
+			&.prefix input {
+				border-radius: 0 3px 3px 0;
+			}
+
+			textarea {
+				width: 100%;
+				max-width: 100%;
+				max-height: 500px;
+				height: 37px;
+				border: 1px solid #e2e2e2;
+				border-radius: 3px;
+				padding: 10px;
+				font-family: inherit;
+				font-size: 13px;
+				color: #555555;
+
+				&[disabled]{
+					background:#f2f2f2;
+				}
+
+				&[readonly]{
+					background:#f2f2f2;
+					cursor: text;
+				}
+
+				&:focus {
+					color: black;
+				}
+			}
+
+			select {
+				width: 100%;
+				height: 37px;
+				border: 1px solid #e2e2e2;
+				border-radius: 3px;
+				padding: 9px;
+				font-family: inherit;
+				font-size: 13px;
+				color: #555555;
+				cursor: pointer;
+
+				&:focus {
+					color: black;
+				}
+			}
+		}
+	}
+}
+
+/*
+
+UI INPUT RANGE (number from-to)
+
+*/
+.lui_input_range {
+	.lui.box-sizing.border-box();
+	position: relative;
+	height: 37px;
+	border: 1px solid #e2e2e2;
+    border-radius: 3px;
+	
+	.range {
+		width: 100%;
+		height: 37px;
+		
+		.ranger {
+			.lui.box-sizing.border-box();
+			position: absolute;
+			top:-1px;
+			width: 20px;
+			height: 37px;
+			border: 1px solid #e2e2e2;
+			background: #f2f2f2;
+			cursor: pointer;
+			border-radius: 3px;
+			
+			&:before {
+				position: absolute;
+				top: 10px;
+				bottom: 10px;
+				left: 50%;
+				margin-left: -2px;
+				width: 2px;
+				content: "";
+				border-left: 1px solid rgba(0,0,0,0.1);
+				border-right: 1px solid rgba(0,0,0,0.1);
+			}
+			
+			&:hover {
+				background: #ececec;
+			}
+			
+			&:hover:after {
+				position: absolute;
+				top: -20px;
+				left: 50%;
+				display: inline-block;
+				background: rgba(0,0,0,0.8)
+			}
+			
+			&:active {
+				background:#34aaed;
+				border-color: #258dc7;
+				
+				&:before {
+					border-left: 1px solid rgba(255,255,255,0.3);
+					border-right: 1px solid rgba(255,255,255,0.3);
+				}
+			}
+		}
+	}
+}
+
+
+/*
+
+UI CHECKBOX (standalone style - can be used everywhere)
+
+*/
+.lui_check {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	height: 30px;
+	padding-left: 30px;
+	
+	@media (max-width:767px){
+		height: 40px;
+		padding-left: 40px;
+	}
+	
+	input {
+		display: none;
+	}
+	
+	/* SPAN MUST USED AT ALL TIME */
+	span {
+		line-height: 30px;
+		margin-right: 5px;
+		color: #555555;
+		font-size: 13px;
+		
+		@media (max-width:767px){
+			line-height: 40px;
+		}
+		
+		&:before {
+			.lui.box-sizing.border-box();
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			font-family: FontAwesome;
+			font-weight: normal;
+			font-size: 19px;
+			content: "\f096";
+			color: #e2e2e2;
+			
+			@media (max-width:767px){
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				font-size: 22px;
+				top: -1px;
+			}
+			
+			&:hover {
+				color: gray;
+			}
+		}
+	}
+	&:hover span:before {
+		content: "\f14a";
+	}
+	
+	input:checked ~ span:before {
+		content: "\f14a";
+		color: #2c2c2c;
+	}
+	
+	&.confirm input:checked ~ span:before {
+		color: @color_confirm;
+	}
+	
+	&.error input:checked ~ span:before {
+		color: @color_delete;
+	}
+	
+	&.warning input:checked ~ span:before {
+		color: @color_edit;
+	}
+	
+	&.info input:checked ~ span:before {
+		color: @color_info;
+	}
+
+}
+
+.lui_form .item .ui_check {
+	margin: 5px -7px;
+}
+
+
+
+/*
+
+UI CHECK LIST
+// if you need more checks in 1 form item
+*/
+.lui_check_list {
+	padding: 8px 0;
+	
+	&.inline {
+		.lui.clear.after();
+		padding: 0 0 8px 0;
+	}
+	
+	& > div {
+		margin: -8px 0;
+	}
+	
+	&.inline > div {
+		float: left;
+		margin: 0 20px -8px 0;
+	}
+}
+
+
+
+
+/*
+
+UI RADIO (standalone style - can be used everywhere)
+// basicaly same as lui_checkbox
+
+*/
+.lui_radio {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	height: 30px;
+	padding-left: 30px;
+	
+	@media (max-width:767px){
+		height: 40px;
+		padding-left: 40px;
+	}
+	
+	input {
+		display: none;
+	}
+	
+	/* SPAN MUST USED AT ALL TIME */
+	span {
+		line-height: 30px;
+		margin-right: 5px;
+		color: #555555;
+		font-size: 13px;
+		
+		@media (max-width:767px){
+			line-height: 40px;
+		}
+		
+		&:before {
+			.lui.box-sizing.border-box();
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			font-family: FontAwesome;
+			font-weight: normal;
+			font-size: 19px;
+			content: "\f10c";
+			color: #e2e2e2;
+			
+			@media (max-width:767px){
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				font-size: 22px;
+				top: -1px;
+			}
+			
+			&:hover {
+				color: gray;
+			}
+		}
+	}
+	&:hover span:before {
+		content: "\f192";
+	}
+	
+	input:checked ~ span:before {
+		content: "\f192";
+		color: #2c2c2c;
+	}
+	
+	&.confirm input:checked ~ span:before {
+		color: @color_confirm;
+	}
+	
+	&.error input:checked ~ span:before {
+		color: @color_delete;
+	}
+	
+	&.warning input:checked ~ span:before {
+		color: @color_edit;
+	}
+	
+	&.info input:checked ~ span:before {
+		color: @color_info;
+	}
+
+}
+
+.lui_form .item .ui_radio {
+	margin: 5px -7px;
+}
+
+
+
+/*
+
+UI RADIO LIST
+// if you need more checks in 1 form item
+*/
+.lui_radio_list {
+	padding: 8px 0;
+	
+	&.inline {
+		.lui.clear.after();
+		padding: 0 0 8px 0;
+		
+	}
+	
+	& > div {
+		margin: -8px 0;
+	}
+	
+	&.inline > div {
+		float: left;
+		margin: 0 20px -8px 0;
+	}
+}
