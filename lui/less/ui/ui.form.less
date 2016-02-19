@@ -477,7 +477,10 @@ UI RADIO (standalone style - can be used everywhere)
 	}
 	
 	input {
-		display: none;
+		opacity: 0;
+		position: absolute;
+		width: 0;
+		height: 0;
 	}
 	
 	/* SPAN MUST USED AT ALL TIME */
@@ -532,7 +535,7 @@ UI RADIO (standalone style - can be used everywhere)
 		background: rgba(0,0,0,0.05);
 		
 		&:before {
-			content: "\f14a";
+			content: "\f192";
 		}
 	}
 	
