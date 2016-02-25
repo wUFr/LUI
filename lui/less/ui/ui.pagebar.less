@@ -29,14 +29,26 @@ TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
 		display: inline-block;
 		margin-bottom: 4px;
 
-		&.prev > a:before {
-			font-family: FontAwesome;
-			content: "\f053";
+		&.prev > a {
+			&:before {
+				font-family: FontAwesome;
+				content: "\f053";
+			}
+
+			span {
+				padding: 0 0 0 10px;
+			}
 		}
 
-		&.next > a:before {
-			font-family: FontAwesome;
-			content: "\f054";
+		&.next > a {
+			&:after {
+				font-family: FontAwesome;
+				content: "\f054";
+			}
+
+			span {
+				padding: 0 10px 0 0;
+			}
 		}
 
 		& > a {
@@ -46,6 +58,43 @@ TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
 			text-decoration: none;
 			background: @pgb_default_bg;
 			border-radius: 5px;
+		}
+		
+		&.input {
+			background: @pgb_default_bg;
+			border-radius: 5px;
+			height: 34px;
+			line-height: 14px;
+			padding: 10px 15px;
+			
+			label {
+				border-right: 1px solid rgba(0,0,0,0.1);
+				margin-right: 14px;
+				padding-right: 14px;
+			}
+			
+			input {
+				display: block;
+				float: right;
+				.lui.box-sizing.border-box();
+				border: 0;
+				width: 60px;
+				height: 35px;
+				
+				margin: -10px -15px;
+				border: 0;
+				background: transparent;
+				text-align: center;
+				font-family: inherit;
+				outline: none;
+				border-radius: 5px;
+				
+				
+				&:focus {
+					background: rgba(255,255,255,0.4);
+					color: black;
+				}
+			}
 		}
 
 		&:not(.inactive) > a {
@@ -68,6 +117,21 @@ TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
 
 			&:not(.inactive):hover {
 				background: darken(@pgb_dark_bg, 10%);
+			}
+		}
+		
+		&.input {
+			background: @pgb_dark_bg;
+			color: @pgb_default_bg;
+			
+			input {
+				color: @pgb_default_bg;
+				
+				
+				&:focus {
+					background: rgba(0,0,0,0.15);
+					color: white;
+				}
 			}
 		}
 	}
