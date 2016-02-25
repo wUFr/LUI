@@ -105,6 +105,31 @@ mb 0+ (mobiles)
 	width: 100%;
 }
 
+.container-fluid,
+.container.fluid {
+	&.max_4k {
+		max-width: @grid_4k_w;
+	}
+	&.max_3k {
+		max-width: @grid_3k_w;
+	}
+	&.max_2k {
+		max-width: @grid_2k_w;
+	}
+	&.max_hd {
+		max-width: @grid_hd_w;
+	}
+	&.max_nb {
+		max-width: @grid_nb_w;
+	}
+	&.max_ds {
+		max-width: @grid_ds_w;
+	}
+	&.max_tb {
+		max-width: @grid_tb_w;
+	}
+}
+
 .row {
 	.lui.box-sizing.border-box();
 	.lui.clear.after();

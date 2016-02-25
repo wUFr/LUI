@@ -14,10 +14,10 @@ HEADER
 
 */
 .demo_header {
-	padding: 40px 15px;
+	padding: 40px 15px 20px 15px;
 	background: #202023;
 	.lui.flexbox.items.align(center);
-	
+
 	header {
 		margin: 0 auto;
 		max-width: 1200px;
@@ -25,12 +25,28 @@ HEADER
 		font-size: 60px;
 		font-weight: bold;
 		color: white;
-		
+
 		span {
 			display: block;
 			font-size: 14px;
 			font-weight: normal;
 			color: #03bdfa;
+		}
+
+		a.github {
+			font-size: 14px;
+			color: white;
+			text-decoration: none;
+
+			&:before {
+				padding-right: 15px;
+				font-family: FontAwesome;
+				content: "\f09b";
+			}
+
+			&:hover {
+				color: #03bdfa;
+			}
 		}
 	}
 }
@@ -58,7 +74,6 @@ HEADER
 
 .demo_content {
 	background: white;
-	min-height: 300px;
 	padding: 30px 15px;
 	margin: 0 auto;
 	max-width: 1200px;
