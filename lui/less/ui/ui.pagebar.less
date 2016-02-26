@@ -5,29 +5,77 @@ PAGEBAR
 TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
 
 */
+
+
+
 .lui_pagebar {
+	.lui.box-sizing.border-box();
+	
 	.lui.clear.before();
 	.lui.clear.after();
+
+	.lui.flexbox.block();
+	.lui.flexbox.flex-direction(row);
+	.lui.flexbox.flex-wrap(wrap);
 
 	list-style: none; // IN CASE OF UL
 	font-size: 14px;
 	line-height: 14px;
 
-	&.left {
-		text-align: left;
+
+	&.va-top {
+		.lui.flexbox.align-content(flex-start);
+		.lui.flexbox.align-items(flex-start);
 	}
 
-	&.center {
-		text-align: center;
+	&.va-bottom {
+		.lui.flexbox.align-content(flex-start);
+		.lui.flexbox.align-items(flex-end);
 	}
 
-	&.right {
-		text-align: right;
+	&.va-middle,
+	&.va-center {
+		.lui.flexbox.align-content(flex-start);
+		.lui.flexbox.align-items(center);
 	}
 
-	& > * {
+	&.a-left {
+		.lui.flexbox.justify-content(flex-start);
+		.lui.flexbox.align-content(flex-start);
+	}
+
+	&.a-right {
+		.lui.flexbox.justify-content(flex-end);
+		.lui.flexbox.align-content(flex-start);
+	}
+
+	&.a-middle,
+	&.a-center {
+		.lui.flexbox.justify-content(center);
+		.lui.flexbox.align-content(flex-start);
+	}
+	
+	@media (max-width:@grid_tb_w){
+		& when (@responsive = true){ 
+			.lui.flexbox.justify-content(~"space-between !important");
+		}
+	}
+
+	& > li {
+		margin: 2px;
 		display: inline-block;
-		margin-bottom: 4px;
+
+		@media (max-width:@grid_tb_w){
+			& when (@responsive = true){ 
+				display: none;
+
+				&.prev,
+				&.next,
+				&.input{
+					display: block;
+				}
+			}
+		}
 
 		&.prev > a {
 			&:before {
@@ -95,6 +143,7 @@ TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
 					color: black;
 				}
 			}
+
 		}
 
 		&:not(.inactive) > a {
@@ -108,6 +157,8 @@ TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
 		&.inactive > a {
 			cursor: default;
 		}
+		
+		
 	}
 
 	&.dark > * {
