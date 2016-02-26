@@ -1,0 +1,80 @@
+/*
+
+BOX
+
+*/
+
+.lui_box {
+	position: relative;
+	background: white;
+	margin: 7.5px 0;
+	overflow: hidden;
+	border-radius: 5px;
+
+	& > .header {
+		padding: 15px;
+		background: @box_default;
+		border-radius: 5px;
+		color: white;
+		overflow: hidden;
+
+		&:after {
+			display: block;
+			width: 100%;
+			content: "";
+			clear: both;
+		}
+
+		.title {
+			font-size: 14px;
+			font-weight: bold;
+			float: left;
+		}
+
+		.actions {
+			float: right;
+			margin: -15px;
+
+			a {
+				display: inline-block;
+				width: 46px;
+				height: 46px;
+				line-height: 46px;
+				text-align: center;
+
+				&:before {
+					font-family: FontAwesome;
+					font-size: 15px;
+				}
+
+				&:hover {
+					background: rgba(0,0,0,0.2);
+				}
+
+				&.close {
+					cursor: pointer;
+				}
+
+				&.close:before {
+					content: "\f0d8";
+				}
+
+				&.close.active {
+					.lui.transform.rotate(180deg);
+				}
+			}
+		}
+	}
+
+	& > .content {
+		padding: 15px;
+
+		&.nospacing {
+			padding:0;
+		}
+	}
+
+	&.closed > .content {
+		display: none;
+	}
+}

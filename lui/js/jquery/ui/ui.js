@@ -1,4 +1,11 @@
 $(document).ready(function () {
+	
+	
+	// UI BOX CLOSE-OPEN TOGGLE
+	$(".lui_box .header .close").click(function () {
+		$(this).parent().parent().parent(".lui_box").toggleClass('closed');
+		$(this).toggleClass('active')
+	});
 
 
 	// FORM PREFIX / POSTFIX
