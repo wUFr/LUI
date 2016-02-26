@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>LUI - Less UI</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet/less" href="/demo.less" />
+
+	<script>
+		less = {
+			env: "development",
+			async: false,
+			fileAsync: false,
+			poll: 1000,
+			functions: {},
+			dumpLineNumbers: "comments",
+			relativeUrls: false
+		};
+	</script>
+	<script src="/lui/js/less/less.min.js" type="text/javascript"></script>
+	
+	<script src="/lui/js/jquery/jquery-2.2.0.min.js"></script>
+	<script src="/lui/js/jquery/ui/ui.js"></script>
+
+</head>
+<body>
+
+	<section class="demo_header">
+		<header>
+			LUI<span>Less UI</span>
+			<a class="github" href="https://github.com/wUFr/LUI" target="_blank">Follow project on GitHub</a>
+		</header>
+		
+	</section>
+	
+	<section class="demo_content" style="overflow: hidden">
+		<div class="inside">
+			<h1>Mixins</h1>
+			<section class="item">
+				<h2>.lui.animation</h2>
+				<div class="content">
+					<h3>.this(@args)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.animation.this(@args);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-animation: @args;
+-moz-animation: @args;
+-ms-animation: @args;
+animation: @args;
+</pre>
+
+					<h3>.delay(@delay)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.animation.delay(@delay);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-animation-delay: @delay;
+-moz-animation-delay: @delay;
+-ms-animation-delay: @delay;
+animation-delay: @delay;
+</pre>
+
+
+					<h3>.direction(@direction)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.animation.direction(@direction);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-animation-direction: @direction;
+-moz-animation-direction: @direction;
+-ms-animation-direction: @direction;
+animation-direction: @direction;
+</pre>
+
+					<h3>.duration(@duration)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.animation.duration(@duration);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-animation-duration: @duration;
+-moz-animation-duration: @duration;
+-ms-animation-duration: @duration;
+animation-duration: @duration;
+</pre>
+
+					<h3>.fill-mode(@mode)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.animation.fill-mode(@mode);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-animation-fill-mode: @mode;
+-moz-animation-fill-mode: @mode;
+-ms-animation-fill-mode: @mode;
+animation-fill-mode: @mode;
+</pre>
+
+
+					<h3>.iteration-count(@count) || .count(@count)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.animation.iteration-count(@count);
+.lui.animation.count(@count);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-animation-iteration-count: @count;
+-moz-animation-iteration-count: @count;
+-ms-animation-iteration-count: @count;
+animation-iteration-count: @count;
+</pre>
+
+
+
+					<h3>.name(@name)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.animation.name(@name);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-animation-name: @name;
+-moz-animation-name: @name;
+-ms-animation-name: @name;
+animation-name: @name;
+</pre>
+
+
+					<h3>.play-state(@state)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.animation.play-state(@state);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-animation-play-state: @state;
+-moz-animation-play-state: @state;
+-ms-animation-play-state: @state;
+animation-play-state: @state;
+</pre>
+
+
+					<h3>.timing-function(@function)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.animation.timing-function(@function);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-animation-timing-function: @function;
+-moz-animation-timing-function: @function;
+-ms-animation-timing-function: @function;
+animation-timing-function: @function;
+</pre>
+					
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>

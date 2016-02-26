@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>LUI - Less UI</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet/less" href="/demo.less" />
+
+	<script>
+		less = {
+			env: "development",
+			async: false,
+			fileAsync: false,
+			poll: 1000,
+			functions: {},
+			dumpLineNumbers: "comments",
+			relativeUrls: false
+		};
+	</script>
+	<script src="/lui/js/less/less.min.js" type="text/javascript"></script>
+	
+	<script src="/lui/js/jquery/jquery-2.2.0.min.js"></script>
+	<script src="/lui/js/jquery/ui/ui.js"></script>
+
+</head>
+<body>
+
+	<section class="demo_header">
+		<header>
+			LUI<span>Less UI</span>
+			<a class="github" href="https://github.com/wUFr/LUI" target="_blank">Follow project on GitHub</a>
+		</header>
+		
+	</section>
+	
+	<section class="demo_content" style="overflow: hidden">
+		<div class="inside">
+			<h1>Grid system</h1>
+		</div>
+	</section>
+	
+	<div class="container demo_container">
+		.container
+	</div>
+	<div class="container fluid demo_container">
+		.container.fluid || .container-fluid
+	</div>
+	
+	<div class="container max_4k fluid demo_container">
+		.container.fluid.max_4k
+	</div>
+	
+	<div class="container max_3k fluid demo_container">
+		.container.fluid.max_3k
+	</div>
+	
+	<div class="container max_2k fluid demo_container">
+		.container.fluid.max_2k
+	</div>
+	
+	<div class="container max_hd fluid demo_container">
+		.container.fluid.max_hd
+	</div>
+	
+	<div class="container max_nb fluid demo_container">
+		.container.fluid.max_nb
+	</div>
+	
+	<div class="container max_ds fluid demo_container">
+		.container.fluid.max_ds
+	</div>
+	
+	<div class="container max_tb fluid demo_container">
+		.container.fluid.max_tb
+	</div>
+	
+	<div class="container fluid demo_container">
+		<div class="row va-top demo_row">
+			<div class="demo_col col-mb-12 col-tb-6 col-ds-4 col-nb-3 col-hd-2 col-2k-1 col-3k-1 col-4k-1">
+				col-mb-12 col-tb-6 col-ds-4 col-nb-3 col-hd-2 col-2k-1 col-3k-1 col-4k-1
+			</div>
+			<div class="demo_col col-mb-12 col-tb-6 col-ds-4 col-nb-3 col-hd-2 col-2k-1 col-3k-1 col-4k-1">
+				col-mb-12 col-tb-6 col-ds-4 col-nb-3 col-hd-2 col-2k-1 col-3k-1 col-4k-1
+			</div>
+			<div class="demo_col col-mb-12 col-tb-6 col-ds-4 col-nb-3 col-hd-2 col-2k-1 col-3k-1 col-4k-1">
+				col-mb-12 col-tb-6 col-ds-4 col-nb-3 col-hd-2 col-2k-1 col-3k-1 col-4k-1
+			</div>
+			<div class="demo_col col-mb-12 col-tb-6 col-ds-4 col-nb-3 col-hd-2 col-2k-1 col-3k-1 col-4k-1">
+				col-mb-12 col-tb-6 col-ds-4 col-nb-3 col-hd-2 col-2k-1 col-3k-1 col-4k-1
+			</div>
+			
+		</div>
+	</div>
+	
+	
+	<div class="container fluid demo_container">
+		<div class="row va-bottom demo_row">
+			<div class="col-all-4 demo_col">
+				col-all-4 (va-bottom)
+			</div>
+			<div class="col-all-4 demo_col">
+				col-all-4 (va-bottom)
+				<br /><br />
+				Hello world!
+			</div>
+			<div class="col-all-4 demo_col">
+				col-all-4 (va-bottom)
+			</div>
+		</div>
+	</div>
+	
+	<div class="container fluid demo_container">
+		<div class="row va-middle demo_row">
+			<div class="col-all-4 demo_col">
+				col-all-4 (va-middle)
+			</div>
+			<div class="col-all-4 demo_col">
+				col-all-4 (va-middle)
+				<br /><br />
+				Hello world!
+			</div>
+			<div class="col-all-4 demo_col">
+				col-all-4 (va-middle)
+			</div>
+		</div>
+	</div>
+	
+	<div class="container fluid demo_container">
+		<div class="row va-middle a-middle demo_row">
+			<div class="col-all-4 demo_col">
+				col-all-4 (va-middle a-middle)
+			</div>
+			<div class="col-all-4 demo_col">
+				col-all-4 (va-middle a-middle)
+				<br /><br />
+				Hello world!
+			</div>
+			<div class="col-all-4 demo_col">
+				col-all-4 (va-middle a-middle)
+			</div>
+		</div>
+	</div>
+	
+	<div class="container fluid demo_container">
+		<div class="row va-middle a-left demo_row">
+			<div class="col-all-4 demo_col">
+				col-all-4 (va-middle a-left)
+			</div>
+			<div class="col-all-4 demo_col">
+				col-all-4 (va-middle a-left)
+				<br /><br />
+				Hello world!
+			</div>
+		</div>
+	</div>
+	
+	<div class="container fluid demo_container">
+		<div class="row va-middle a-center demo_row">
+			<div class="col-all-4 demo_col">
+				col-all-4 (va-middle a-center)
+			</div>
+			<div class="col-all-4 demo_col">
+				col-all-4 (va-middle a-center)
+				<br /><br />
+				Hello world!
+			</div>
+		</div>
+	</div>
+	
+	<div class="container fluid demo_container">
+		<div class="row va-middle a-right demo_row">
+			<div class="col-all-4 demo_col" >
+				col-all-4 (va-middle a-right)
+			</div>
+			<div class="col-all-4 demo_col">
+				col-all-4 (va-middle a-right)
+				<br /><br />
+				Hello world!
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
