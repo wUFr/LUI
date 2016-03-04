@@ -26,55 +26,56 @@ FORMS
 				color: @color_delete;
 				content:" *";
 			}
-
-			@media (max-width:@grid_sm_mw){
-				&.col-xs-12 {
-					text-align: left;
-					padding-bottom: 5px;
+		}
+		
+		div {
+			
+			.make.block-label {
+				text-align: left;
+				padding: 7px 0;
+			}
+			
+			@media (max-width:@grid_xs_w){
+				&.col-xs-12 .label {
+					.make.block-label();
 				}
 			}
-			@media (max-width:@grid_md_mw){
-				&.col-sm-12 {
-					text-align: left;
-					padding-bottom: 5px;
+			@media (min-width:@grid_sm_w){
+				&.col-sm-12 .label {
+					.make.block-label();
 				}
 			}
-			@media (max-width:@grid_lg_mw){
-				&.col-md-12 {
-					text-align: left;
-					padding-bottom: 5px;
+			@media (min-width:@grid_md_w){
+				&.col-md-12 .label {
+					.make.block-label();
 				}
 			}
-			@media (max-width:@grid_hd_mw){
-				&.col-lg-12 {
-					text-align: left;
-					padding-bottom: 5px;
+			@media (min-width:@grid_lg_w){
+				&.col-lg-12 .label {
+					.make.block-label();
 				}
 			}
-			@media (max-width:@grid_2k_mw){
-				&.col-hd-12 {
-					text-align: left;
-					padding-bottom: 5px;
+			@media (min-width:@grid_hd_w){
+				&.col-hd-12 .label {
+					.make.block-label();
 				}
 			}
-			@media (max-width:@grid_3k_mw){
-				&.col-2k-12 {
-					text-align: left;
-					padding-bottom: 5px;
+			@media (min-width:@grid_2k_w){
+				&.col-2k-12 .label {
+					.make.block-label();
 				}
 			}
-			@media (max-width:@grid_4k_mw){
-				&.col-3k-12 {
-					text-align: left;
-					padding-bottom: 5px;
+			@media (min-width:@grid_3k_w){
+				&.col-3k-12 .label {
+					.make.block-label();
 				}
 			}
 			@media (min-width:@grid_4k_w){
-				&.col-4k-12 {
-					text-align: left;
-					padding-bottom: 5px;
+				&.col-4k-12 .label {
+					.make.block-label();
 				}
 			}
+			
 		}
 
 		div.info {
