@@ -11,7 +11,7 @@ TABLE
 	padding: 5px;
 	overflow: hidden;
 
-	@media (min-width:992px){
+	@media (min-width:@grid_lg_start){
 		& when (@responsive = true){
 			background: white;
 			border-radius: 5px;
@@ -19,7 +19,7 @@ TABLE
 	}
 
 	thead {
-		@media (max-width:991px){
+		@media (max-width:@grid_md_end){
 			& when (@responsive = true){
 				display: none;
 			}
@@ -43,7 +43,7 @@ TABLE
 		tr {
 			border-bottom: 1px solid #F3F3F3;
 
-			@media (max-width:991px){
+			@media (max-width:@grid_md_end){
 				& when (@responsive = true){
 					border-bottom-width: 0;
 				}
@@ -54,7 +54,7 @@ TABLE
 				text-align: left;
 
 				/* MOBILE VERSION */
-				@media (max-width:991px){
+				@media (max-width:@grid_md_end){
 					& when (@responsive = true){
 						background: #fcfcfc;
 						border: 1px solid #ebebeb;
@@ -79,7 +79,7 @@ TABLE
 				}
 
 				/* TABLET+ */
-				@media (min-width:992px){
+				@media (min-width:@grid_lg_start){
 					&.options when (@responsive = true){
 						padding: 6px 10px 0 10px;
 						text-align: right;
@@ -103,7 +103,7 @@ TABLE
 				background: #f2f6fa;
 			}
 
-			@media (max-width:991px){
+			@media (max-width:@grid_md_end){
 				&:nth-child(even) td when (@responsive = true) {
 					background: #fcfcfc;
 				}

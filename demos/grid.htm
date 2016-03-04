@@ -38,6 +38,58 @@
 	<section class="demo_content" style="overflow: hidden">
 		<div class="inside">
 			<h1>Grid system</h1>
+			<p>
+				Grid and cols min-max width info:
+			</p>
+			
+			<section class="item">
+				<h2>Grid and cols min-max width info</h2>
+				<div class="content">
+					<h3>XS - extra small</h3>
+					<p>
+						<strong>Start</strong>: 0px<br />
+						<strong>End</strong>: 500px
+					</p>
+					
+					<h3>SM - small</h3>
+					<p>
+						<strong>Start</strong>: 501px<br />
+						<strong>End</strong>: 767px
+					</p>
+					
+					<h3>MD - medium</h3>
+					<p>
+						<strong>Start</strong>: 768px<br />
+						<strong>End</strong>: 991px
+					</p>
+					
+					<h3>LG - large</h3>
+					<p>
+						<strong>Start</strong>: 992px<br />
+						<strong>End</strong>: 1199px
+					</p>
+					
+					<h3>XL - extra large</h3>
+					<p>
+						<strong>Start</strong>: 1200px<br />
+						<strong>End</strong>: 1499px
+					</p>
+					
+					<h3>HD - high definition (fullhd)</h3>
+					<p>
+						<strong>Start</strong>: 1500px<br />
+						<strong>End</strong>: 1999px
+					</p>
+					
+					<h3>2K and bigger</h3>
+					<p>
+						<strong>Start</strong>: 2000px<br />
+						<strong>End</strong>: 9999px aka "infinite"
+					</p>
+			
+				</div>
+			</section>
+			
 		</div>
 	</section>
 	
@@ -47,21 +99,17 @@
 	<div class="container fluid demo_container">
 		.container.fluid || .container-fluid
 	</div>
-	
-	<div class="container max_4k fluid demo_container">
-		.container.fluid.max_4k
-	</div>
-	
-	<div class="container max_3k fluid demo_container">
-		.container.fluid.max_3k
-	</div>
-	
+
 	<div class="container max_2k fluid demo_container">
 		.container.fluid.max_2k
 	</div>
 	
 	<div class="container max_hd fluid demo_container">
 		.container.fluid.max_hd
+	</div>
+	
+	<div class="container max_xl fluid demo_container">
+		.container.fluid.max_xl
 	</div>
 	
 	<div class="container max_lg fluid demo_container">
@@ -82,17 +130,17 @@
 	
 	<div class="container fluid demo_container">
 		<div class="row va-top demo_row">
-			<div class="demo_col col-xs-12 col-sm-6 col-md-3 col-lg-2 col-hd-2 col-2k-1 col-3k-1 col-4k-1">
-				col-xs-12 col-sm-6 col-md-3 col-lg-2 col-hd-2 col-2k-1 col-3k-1 col-4k-1
+			<div class="demo_col col-xs-12 col-sm-6 col-md-3 col-lg-2 col-xs-2 col-hd-1 col-2k-1">
+				col-xs-12 col-sm-6 col-md-3 col-lg-2 col-xs-2 col-hd-1 col-2k-1
 			</div>
-			<div class="demo_col col-xs-12 col-sm-6 col-md-3 col-lg-2 col-hd-2 col-2k-1 col-3k-1 col-4k-1">
-				col-xs-12 col-sm-6 col-md-3 col-lg-2 col-hd-2 col-2k-1 col-3k-1 col-4k-1
+			<div class="demo_col col-xs-12 col-sm-6 col-md-3 col-lg-2 col-xs-2 col-hd-1 col-2k-1">
+				col-xs-12 col-sm-6 col-md-3 col-lg-2 col-xs-2 col-hd-1 col-2k-1
 			</div>
-			<div class="demo_col col-xs-12 col-sm-6 col-md-3 col-lg-2 col-hd-2 col-2k-1 col-3k-1 col-4k-1">
-				col-xs-12 col-sm-6 col-md-3 col-lg-2 col-hd-2 col-2k-1 col-3k-1 col-4k-1
+			<div class="demo_col col-xs-12 col-sm-6 col-md-3 col-lg-2 col-xs-2 col-hd-1 col-2k-1">
+				col-xs-12 col-sm-6 col-md-3 col-lg-2 col-xs-2 col-hd-1 col-2k-1
 			</div>
-			<div class="demo_col col-xs-12 col-sm-6 col-md-3 col-lg-2 col-hd-2 col-2k-1 col-3k-1 col-4k-1">
-				col-xs-12 col-sm-6 col-md-3 col-lg-2 col-hd-2 col-2k-1 col-3k-1 col-4k-1
+			<div class="demo_col col-xs-12 col-sm-6 col-md-3 col-lg-2 col-xs-2 col-hd-1 col-2k-1">
+				col-xs-12 col-sm-6 col-md-3 col-lg-2 col-xs-2 col-hd-1 col-2k-1
 			</div>
 		</div>
 	</div>
@@ -100,85 +148,91 @@
 	
 	<div class="container fluid demo_container">
 		<div class="row va-bottom demo_row">
-			<div class="col-all-4 demo_col">
-				col-all-4 (va-bottom)
+			<div class="col-3 demo_col">
+				col-3 (va-bottom)
 			</div>
-			<div class="col-all-4 demo_col">
-				col-all-4 (va-bottom)
+			<div class="col-3 demo_col">
+				col-3 (va-bottom)
 				<br /><br />
 				Hello world!
 			</div>
-			<div class="col-all-4 demo_col">
-				col-all-4 (va-bottom)
+			<div class="col-3 demo_col">
+				col-3 (va-bottom)
 			</div>
 		</div>
 	</div>
 	
 	<div class="container fluid demo_container">
 		<div class="row va-middle demo_row">
-			<div class="col-all-4 demo_col">
-				col-all-4 (va-middle)
+			<div class="col-3 demo_col">
+				col-3 (va-middle)
 			</div>
-			<div class="col-all-4 demo_col">
-				col-all-4 (va-middle)
+			<div class="col-3 demo_col">
+				col-3 (va-middle)
 				<br /><br />
 				Hello world!
 			</div>
-			<div class="col-all-4 demo_col">
-				col-all-4 (va-middle)
+			<div class="col-3 demo_col">
+				col-3 (va-middle)
 			</div>
 		</div>
 	</div>
 	
 	<div class="container fluid demo_container">
 		<div class="row va-middle a-middle demo_row">
-			<div class="col-all-4 demo_col">
-				col-all-4 (va-middle a-middle)
+			<div class="col-3 demo_col">
+				col-3 (va-middle a-middle)
 			</div>
-			<div class="col-all-4 demo_col">
-				col-all-4 (va-middle a-middle)
+			<div class="col-3 demo_col">
+				col-3 (va-middle a-middle)
 				<br /><br />
 				Hello world!
 			</div>
-			<div class="col-all-4 demo_col">
-				col-all-4 (va-middle a-middle)
+			<div class="col-3 demo_col">
+				col-3 (va-middle a-middle)
 			</div>
 		</div>
 	</div>
 	
 	<div class="container fluid demo_container">
 		<div class="row va-middle a-left demo_row">
-			<div class="col-all-4 demo_col">
-				col-all-4 (va-middle a-left)
+			<div class="col-3 demo_col">
+				col-3 (va-middle a-left)
 			</div>
-			<div class="col-all-4 demo_col">
-				col-all-4 (va-middle a-left)
+			<div class="col-3 demo_col">
+				col-3 (va-middle a-left)
 				<br /><br />
 				Hello world!
+			</div>
+			<div class="col-3 demo_col">
+				col-3 (va-middle a-left)
 			</div>
 		</div>
 	</div>
 	
 	<div class="container fluid demo_container">
 		<div class="row va-middle a-center demo_row">
-			<div class="col-all-4 demo_col">
-				col-all-4 (va-middle a-center)
+			<div class="col-3 demo_col">
+				col-3 (va-middle a-center)
 			</div>
-			<div class="col-all-4 demo_col">
-				col-all-4 (va-middle a-center)
+			<div class="col-3 demo_col">
+				col-3 (va-middle a-center)
 				<br /><br />
 				Hello world!
+			</div>
+			<div class="col-3 demo_col">
+				col-3 (va-middle a-center)
 			</div>
 		</div>
 	</div>
 	
 	<div class="container fluid demo_container">
 		<div class="row va-middle a-right demo_row">
-			<div class="col-all-4 demo_col" >
-				col-all-4 (va-middle a-right)
+			<div class="col-3 demo_col" >
+				col-3 (va-middle a-right)
 			</div>
-			<div class="col-all-4 demo_col">
-				col-all-4 (va-middle a-right)
+			<div class="col-3 demo_col">
+				col-3 (va-middle a-right)
 				<br /><br />
 				Hello world!
 			</div>

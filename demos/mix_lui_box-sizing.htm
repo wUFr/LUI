@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>LUI - Less UI</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet/less" href="/demo.less" />
+
+	<script>
+		less = {
+			env: "development",
+			async: false,
+			fileAsync: false,
+			poll: 1000,
+			functions: {},
+			dumpLineNumbers: "comments",
+			relativeUrls: false
+		};
+	</script>
+	<script src="/lui/js/less/less.min.js" type="text/javascript"></script>
+	
+	<script src="/lui/js/jquery/jquery-2.2.0.min.js"></script>
+	<script src="/lui/js/jquery/ui/ui.js"></script>
+
+</head>
+<body>
+
+	<section class="demo_header">
+		<header>
+			LUI<span>Less UI</span>
+			<a class="github" href="https://github.com/wUFr/LUI" target="_blank">Follow project on GitHub</a>
+		</header>
+		
+	</section>
+	
+	<section class="demo_content" style="overflow: hidden">
+		<div class="inside">
+			<h1>Mixins</h1>
+			<section class="item">
+				<h2>.lui.box-sizing</h2>
+				<div class="content">
+					<h3>.this(@args)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.box-sizing.this(@args);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-box-sizing: @args;
+-moz-box-sizing: @args;
+box-sizing: @args;
+</pre>
+
+					<h3>.border-box() || .border()</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.box-sizing.border-box();
+.lui.box-sizing.border();
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+</pre>
+
+
+					<h3>.content-box() || .content()</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.box-sizing.content-box();
+.lui.box-sizing.content();
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+</pre>
+					
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>

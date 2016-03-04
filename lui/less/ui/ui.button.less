@@ -29,7 +29,7 @@ BUTTON
 		font-size: 12px;
 	}
 	
-	@media (max-width:550px){
+	@media (max-width:@grid_sm_end){
 		&.mobile_big when (@responsive = true){
 			display: block;
 			width: 100%;
@@ -136,7 +136,7 @@ BUTTON
 		font-size: 10px;
 	}
 
-	@media (max-width:550px){
+	@media (max-width:@grid_sm_end){
 		&.mobile_big:before when (@responsive = true){
 			height: @btn_mobile_height;
 			line-height: @btn_mobile_height;
@@ -160,7 +160,7 @@ BUTTON
 		font-size: 10px;
 	}
 
-	@media (max-width:550px){
+	@media (max-width:@grid_sm_end){
 		&.mobile_big:after when (@responsive = true){
 			height: @btn_mobile_height;
 			line-height: @btn_mobile_height;

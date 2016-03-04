@@ -55,7 +55,7 @@ TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
 		.lui.flexbox.align-content(flex-start);
 	}
 	
-	@media (max-width:@grid_sm_mw){
+	@media (max-width:@grid_sm_end){
 		& when (@responsive = true){ 
 			.lui.flexbox.justify-content(~"space-between !important");
 		}
@@ -65,7 +65,7 @@ TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
 		margin: 2px;
 		display: inline-block;
 
-		@media (max-width:@grid_sm_mw){
+		@media (max-width:@grid_sm_end){
 			& when (@responsive = true){ 
 				display: none;
 
@@ -113,7 +113,13 @@ TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
 			border-radius: 5px;
 			height: 34px;
 			line-height: 14px;
-			padding: 10px 15px 10px 0;
+			padding: 10px 15px 10px 10px;
+			
+			@media (max-width:@grid_sm_end){
+				& when (@responsive = true){ 
+					padding: 10px 15px 10px 0;
+				}
+			}
 			
 			label {
 				margin-right: 14px;

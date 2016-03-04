@@ -35,47 +35,41 @@ FORMS
 				padding: 7px 0;
 			}
 			
-			@media (max-width:@grid_xs_w){
+			@media (max-width:@grid_xs_end){
 				&.col-xs-12 .label {
 					.make.block-label();
 				}
 			}
-			@media (min-width:@grid_sm_w){
+			@media (min-width:@grid_sm_start) and (max-width:@grid_sm_end){
 				&.col-sm-12 .label {
 					.make.block-label();
 				}
 			}
-			@media (min-width:@grid_md_w){
+			@media (min-width:@grid_md_start) and (max-width:@grid_md_end){
 				&.col-md-12 .label {
 					.make.block-label();
 				}
 			}
-			@media (min-width:@grid_lg_w){
+			@media (min-width:@grid_lg_start) and (max-width:@grid_lg_end){
 				&.col-lg-12 .label {
 					.make.block-label();
 				}
 			}
-			@media (min-width:@grid_hd_w){
+			@media (min-width:@grid_xl_start) and (max-width:@grid_xl_end){
+				&.col-xl-12 .label {
+					.make.block-label();
+				}
+			}
+			@media (min-width:@grid_hd_start) and (max-width:@grid_hd_end){
 				&.col-hd-12 .label {
 					.make.block-label();
 				}
 			}
-			@media (min-width:@grid_2k_w){
+			@media (min-width:@grid_2k_start){
 				&.col-2k-12 .label {
 					.make.block-label();
 				}
 			}
-			@media (min-width:@grid_3k_w){
-				&.col-3k-12 .label {
-					.make.block-label();
-				}
-			}
-			@media (min-width:@grid_4k_w){
-				&.col-4k-12 .label {
-					.make.block-label();
-				}
-			}
-			
 		}
 
 		div.info {
@@ -84,50 +78,44 @@ FORMS
 			color: gray;
 			padding-left: 0;
 
-			@media (max-width:@grid_sm_mw){
+			@media (max-width:@grid_xs_end){
 				&.col-xs-12 {
 					padding-left: 15px;
 					padding-top: 4px;
 				}
 			}
-			@media (max-width:@grid_md_mw){
+			@media (min-width:@grid_sm_start){
 				&.col-sm-12 {
 					padding-left: 15px;
 					padding-top: 4px;
 				}
 			}
-			@media (max-width:@grid_lg_mw){
+			@media (min-width:@grid_md_start){
 				&.col-md-12 {
 					padding-left: 15px;
 					padding-top: 4px;
 				}
 			}
-			@media (max-width:@grid_hd_mw){
+			@media (min-width:@grid_lg_start){
 				&.col-lg-12 {
 					padding-left: 15px;
 					padding-top: 4px;
 				}
 			}
-			@media (max-width:@grid_2k_mw){
+			@media (min-width:@grid_xl_start){
+				&.col-xl-12 {
+					padding-left: 15px;
+					padding-top: 4px;
+				}
+			}
+			@media (min-width:@grid_hd_start){
 				&.col-hd-12 {
 					padding-left: 15px;
 					padding-top: 4px;
 				}
 			}
-			@media (max-width:@grid_3k_mw){
+			@media (min-width:@grid_2k_start){
 				&.col-2k-12 {
-					padding-left: 15px;
-					padding-top: 4px;
-				}
-			}
-			@media (max-width:@grid_4k_mw){
-				&.col-3k-12 {
-					padding-left: 15px;
-					padding-top: 4px;
-				}
-			}
-			@media (min-width:@grid_4k_w){
-				&.col-4k-12 {
 					padding-left: 15px;
 					padding-top: 4px;
 				}
@@ -423,8 +411,8 @@ UI CHECKBOX (standalone style - can be used everywhere)
 	}
 }
 
-.lui_form .item .ui_check {
-	margin: 5px -7px;
+.lui_form .item .lui_check {
+	margin-left: -7px;
 }
 
 /*
@@ -516,7 +504,7 @@ UI RADIO (standalone style - can be used everywhere)
 	}
 
 	&:hover span:before {
-		content: "\f192";
+		color: #2c2c2c;
 	}
 
 	input:checked ~ span:before {
@@ -549,8 +537,8 @@ UI RADIO (standalone style - can be used everywhere)
 	}
 }
 
-.lui_form .item .ui_radio {
-	margin: 5px -7px;
+.lui_form .item .lui_radio {
+	margin-left: -7px;
 }
 
 /*

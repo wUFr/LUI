@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>LUI - Less UI</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet/less" href="/demo.less" />
+
+	<script>
+		less = {
+			env: "development",
+			async: false,
+			fileAsync: false,
+			poll: 1000,
+			functions: {},
+			dumpLineNumbers: "comments",
+			relativeUrls: false
+		};
+	</script>
+	<script src="/lui/js/less/less.min.js" type="text/javascript"></script>
+	
+	<script src="/lui/js/jquery/jquery-2.2.0.min.js"></script>
+	<script src="/lui/js/jquery/ui/ui.js"></script>
+
+</head>
+<body>
+
+	<section class="demo_header">
+		<header>
+			LUI<span>Less UI</span>
+			<a class="github" href="https://github.com/wUFr/LUI" target="_blank">Follow project on GitHub</a>
+		</header>
+		
+	</section>
+	
+	<section class="demo_content" style="overflow: hidden">
+		<div class="inside">
+			<h1>Mixins</h1>
+			<section class="item">
+				<h2>.lui.flexbox</h2>
+				<div class="content">
+					<h3>.block() || .box() || .flex-block()</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.block();
+.lui.flexbox.box();
+.lui.flexbox.flex-block();
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+</pre>
+
+					<h3>.inline() || .flex-inline()</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.inline();
+.lui.flexbox.flex-inline();
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+display: -ms-inline-flexbox;
+display: -webkit-inline-flex;
+display: inline-flex;
+</pre>
+
+
+					<h3>.flow(@direction, @wrap)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.flow(@direction, @wrap);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-flex-flow: @direction @wrap;
+-moz-flex-flow: @direction @wrap;
+-ms-flex-direction: @direction;
+-ms-flex-wrap: @wrap;
+flex-flow: @direction @wrap;
+</pre>
+
+
+					<h3>.align-content(@alignment)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.align-content(@alignment);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-align-content: @alignment;
+-moz-align-content: @alignment;
+-ms-align-content: @alignment;
+align-content: @alignment;
+</pre>
+
+
+					<h3>.justify-content(@justification)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.justify-content(@justification);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-justify-content: @justification;
+-webkit-box-pack: @justification;
+-moz-box-pack: @justification;
+-ms-flex-pack: @justification;
+justify-content: @justification;
+</pre>
+
+
+					<h3>.content.align(@alignment)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.content.align(@alignment);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-align-content: @alignment;
+-moz-align-content: @alignment;
+-ms-align-content: @alignment;
+align-content: @alignment;
+</pre>
+
+
+					<h3>.content.justify(@justification)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.content.justify(@justification);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-justify-content: @justification;
+-webkit-box-pack: @justification;
+-moz-box-pack: @justification;
+-ms-flex-pack: @justification;
+justify-content: @justification;
+</pre>
+
+
+					<h3>.flex-direction(@direction) || .direction(@direction)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.flex-direction(@direction);
+.lui.flexbox.direction(@direction);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-flex-direction: @direction;
+-moz-flex-direction: @direction;
+-ms-flex-direction: @direction;
+flex-direction: @direction;
+</pre>
+
+
+					<h3>.flex-wrap(@wrap) || .wrap(@wrap)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.flex-wrap(@wrap);
+.lui.flexbox.wrap(@wrap);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-flex-wrap: @wrap;
+-moz-flex-wrap: @wrap;
+-ms-flex-wrap: @wrap;
+flex-wrap: @wrap;
+</pre>
+
+
+					<h3>.align-items(@mode) || .items.align(@mode)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.align-items(@mode);
+.lui.flexbox.items.align(@mode);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-align-items: @mode;
+-webkit-box-align: @mode;
+-moz-box-align: @mode;
+-ms-flex-align: @mode;
+align-items: @mode;
+</pre>
+
+
+					<h3>.order(@order) || .items.order(@order)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.order(@order);
+.lui.flexbox.items.order(@order);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-box-ordinal-group: @order;
+-moz-box-ordinal-group: @order;
+-ms-box-ordinal-group: @order;
+-ms-flex-order: @order;
+-webkit-order: @order;
+-moz-order: @order;
+-ms-order: @order;
+order: @order;
+</pre>
+
+
+					<h3>.flex(@args)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.flex(@args);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-flex: @args;
+-moz-flex: @args;
+-ms-flex: @args;
+flex: @args;
+</pre>
+
+
+					<h3>.flex-grow(@grow) || .grow(@grow)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.flex-grow(@grow);
+.lui.flexbox.grow(@grow);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-flex-grow: @grow;
+-moz-flex-grow: @grow;
+-ms-flex-grow: @grow;
+flex-grow: @grow;
+</pre>
+
+
+					<h3>.flex-shrink(@shrink) || .shrink(@shrink)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.flex-shrink(@shrink);
+.lui.flexbox.shrink(@shrink);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-flex-shrink: @shrink;
+-moz-flex-shrink: @shrink;
+-ms-flex-shrink: @shrink;
+flex-shrink: @shrink;
+</pre>
+
+
+					<h3>.flex-basis(@basis) || .basis(@basis)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.flex-basis(@basis);
+.lui.flexbox.basis(@basis);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-flex-basis: @basis;
+-moz-flex-basis: @basis;
+-ms-flex-basis: @basis;
+flex-basis: @basis;
+</pre>
+
+
+					<h3>.align-self(@align)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.flexbox.align-self(@align);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-align-self: @align;
+-moz-align-self: @align;
+-ms-align-self: @align;
+align-self: @align;
+</pre>
+					
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>
