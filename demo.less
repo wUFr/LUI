@@ -167,3 +167,48 @@ HEADER
 		}
 	}
 }
+
+
+/*
+
+GRANDIENT DEMOS
+
+*/
+.demo_grandient {
+	width: 200px;
+	height: 120px;
+	margin: 10px 0;
+	
+	&.this {
+		.lui.grandient.linear.vertical(~"45deg, black 0%, white 50%, orange 100%");
+	}
+	
+	&.vertical {
+		.lui.grandient.linear.vertical(~"black 0%, white 50%, orange 100%");
+	}
+	
+	&.horizontal {
+		.lui.grandient.linear.horizontal(~"black 0%, white 50%, orange 100%");
+	}
+	
+	&.diagonal {
+		.lui.grandient.linear.diagonal.left2right(~"black 0%, white 50%, orange 100%");
+	}
+	
+	&.diagonal2 {
+		.lui.grandient.linear.diagonal.right2left(~"black 0%, white 50%, orange 100%");
+	}
+	
+	&.radial_this {
+		.lui.grandient.radial.this(~"black 0%, white 50%, orange 100%");
+	}
+	
+	&.radial_this2 {
+		.lui.grandient.radial.this(~"circle, black 0%, white 50%, orange 100%");
+	}
+	
+	&.radial_repeat {
+		.lui.grandient.radial.repeat(~"circle, black 0%, white 25%, orange 50%");
+	}
+}
+

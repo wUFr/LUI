@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>LUI - Less UI</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet/less" href="/demo.less" />
+
+	<script>
+		less = {
+			env: "development",
+			async: false,
+			fileAsync: false,
+			poll: 1000,
+			functions: {},
+			dumpLineNumbers: "comments",
+			relativeUrls: false
+		};
+	</script>
+	<script src="/lui/js/less/less.min.js" type="text/javascript"></script>
+	
+	<script src="/lui/js/jquery/jquery-2.2.0.min.js"></script>
+	<script src="/lui/js/jquery/ui/ui.js"></script>
+
+</head>
+<body>
+
+	<section class="demo_header">
+		<header>
+			LUI<span>Less UI</span>
+			<a class="github" href="https://github.com/wUFr/LUI" target="_blank">Follow project on GitHub</a>
+		</header>
+		
+	</section>
+	
+	<section class="demo_content" style="overflow: hidden">
+		<div class="inside">
+			<h1>Mixins</h1>
+			<section class="item">
+				<h2>.lui.grandient</h2>
+				<div class="content">
+					<h3>.linear.this(~"@args")</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.grandient.linear.this(~"@args");
+</pre>
+					<p><strong>! its important to write it like this with ~"@args" becouse "," between colors</strong></p>
+
+					<p class="pre_title">Returns</p>
+<pre>
+background: -webkit-linear-gradient(@args);
+background: linear-gradient(@args);
+</pre>
+
+					<h4>Demo</h4>
+
+<pre>
+.lui.grandient.linear.this(~"45deg, black 0%, white 50%, orange 100%");
+</pre>
+
+					<div class="demo_grandient this">
+						
+					</div>
+					
+					
+					
+					
+					<h3>.linear.vertical(~"@args")</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.grandient.linear.vertical(~"@args");
+</pre>
+					<p><strong>! its important to write it like this with ~"@args" becouse "," between colors</strong></p>
+
+					<p class="pre_title">Returns</p>
+<pre>
+background: -webkit-linear-gradient(@args);
+background: linear-gradient(@args);
+</pre>
+
+					<h4>Demo</h4>
+
+<pre>
+.lui.grandient.linear.vertical(~"black 0%, white 50%, orange 100%");
+</pre>
+
+					<div class="demo_grandient vertical">
+						
+					</div>
+					
+					
+					<h3>.linear.horizontal(~"@args")</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.grandient.linear.horizontal(~"@args");
+</pre>
+					<p><strong>! its important to write it like this with ~"@args" becouse "," between colors</strong></p>
+
+					<p class="pre_title">Returns</p>
+<pre>
+background: -webkit-linear-gradient(90deg @args);
+background: linear-gradient(90deg @args);
+</pre>
+
+					<h4>Demo</h4>
+
+<pre>
+.lui.grandient.linear.horizontal(~"black 0%, white 50%, orange 100%");
+</pre>
+
+					<div class="demo_grandient horizontal">
+						
+					</div>
+					
+					
+					<h3>.linear.diagonal.left2right(~"@args")</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.grandient.linear.left2right(~"@args");
+</pre>
+					<p><strong>! its important to write it like this with ~"@args" becouse "," between colors</strong></p>
+
+					<p class="pre_title">Returns</p>
+<pre>
+background: -webkit-linear-gradient(135deg, @args);
+background: linear-gradient(135deg, @args);
+</pre>
+
+					<h4>Demo</h4>
+
+<pre>
+.lui.grandient.linear.diagonal(~"black 0%, white 50%, orange 100%");
+</pre>
+
+					<div class="demo_grandient diagonal">
+						
+					</div>
+					
+					
+					<h3>.linear.diagonal.right2left(@args)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.grandient.linear.right2left(~"@args");
+</pre>
+					<p><strong>! its important to write it like this with ~"@args" becouse "," between colors</strong></p>
+
+					<p class="pre_title">Returns</p>
+<pre>
+background: -webkit-linear-gradient(135deg, @args);
+background: linear-gradient(135deg, @args);
+</pre>
+
+					<h4>Demo</h4>
+
+<pre>
+.lui.grandient.linear.diagonal.right2left(~"black 0%, white 50%, orange 100%");
+</pre>
+
+					<div class="demo_grandient diagonal2">
+						
+					</div>
+					
+					
+					
+					
+					
+					<h3>.radial.this(~"@args")</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.grandient.radial.this(~"@args");
+</pre>
+					<p><strong>! its important to write it like this with ~"@args" becouse "," between colors</strong></p>
+
+					<p class="pre_title">Returns</p>
+<pre>
+background: -webkit-radial-gradient(@args);
+background: -o-radial-gradient(@args);
+background: -moz-radial-gradient(@args);
+background: radial-gradient(@args);
+</pre>
+
+					<h4>Demo</h4>
+
+<pre>
+.lui.grandient.radial.this(~"black 0%, white 50%, orange 100%");
+</pre>
+
+					<div class="demo_grandient radial_this">
+						
+					</div>
+					
+					
+					<h4>Demo</h4>
+
+<pre>
+.lui.grandient.radial.this(~"circle, black 0%, white 50%, orange 100%");
+</pre>
+
+					<div class="demo_grandient radial_this2">
+						
+					</div>
+					
+					
+					<h3>.radial.repeat(~"@args")</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.grandient.radial.repeat(~"@args");
+</pre>
+					<p><strong>! its important to write it like this with ~"@args" becouse "," between colors</strong></p>
+
+					<p class="pre_title">Returns</p>
+<pre>
+background: -webkit-repeating-radial-gradient(@args);
+background: -o-repeating-radial-gradient(@args);
+background: -moz-repeating-radial-gradient(@args);
+background: repeating-radial-gradient(@args);
+</pre>
+
+					<h4>Demo</h4>
+
+<pre>
+.lui.grandient.radial.repeat(~"circle, black 0%, white 25%, orange 50%");
+</pre>
+
+					<div class="demo_grandient radial_repeat">
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>

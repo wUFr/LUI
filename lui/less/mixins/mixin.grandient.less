@@ -1,0 +1,51 @@
+/*
+
+GRANDIENT
+
+*/
+
+.lui.grandient {
+	.linear {
+		.this(@args){
+			background: -webkit-linear-gradient(@args);
+			background: linear-gradient(@args);
+		}
+	
+		.vertical(@args){
+			.this(@args);
+		}
+	
+		.horizontal(@args){
+			background: -webkit-linear-gradient(90deg, @args);
+			background: linear-gradient(90deg, @args);
+		}
+
+		.diagonal(){
+			.left2right(@args){
+				background: -webkit-linear-gradient(135deg, @args);
+				background: linear-gradient(135deg, @args);
+			}
+
+			.right2left(@args){
+				background: -webkit-linear-gradient(225deg, @args);
+				background: linear-gradient(225deg, @args);
+			}
+		}
+	}
+
+	.radial {
+		.this(@args){
+			background: -webkit-radial-gradient(@args);
+			background: -o-radial-gradient(@args);
+			background: -moz-radial-gradient(@args);
+			background: radial-gradient(@args);
+		}
+
+		.repeat(@args){
+			background: -webkit-repeating-radial-gradient(@args);
+			background: -o-repeating-radial-gradient(@args);
+			background: -moz-repeating-radial-gradient(@args);
+			background: repeating-radial-gradient(@args);
+		}
+	}
+}
