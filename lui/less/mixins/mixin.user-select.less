@@ -1,0 +1,34 @@
+/*
+
+USER SELECT
+
+*/
+
+.lui.user-select {
+	.this(@args){
+		-webkit-user-select: @args;
+		-moz-user-select: @args;
+		-ms-user-select: @args;
+		user-select: @args;
+	}
+
+	.none(){
+		.this(none);
+	}
+
+	.disable(){
+		.none();
+	}
+
+	.text(){
+		.this(text);
+	}
+
+	.all(){
+		.this(all);
+	}
+
+	.contain(){
+		.this(contain);
+	}
+}

@@ -178,35 +178,35 @@ gradient DEMOS
 	width: 200px;
 	height: 120px;
 	margin: 10px 0;
-	
+
 	&.this {
 		.lui.gradient.linear.vertical(~"45deg, black 0%, white 50%, orange 100%");
 	}
-	
+
 	&.vertical {
 		.lui.gradient.linear.vertical(~"black 0%, white 50%, orange 100%");
 	}
-	
+
 	&.horizontal {
 		.lui.gradient.linear.horizontal(~"black 0%, white 50%, orange 100%");
 	}
-	
+
 	&.diagonal {
 		.lui.gradient.linear.diagonal.left2right(~"black 0%, white 50%, orange 100%");
 	}
-	
+
 	&.diagonal2 {
 		.lui.gradient.linear.diagonal.right2left(~"black 0%, white 50%, orange 100%");
 	}
-	
+
 	&.radial_this {
 		.lui.gradient.radial.this(~"black 0%, white 50%, orange 100%");
 	}
-	
+
 	&.radial_this2 {
 		.lui.gradient.radial.this(~"circle, black 0%, white 50%, orange 100%");
 	}
-	
+
 	&.radial_repeat {
 		.lui.gradient.radial.repeat(~"circle, black 0%, white 25%, orange 50%");
 	}
@@ -268,4 +268,13 @@ FILTER DEMOS
 	&.sepia {
 		.lui.filter.sepia(75%);
 	}
+}
+
+/*
+
+USER SELECT
+
+*/
+.demo_user-select_none {
+	.lui.user-select.none();
 }
