@@ -1,24 +1,22 @@
 # LUI - Less UI
 Less UI repo - responsive UI elements and mixins collection
 
-This repo (will) cointain basic UI elements that most websites needs. 
-From stuff like error messages all the way to responsive forms and tables. If you like your own UI stuff, you can just use mixin collection to make your life easier - especialy with flexbox mixins and .clear.after() ... :)
+This repo cointains basic UI elements that most websites need. 
+From stuff like error messages all the way to responsive forms and tables. If you like your own UI stuff, you can just use mixin collection to make your life easier :)
 
-*will be updated with tutorial how to use and better demos soon-ish*
-
+online demo/documentation: http://lui.demo.wufr.net/
 
 **currently implemented:**
-- working grid system from mobile all the way to 4K
-- fully responsive forms
+- working grid system from mobile all the way to 2K
+- fully responsive forms (beta)
 - fully responsive tables
 - buttons (also with some mobile friendly stuff)
 - FontAwesome icons!
-- pagebars (code derp)
-- usefull mixins for clearing, animations or flexbox
+- Mobile friendly pagebar/page switch
+- Tons of mixins and more to come
 
 
 **on way:**
-- tweaked grid (need more testing)
-- way more mixins
-- way more UI elements (form stuff, popups, list, menus.. ALL RESPONSIVE)
+- even more mixins
+- even more UI elements (popups, list, menus.. ALL RESPONSIVE)
 - ... i dont even know, who can predict future
