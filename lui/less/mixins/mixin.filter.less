@@ -1,0 +1,44 @@
+/*
+
+FILTER
+
+*/
+
+.lui.filter {
+	.this(@args){
+		-webkit-filter: @args;
+		filter: @args;
+	}
+
+	.brightness(@args){
+		.this(brightness(@args));
+	}
+
+	.contrast(@args){
+		.this(contrast(@args));
+	}
+
+	.grayscale(@args){
+		.this(grayscale(@args));
+	}
+
+	.hue-rotate(@args){
+		.this(hue-rotate(@args));
+	}
+
+	.hue(@args){
+		.hue-rotate(@args);
+	}
+
+	.invert(@args){
+		.this(invert(@args));
+	}
+
+	.saturate(@args){
+		.this(saturate(@args));
+	}
+
+	.sepia(@args){
+		.this(sepia(@args));
+	}
+}

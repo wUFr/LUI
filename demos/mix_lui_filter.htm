@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>LUI - Less UI</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet/less" href="/demo.less" />
+
+	<script>
+		less = {
+			env: "development",
+			async: false,
+			fileAsync: false,
+			poll: 1000,
+			functions: {},
+			dumpLineNumbers: "comments",
+			relativeUrls: false
+		};
+	</script>
+	<script src="/lui/js/less/less.min.js" type="text/javascript"></script>
+	
+	<script src="/lui/js/jquery/jquery-2.2.0.min.js"></script>
+	<script src="/lui/js/jquery/ui/ui.js"></script>
+
+</head>
+<body>
+
+	<section class="demo_header">
+		<header>
+			LUI<span>Less UI</span>
+			<a class="github" href="https://github.com/wUFr/LUI" target="_blank">Follow project on GitHub</a>
+		</header>
+		
+	</section>
+	
+	<section class="demo_content" style="overflow: hidden">
+		<div class="inside">
+			<h1>Mixins</h1>
+			<section class="item">
+				<h2>.lui.filter</h2>
+				<div class="content">
+					<h3>.this(~"@args")</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.filter.this(~"@args");
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-filter: @args;
+filter: @args;
+</pre>
+
+<h4>Demo</h4>
+
+<pre>
+.lui.filter.this(~"blur(2px)");
+</pre>
+
+					<div class="demo_filter this">
+						<img src="/demo.jpg" />
+					</div>
+					
+					
+					<h3>.brightness(@arg)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.clear.brightness(@arg);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-filter: brightness(@args);
+filter: brightness(@args);
+</pre>
+
+<h4>Demo</h4>
+
+<pre>
+.lui.filter.brightness(180%);
+</pre>
+
+					<div class="demo_filter brightness">
+						<img src="/demo.jpg" />
+					</div>
+					
+					
+					
+					<h3>.contrast(@arg)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.clear.contrast(@arg);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-filter: contrast(@args);
+filter: contrast(@args);
+</pre>
+
+<h4>Demo</h4>
+
+<pre>
+.lui.filter.contrast(50%);
+.lui.filter.contrast(150%);
+</pre>
+
+					<div class="demo_filter contrast">
+						<img src="/demo.jpg" />
+					</div>
+					<div class="demo_filter contrast2">
+						<img src="/demo.jpg" />
+					</div>
+					
+					
+					
+					<h3>.grayscale(@arg)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.clear.grayscale(@arg);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-filter: grayscale(@args);
+filter: grayscale(@args);
+</pre>
+
+<h4>Demo</h4>
+
+<pre>
+.lui.filter.grayscale(50%);
+.lui.filter.grayscale(150%);
+</pre>
+
+					<div class="demo_filter grayscale">
+						<img src="/demo.jpg" />
+					</div>
+					<div class="demo_filter grayscal2">
+						<img src="/demo.jpg" />
+					</div>
+					
+					
+					
+					<h3>.hue-rotate(@arg)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.clear.hue-rotate(@arg);
+.lui.clear.hue(@arg);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-filter: hue-rotate(@args);
+filter: hue-rotate(@args);
+</pre>
+
+<h4>Demo</h4>
+
+<pre>
+.lui.filter.hue-rotate(-50deg);
+.lui.filter.hue-rotate(150deg);
+</pre>
+
+					<div class="demo_filter hue-rotate">
+						<img src="/demo.jpg" />
+					</div>
+					<div class="demo_filter hue-rotate2">
+						<img src="/demo.jpg" />
+					</div>
+					
+					
+					
+					<h3>.invert(@arg)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.clear.invert(@arg);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-filter: invert(@args);
+filter: invert(@args);
+</pre>
+
+<h4>Demo</h4>
+
+<pre>
+.lui.filter.invert(100%);
+</pre>
+
+					<div class="demo_filter invert">
+						<img src="/demo.jpg" />
+					</div>
+					
+					
+					
+					<h3>.saturate(@arg)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.clear.saturate(@arg);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-filter: saturate(@args);
+filter: saturate(@args);
+</pre>
+
+<h4>Demo</h4>
+
+<pre>
+.lui.filter.saturate(5);
+</pre>
+
+					<div class="demo_filter saturate">
+						<img src="/demo.jpg" />
+					</div>
+					
+					
+					
+					<h3>.sepia(@arg)</h3>
+					<p class="pre_title">Usage in less:</p>
+<pre>
+.lui.clear.sepia(@arg);
+</pre>
+					<p class="pre_title">Returns</p>
+<pre>
+-webkit-filter: sepia(@args);
+filter: sepia(@args);
+</pre>
+
+<h4>Demo</h4>
+
+<pre>
+.lui.filter.sepia(75%);
+</pre>
+
+					<div class="demo_filter sepia">
+						<img src="/demo.jpg" />
+					</div>
+
+
+			
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>

@@ -212,3 +212,60 @@ GRANDIENT DEMOS
 	}
 }
 
+/*
+
+FILTER DEMOS
+
+*/
+.demo_filter {
+	width: 350px;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+
+	&.this {
+		.lui.filter.this(~"blur(2px)");
+	}
+
+	&.brightness {
+		.lui.filter.brightness(180%);
+	}
+
+	&.contrast {
+		.lui.filter.contrast(50%);
+	}
+
+	&.contrast2 {
+		.lui.filter.contrast(150%);
+	}
+
+	&.grayscale {
+		.lui.filter.grayscale(50%);
+	}
+
+	&.grayscale2 {
+		.lui.filter.grayscale(150%);
+	}
+
+	&.hue-rotate {
+		.lui.filter.hue-rotate(-50deg);
+	}
+
+	&.hue-rotate2 {
+		.lui.filter.hue-rotate(150deg);
+	}
+
+	&.invert {
+		.lui.filter.invert(100%);
+	}
+
+	&.saturate {
+		.lui.filter.saturate(5);
+	}
+
+	&.sepia {
+		.lui.filter.sepia(75%);
+	}
+}
