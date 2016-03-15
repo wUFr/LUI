@@ -6,14 +6,32 @@ From stuff like error messages all the way to responsive forms and tables. If yo
 
 online demo/documentation: http://lui.demo.wufr.net/
 
-**currently implemented:**
-- working grid system from mobile all the way to 2K
-- fully responsive forms (beta)
-- fully responsive tables
-- buttons (also with some mobile friendly stuff)
-- FontAwesome icons!
-- Mobile friendly pagebar/page switch
-- Tons of mixins and more to come
+
+**Awesome grid system**
+- able to set both vertical and horizontal position of columns (!!!)
+- more resolutions, but if you dont need responsive, you can simply use static grid (!)
+- extra columns size for print (!!)
+- need 5, 7, 8, 9, 10 or 11 columns in grid? no problem!
+- **flexbox FTW**
+ 
+**UI stuff:**
+- Responsive forms
+- Responsive table
+- Mobile friendly pagebar
+- FontAwesome!
+- Some buttons - also mobile friendly if you need
+
+**Mixins for:**
+- animation
+- border-radius
+- box-sizing
+- clearing (using :before / :after)
+- filters (colors, contrast, ..)
+- flexbox
+- grandient
+- transform
+- transition
+- user-select
 
 
 **on way:**
