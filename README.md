@@ -7,6 +7,10 @@ From stuff like error messages all the way to responsive forms and tables. If yo
 online demo/documentation: http://lui.demo.wufr.net/
 
 
+**big thanks to BrowserStack for supporting me with tool for testing! Go check them out https://www.browserstack.com/**
+
+
+
 **Awesome grid system**
 - able to set both vertical and horizontal position of columns (!!!)
 - more resolutions, but if you dont need responsive, you can simply use static grid (!)
