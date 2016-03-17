@@ -249,40 +249,48 @@ GRID
 .mr-11	{margin-right: @tbr_11_W;}
 .mr-12	{margin-right: @tbr_12_W;}
 
+.col-dbg(@col: test){
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: red;
+}
+
 /* XS - OVERWRITED BY BIGGER SCREENS */
 @media (max-width:@grid_xs_end){
-	.col-xs-1	{width: @col_1_W;}
-	.col-xs-2	{width: @col_2_W;}
-	.col-xs-3	{width: @col_3_W;}
-	.col-xs-4	{width: @col_4_W;}
-	.col-xs-5	{width: @col_5_W;}
-	.col-xs-6	{width: @col_6_W;}
-	.col-xs-7	{width: @col_7_W;}
-	.col-xs-8	{width: @col_8_W;}
-	.col-xs-9	{width: @col_9_W;}
-	.col-xs-10	{width: @col_10_W;}
-	.col-xs-11	{width: @col_11_W;}
-	.col-xs-12	{width: @col_12_W;}
+	.col-xs-1	{width: @col_1_W;	&:before when (@debug = true){.col-dbg();content:"col-xs-1";}}
+	.col-xs-2	{width: @col_2_W;	&:before when (@debug = true){.col-dbg();content:"col-xs-2";}}
+	.col-xs-3	{width: @col_3_W;	&:before when (@debug = true){.col-dbg();content:"col-xs-3";}}
+	.col-xs-4	{width: @col_4_W;	&:before when (@debug = true){.col-dbg();content:"col-xs-4";}}
+	.col-xs-5	{width: @col_5_W;	&:before when (@debug = true){.col-dbg();content:"col-xs-5";}}
+	.col-xs-6	{width: @col_6_W;	&:before when (@debug = true){.col-dbg();content:"col-xs-6";}}
+	.col-xs-7	{width: @col_7_W;	&:before when (@debug = true){.col-dbg();content:"col-xs-7";}}
+	.col-xs-8	{width: @col_8_W;	&:before when (@debug = true){.col-dbg();content:"col-xs-8";}}
+	.col-xs-9	{width: @col_9_W;	&:before when (@debug = true){.col-dbg();content:"col-xs-9";}}
+	.col-xs-10	{width: @col_10_W;	&:before when (@debug = true){.col-dbg();content:"col-xs-10";}}
+	.col-xs-11	{width: @col_11_W;	&:before when (@debug = true){.col-dbg();content:"col-xs-11";}}
+	.col-xs-12	{width: @col_12_W;	&:before when (@debug = true){.col-dbg();content:"col-xs-12";}}
 
 	/* PERCENTAGE COLS */
-	.col-xs-10p	{width: 10%;}
-	.col-xs-20p	{width: 20%;}
-	.col-xs-30p	{width: 30%;}
-	.col-xs-40p	{width: 40%;}
-	.col-xs-50p	{width: 50%;}
-	.col-xs-60p	{width: 60%;}
-	.col-xs-70p	{width: 70%;}
-	.col-xs-80p	{width: 80%;}
-	.col-xs-90p	{width: 90%;}
-	.col-xs-100p	{width: 100%;}
+	.col-xs-10p	{width: 10%;	&:before when (@debug = true){.col-dbg();content:"col-xs-10p";}}
+	.col-xs-20p	{width: 20%;	&:before when (@debug = true){.col-dbg();content:"col-xs-20p";}}
+	.col-xs-30p	{width: 30%;	&:before when (@debug = true){.col-dbg();content:"col-xs-30p";}}
+	.col-xs-40p	{width: 40%;	&:before when (@debug = true){.col-dbg();content:"col-xs-40p";}}
+	.col-xs-50p	{width: 50%;	&:before when (@debug = true){.col-dbg();content:"col-xs-50p";}}
+	.col-xs-60p	{width: 60%;	&:before when (@debug = true){.col-dbg();content:"col-xs-60p";}}
+	.col-xs-70p	{width: 70%;	&:before when (@debug = true){.col-dbg();content:"col-xs-70p";}}
+	.col-xs-80p	{width: 80%;	&:before when (@debug = true){.col-dbg();content:"col-xs-80p";}}
+	.col-xs-90p	{width: 90%;	&:before when (@debug = true){.col-dbg();content:"col-xs-90p";}}
+	.col-xs-100p{width: 100%;	&:before when (@debug = true){.col-dbg();content:"col-xs-100p";}}
 
 	/* EXTRA COLS */
-	.col-xs-5th		{width: 20%;}
-	.col-xs-7th 	{width: 14.28%;}
-	.col-xs-8th 	{width: 12.5%;}
-	.col-xs-9th 	{width: 11.1%;}
-	.col-xs-10th 	{width: 10%;}
-	.col-xs-11th 	{width: 9.09%;}
+	.col-xs-5th		{width: 20%;	&:before when (@debug = true){.col-dbg();content:"col-xs-5th";}}
+	.col-xs-7th 	{width: 14.28%;	&:before when (@debug = true){.col-dbg();content:"col-xs-7th";}}
+	.col-xs-8th 	{width: 12.5%;	&:before when (@debug = true){.col-dbg();content:"col-xs-8th";}}
+	.col-xs-9th 	{width: 11.1%;	&:before when (@debug = true){.col-dbg();content:"col-xs-9th";}}
+	.col-xs-10th 	{width: 10%;	&:before when (@debug = true){.col-dbg();content:"col-xs-10th";}}
+	.col-xs-11th 	{width: 9.09%;	&:before when (@debug = true){.col-dbg();content:"col-xs-11th";}}
 
 	/* MARGIN LEFT */
 	.ml-xs-1	{margin-left: @tbl_1_W;}
