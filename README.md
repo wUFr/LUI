@@ -44,7 +44,7 @@ online demo/documentation: http://lui.demo.wufr.net/
 - ... i dont even know, who can predict future
 
 
-**Suported/tested browsers:**
+**Supported/tested browsers:**
 
 IE10+, Google Chrome 49, Firefox 45, Opera 35, Safari 8 (OSX version), Yandex 14.12
 
