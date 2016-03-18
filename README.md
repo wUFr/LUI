@@ -42,3 +42,9 @@ online demo/documentation: http://lui.demo.wufr.net/
 - even more mixins
 - even more UI elements (popups, list, menus.. ALL RESPONSIVE)
 - ... i dont even know, who can predict future
+
+
+**Suported/tested browsers:**
+
+IE10+, Google Chrome 49, Firefox 45, Opera 35, Safari 8 (OSX version), Yandex 14.12
+
