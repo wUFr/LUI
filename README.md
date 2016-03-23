@@ -1,5 +1,7 @@
 # LUI - Less UI
-Less UI repo - responsive UI elements and mixins collection
+LUI or "Less UI" is front-end framework made to make your coding easier. If you dont need all the stuff around you can just use our grid and mixins. Other UI stuff like forms/tables will be as "extra" package in the future
+
+####Website on way. All documentation will be there instead of this git repo, this repo will contain just stuff you need
 
 This repo cointains basic UI elements that most websites need. 
 From stuff like error messages all the way to responsive forms and tables. If you like your own UI stuff, you can just use mixin collection to make your life easier :)
