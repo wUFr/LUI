@@ -71,29 +71,29 @@
 	- mixins are part of CORE, they are used across whole framework
 	- You dont need to remove them to save CSS size, they wont be in compiled CSS unless they are used somewhere
 */
-@import "/lui/less/mixins/mixin.clear.less";
-@import "/lui/less/mixins/mixin.gradient.less";
-@import "/lui/less/mixins/mixin.filter.less";
-@import "/lui/less/mixins/mixin.border-radius.less";
-@import "/lui/less/mixins/mixin.box-sizing.less";
-@import "/lui/less/mixins/mixin.user-select.less";
-@import "/lui/less/mixins/mixin.animation.less";
-@import "/lui/less/mixins/mixin.transform.less";
-@import "/lui/less/mixins/mixin.transition.less";
-@import "/lui/less/mixins/mixin.flexbox.less";
+@import "mixins/mixin.clear.less";
+@import "mixins/mixin.gradient.less";
+@import "mixins/mixin.filter.less";
+@import "mixins/mixin.border-radius.less";
+@import "mixins/mixin.box-sizing.less";
+@import "mixins/mixin.user-select.less";
+@import "mixins/mixin.animation.less";
+@import "mixins/mixin.transform.less";
+@import "mixins/mixin.transition.less";
+@import "mixins/mixin.flexbox.less";
 
 
 /*
 	BASIC CSS RESET TO GET RID OF SOME STUFF	
 */
-@import "/lui/less/reset.less";
+@import "reset.less";
 
 
 /*
 	FONT AWESOME IS ICON FONT, AND ITS AWESOME!
 	- used as button's icons and more	
 */
-@import "/lui/less/ui/ui.fontawesome.less"; // must stay as first UI component
+@import "ui/ui.fontawesome.less"; // must stay as first UI component
 
 
 /*
@@ -101,7 +101,7 @@
 	- this is CORE of LUI
 	- some UI elements may work without it, but whole framework is based on it	
 */
-@import "/lui/less/ui/ui.grid.less";
+@import "ui/ui.grid.less";
 
 /*
 	BUTTON
@@ -116,13 +116,13 @@
 @btn_color_delete:		#e60d0d;
 @btn_color_dark:		#373737;
 @btn_mobile_height:		42px;
-@import "/lui/less/ui/ui.button.less";
+@import "ui/ui.button.less";
 
 /*
 	FORMS
 	- default styles for forms
 */
-@import "/lui/less/ui/ui.form.less";
+@import "ui/ui.form.less";
 
 /*
 	PAGEBAR
@@ -130,17 +130,17 @@
 */
 @pgb_default_bg:	#f2f2f2; // LIGHT VERSION
 @pgb_dark_bg:		#515a5e; // DARK VERSION
-@import "/lui/less/ui/ui.pagebar.less";
+@import "ui/ui.pagebar.less";
 
 /*
 	RESPONSIVE TABLE
 	- for "lists" of data, mobile friendly
 */
-@import "/lui/less/ui/ui.table.less";
+@import "ui/ui.table.less";
 
 /*
 	BOX
 	- simple box for your content, which you can close or open
 */
 @box_default:	#34aaed;
-@import "/lui/less/ui/ui.box.less";
+@import "ui/ui.box.less";
