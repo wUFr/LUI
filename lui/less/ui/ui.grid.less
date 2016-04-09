@@ -96,6 +96,18 @@ Use loops to generate grid and debug stuff
 	@media (min-width:@grid_2k_start){
 		width: @cnt_2k_w;
 	}
+	
+	/* TODO:
+	apply width: auto and max-width only on XS/SM/.. and higher resolutions
+	- MAX-WIDTH works tho, but better to be 100% sure :D
+	*/
+	&.max_xs {max-width: @cnt_xs_w;}
+	&.max_sm {max-width: @cnt_sm_w;}
+	&.max_md {max-width: @cnt_md_w;}
+	&.max_lg {max-width: @cnt_lg_w;}
+	&.max_xl {max-width: @cnt_xl_w;}
+	&.max_hd {max-width: @cnt_hd_w;}
+	&.max_2k {max-width: @cnt_2k_w;}
 
 	&.fluid {
 		width: 100%;
@@ -130,14 +142,15 @@ Use loops to generate grid and debug stuff
 	}
 
 	&.va-bottom {
-		.lui.flexbox.align-content(flex-start);
+		.lui.flexbox.align-content(flex-end);
 		.lui.flexbox.align-items(flex-end);
 	}
 
 	&.va-middle,
 	&.va-center {
-		.lui.flexbox.align-content(flex-start);
+		.lui.flexbox.align-content(center);
 		.lui.flexbox.align-items(center);
+		
 	}
 
 	&.a-left {
@@ -154,6 +167,10 @@ Use loops to generate grid and debug stuff
 	&.a-center {
 		.lui.flexbox.justify-content(center);
 		.lui.flexbox.align-content(flex-start);
+	}
+	
+	&.fill {
+		.lui.flexbox.justify-content(space-between);
 	}
 }
 
@@ -253,83 +270,83 @@ Use loops to generate grid and debug stuff
 }
 
 /* XS - OVERWRITED BY BIGGER SCREENS */
-@media (max-width:@grid_xs_end){
-	.col-xs-1	{width: @col_1_W;	.col-debug("col-xs-1")}
-	.col-xs-2	{width: @col_2_W;	.col-debug("col-xs-2")}
-	.col-xs-3	{width: @col_3_W;	.col-debug("col-xs-3")}
-	.col-xs-4	{width: @col_4_W;	.col-debug("col-xs-4")}
-	.col-xs-5	{width: @col_5_W;	.col-debug("col-xs-5")}
-	.col-xs-6	{width: @col_6_W;	.col-debug("col-xs-6")}
-	.col-xs-7	{width: @col_7_W;	.col-debug("col-xs-7")}
-	.col-xs-8	{width: @col_8_W;	.col-debug("col-xs-8")}
-	.col-xs-9	{width: @col_9_W;	.col-debug("col-xs-9")}
-	.col-xs-10	{width: @col_10_W;	.col-debug("col-xs-10")}
-	.col-xs-11	{width: @col_11_W;	.col-debug("col-xs-11")}
-	.col-xs-12	{width: @col_12_W;	.col-debug("col-xs-12")}
+
+.col-xs-1	{width: @col_1_W;	.col-debug("col-xs-1")}
+.col-xs-2	{width: @col_2_W;	.col-debug("col-xs-2")}
+.col-xs-3	{width: @col_3_W;	.col-debug("col-xs-3")}
+.col-xs-4	{width: @col_4_W;	.col-debug("col-xs-4")}
+.col-xs-5	{width: @col_5_W;	.col-debug("col-xs-5")}
+.col-xs-6	{width: @col_6_W;	.col-debug("col-xs-6")}
+.col-xs-7	{width: @col_7_W;	.col-debug("col-xs-7")}
+.col-xs-8	{width: @col_8_W;	.col-debug("col-xs-8")}
+.col-xs-9	{width: @col_9_W;	.col-debug("col-xs-9")}
+.col-xs-10	{width: @col_10_W;	.col-debug("col-xs-10")}
+.col-xs-11	{width: @col_11_W;	.col-debug("col-xs-11")}
+.col-xs-12	{width: @col_12_W;	.col-debug("col-xs-12")}
 
 
-	/* PERCENTAGE COLS */
-	.col-xs-10p	{width: 10%;	.col-debug("col-xs-10p")}
-	.col-xs-20p	{width: 20%;	.col-debug("col-xs-20p")}
-	.col-xs-30p	{width: 30%;	.col-debug("col-xs-30p")}
-	.col-xs-40p	{width: 40%;	.col-debug("col-xs-40p")}
-	.col-xs-50p	{width: 50%;	.col-debug("col-xs-50p")}
-	.col-xs-60p	{width: 60%;	.col-debug("col-xs-60p")}
-	.col-xs-70p	{width: 70%;	.col-debug("col-xs-70p")}
-	.col-xs-80p	{width: 80%;	.col-debug("col-xs-80p")}
-	.col-xs-90p	{width: 90%;	.col-debug("col-xs-90p")}
-	.col-xs-100p{width: 100%;	.col-debug("col-xs-100p")}
+/* PERCENTAGE COLS */
+.col-xs-10p	{width: 10%;	.col-debug("col-xs-10p")}
+.col-xs-20p	{width: 20%;	.col-debug("col-xs-20p")}
+.col-xs-30p	{width: 30%;	.col-debug("col-xs-30p")}
+.col-xs-40p	{width: 40%;	.col-debug("col-xs-40p")}
+.col-xs-50p	{width: 50%;	.col-debug("col-xs-50p")}
+.col-xs-60p	{width: 60%;	.col-debug("col-xs-60p")}
+.col-xs-70p	{width: 70%;	.col-debug("col-xs-70p")}
+.col-xs-80p	{width: 80%;	.col-debug("col-xs-80p")}
+.col-xs-90p	{width: 90%;	.col-debug("col-xs-90p")}
+.col-xs-100p{width: 100%;	.col-debug("col-xs-100p")}
 
-	/* EXTRA COLS */
-	.col-xs-5th		{width: 20%;	.col-debug("col-xs-5th")}
-	.col-xs-7th 	{width: 14.28%;	.col-debug("col-xs-7th")}
-	.col-xs-8th 	{width: 12.5%;	.col-debug("col-xs-8th")}
-	.col-xs-9th 	{width: 11.1%;	.col-debug("col-xs-9th")}
-	.col-xs-10th 	{width: 10%;	.col-debug("col-xs-10th")}
-	.col-xs-11th 	{width: 9.09%;	.col-debug("col-xs-11th")}
+/* EXTRA COLS */
+.col-xs-5th		{width: 20%;	.col-debug("col-xs-5th")}
+.col-xs-7th 	{width: 14.28%;	.col-debug("col-xs-7th")}
+.col-xs-8th 	{width: 12.5%;	.col-debug("col-xs-8th")}
+.col-xs-9th 	{width: 11.1%;	.col-debug("col-xs-9th")}
+.col-xs-10th 	{width: 10%;	.col-debug("col-xs-10th")}
+.col-xs-11th 	{width: 9.09%;	.col-debug("col-xs-11th")}
 
-	/* MARGIN LEFT */
-	.ml-xs-1	{margin-left: @tbl_1_W;}
-	.ml-xs-2	{margin-left: @tbl_2_W;}
-	.ml-xs-3	{margin-left: @tbl_3_W;}
-	.ml-xs-4	{margin-left: @tbl_4_W;}
-	.ml-xs-5	{margin-left: @tbl_5_W;}
-	.ml-xs-6	{margin-left: @tbl_6_W;}
-	.ml-xs-7	{margin-left: @tbl_7_W;}
-	.ml-xs-8	{margin-left: @tbl_8_W;}
-	.ml-xs-9	{margin-left: @tbl_9_W;}
-	.ml-xs-10	{margin-left: @tbl_10_W;}
-	.ml-xs-11	{margin-left: @tbl_11_W;}
-	.ml-xs-12	{margin-left: @tbl_12_W;}
+/* MARGIN LEFT */
+.ml-xs-1	{margin-left: @tbl_1_W;}
+.ml-xs-2	{margin-left: @tbl_2_W;}
+.ml-xs-3	{margin-left: @tbl_3_W;}
+.ml-xs-4	{margin-left: @tbl_4_W;}
+.ml-xs-5	{margin-left: @tbl_5_W;}
+.ml-xs-6	{margin-left: @tbl_6_W;}
+.ml-xs-7	{margin-left: @tbl_7_W;}
+.ml-xs-8	{margin-left: @tbl_8_W;}
+.ml-xs-9	{margin-left: @tbl_9_W;}
+.ml-xs-10	{margin-left: @tbl_10_W;}
+.ml-xs-11	{margin-left: @tbl_11_W;}
+.ml-xs-12	{margin-left: @tbl_12_W;}
 
-	/* MARGIN RIGHT */
-	.mr-xs-1	{margin-right: @tbr_1_W;}
-	.mr-xs-2	{margin-right: @tbr_2_W;}
-	.mr-xs-3	{margin-right: @tbr_3_W;}
-	.mr-xs-4	{margin-right: @tbr_4_W;}
-	.mr-xs-5	{margin-right: @tbr_5_W;}
-	.mr-xs-6	{margin-right: @tbr_6_W;}
-	.mr-xs-7	{margin-right: @tbr_7_W;}
-	.mr-xs-8	{margin-right: @tbr_8_W;}
-	.mr-xs-9	{margin-right: @tbr_9_W;}
-	.mr-xs-10	{margin-right: @tbr_10_W;}
-	.mr-xs-11	{margin-right: @tbr_11_W;}
-	.mr-xs-12	{margin-right: @tbr_12_W;}
-	
-	/* ORDER */
-	.o-xs-1 	{order:1;}
-	.o-xs-2 	{order:2;}
-	.o-xs-3 	{order:3;}
-	.o-xs-4 	{order:4;}
-	.o-xs-5 	{order:5;}
-	.o-xs-6 	{order:6;}
-	.o-xs-7 	{order:7;}
-	.o-xs-8		{order:8;}
-	.o-xs-9 	{order:9;}
-	.o-xs-10 	{order:10;}
-	.o-xs-11 	{order:11;}
-	.o-xs-12 	{order:12;}
-}
+/* MARGIN RIGHT */
+.mr-xs-1	{margin-right: @tbr_1_W;}
+.mr-xs-2	{margin-right: @tbr_2_W;}
+.mr-xs-3	{margin-right: @tbr_3_W;}
+.mr-xs-4	{margin-right: @tbr_4_W;}
+.mr-xs-5	{margin-right: @tbr_5_W;}
+.mr-xs-6	{margin-right: @tbr_6_W;}
+.mr-xs-7	{margin-right: @tbr_7_W;}
+.mr-xs-8	{margin-right: @tbr_8_W;}
+.mr-xs-9	{margin-right: @tbr_9_W;}
+.mr-xs-10	{margin-right: @tbr_10_W;}
+.mr-xs-11	{margin-right: @tbr_11_W;}
+.mr-xs-12	{margin-right: @tbr_12_W;}
+
+/* ORDER */
+.o-xs-1 	{order:1;}
+.o-xs-2 	{order:2;}
+.o-xs-3 	{order:3;}
+.o-xs-4 	{order:4;}
+.o-xs-5 	{order:5;}
+.o-xs-6 	{order:6;}
+.o-xs-7 	{order:7;}
+.o-xs-8		{order:8;}
+.o-xs-9 	{order:9;}
+.o-xs-10 	{order:10;}
+.o-xs-11 	{order:11;}
+.o-xs-12 	{order:12;}
+
 
 /* GRID SM */
 @media (min-width:@grid_sm_start){
