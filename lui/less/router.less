@@ -1,76 +1,8 @@
 
-/*
-	DEBUG MODE
-	Will enable some debug features:
-	- Visible actual col-width used, aka "col-xs-12" on phones (since you cant really open console on phone and look)
-*/
-@debug: false;
+//  LUI CONFIGURATION
+@import "config.less";
 
-
-/*
-	TURN ON/OFF RESPONSIVE
-	- This will disable or enable responsive UI elements
-	- FEATURE STILL WORK IN PROGRES - MAY NOT WORK ON EVERYTHING
-*/
-@responsive: true;
-
-
-/*
-	UI MESSAGES
-	- just basic status messages and their colors
-*/
-@default_ui_message_confirm_bg:		#cdf6bf;
-@default_ui_message_confirm_color:	#11420e;
-@default_ui_message_error_bg:		#f6bfbf;
-@default_ui_message_error_color:	#420e0e;
-@default_ui_message_warning_bg:		#f6e6bf;
-@default_ui_message_warning_color:	#42360e;
-@default_ui_message_info_bg:		#bfe6f6;
-@default_ui_message_info_color:		#0e3542;
-@default_ui_form_required_color:	#AE0000;
-
-
-/*
-	GLOBAL STATUS COLORS	
-*/
-@color_confirm:	#45bd0a;
-@color_info:	#34aaed;
-@color_edit:	#ee8e04;
-@color_delete:	#e60d0d;
-
-
-/*
-	COLS MIN/MAX WIDTHS
-	- what is used and when
-*/
-@grid_xs_start: 0;
-@grid_xs_end: 	500px;
-
-@grid_sm_start: 501px;
-@grid_sm_end: 	767px;
-
-@grid_md_start: 768px;
-@grid_md_end: 	991px;
-
-@grid_lg_start: 992px;
-@grid_lg_end: 	1199px;
-
-@grid_xl_start: 1200px;
-@grid_xl_end: 	1499px;
-
-@grid_hd_start: 1500px;
-@grid_hd_end: 	1999px;
-
-@grid_2k_start: 2000px;
-@grid_2k_end: 	9999px; /* LETS CALL THIS INFINITE */
-
-
-/*
-	MIXINS
-	- must be included BEFORE everything else
-	- mixins are part of CORE, they are used across whole framework
-	- You dont need to remove them to save CSS size, they wont be in compiled CSS unless they are used somewhere
-*/
+//  MIXINS, MIXINS EVERYWHERE
 @import "mixins/mixin.clear.less";
 @import "mixins/mixin.gradient.less";
 @import "mixins/mixin.filter.less";
@@ -82,65 +14,32 @@
 @import "mixins/mixin.transition.less";
 @import "mixins/mixin.flexbox.less";
 
-
-/*
-	BASIC CSS RESET TO GET RID OF SOME STUFF	
-*/
+//	BASIC CSS RESET
 @import "reset.less";
 
+//	FONT AWESOME is awesome font full of icons!
+//  should be always included
+@import "ui/ui.fontawesome.less";
 
-/*
-	FONT AWESOME IS ICON FONT, AND ITS AWESOME!
-	- used as button's icons and more	
-*/
-@import "ui/ui.fontawesome.less"; // must stay as first UI component
-
-
-/*
-	GRID LAYOUT
-	- this is CORE of LUI
-	- some UI elements may work without it, but whole framework is based on it	
-*/
+//	GRID LAYOUT
+//	the most awesome and responsive grid layout
 @import "ui/ui.grid.less";
 
-/*
-	BUTTON
-	- just some buttons
-	- using FontAwesome icons
-*/
-// DEFAULT BACKGROUND COLORS
-@btn_color_default:		silver;
-@btn_color_confirm:		#45bd0a;
-@btn_color_info:		#34aaed;
-@btn_color_edit:		#ee8e04;
-@btn_color_delete:		#e60d0d;
-@btn_color_dark:		#373737;
-@btn_mobile_height:		42px;
+//	BUTTONS
+//	simple buttons compatible with FontAwesome icons
 @import "ui/ui.button.less";
 
-/*
-	FORMS
-	- default styles for forms
-*/
+//	FORMS
 @import "ui/ui.form.less";
 
-/*
-	PAGEBAR
-	- mobile friendly pagebar	
-*/
-@pgb_default_bg:	#f2f2f2; // LIGHT VERSION
-@pgb_dark_bg:		#515a5e; // DARK VERSION
+//	PAGEBAR
+//	- mobile friendly pagebar
 @import "ui/ui.pagebar.less";
 
-/*
-	RESPONSIVE TABLE
-	- for "lists" of data, mobile friendly
-*/
+//	RESPONSIVE TABLE
+//	for "lists" of data, mobile friendly
 @import "ui/ui.table.less";
 
-/*
-	BOX
-	- simple box for your content, which you can close or open
-*/
-@box_default:	#34aaed;
+//	BOX
+//	simple box for your content, which you can close or open
 @import "ui/ui.box.less";
