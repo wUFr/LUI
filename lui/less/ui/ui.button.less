@@ -29,6 +29,16 @@ BUTTON
 		font-size: 12px;
 	}
 	
+	&.a-left {
+		text-align: left;
+	}
+	&.a-right {
+		text-align: right;
+	}
+	&.a-center {
+		text-align: center;
+	}
+	
 	@media (max-width:@grid_sm_end){
 		&.mobile_big when (@responsive = true){
 			display: block;
@@ -37,6 +47,7 @@ BUTTON
 			height: @btn_mobile_height;
 			padding: 0 15px;
 			font-size: 15px;
+			text-align: center;
 		}
 	}
 
@@ -47,18 +58,42 @@ BUTTON
 
 	&[class*="fa_b_"] {
 		padding-left: 45px;
+		
+		@media (max-width:@grid_sm_end){
+			&.mobile_big when (@responsive = true){
+				padding-right: 45px;
+			}
+		}
 	}
 
 	&[class*="fa_b_"].small {
 		padding-left: 40px;
+		
+		@media (max-width:@grid_sm_end){
+			&.mobile_big when (@responsive = true){
+				padding-right: 40px;
+			}
+		}
 	}
 
 	&[class*="fa_a_"] {
 		padding-right: 45px;
+
+		@media (max-width:@grid_sm_end){
+			&.mobile_big when (@responsive = true){
+				padding-left: 45px;
+			}
+		}
 	}
 
 	&[class*="fa_a_"].small {
 		padding-right: 40px;
+
+		@media (max-width:@grid_sm_end){
+			&.mobile_big when (@responsive = true){
+				padding-left: 40px;
+			}
+		}
 	}
 
 	&.info {
@@ -111,6 +146,8 @@ BUTTON
 			background: darken(@btn_color_dark,10%);
 		}
 	}
+	
+	
 
 	&.inactive {
 		opacity: 0.5;
