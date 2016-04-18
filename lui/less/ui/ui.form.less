@@ -82,9 +82,30 @@ FORMS
 
 		div.info {
 			padding: 11px 15px;
+			margin: -5px 0;
 			font-size: 12px;
 			color: gray;
 			padding-left: 0;
+			
+			&.error {
+				color: @color_delete;
+			}
+			
+			&.confirm {
+				color: @color_confirm;
+			}
+			
+			&.warning {
+				color: @color_edit;
+			}
+			
+			&:before {
+				padding-right: 7px;
+			}
+			
+			&:after {
+				padding-left: 7px;
+			}
 
 			@media (max-width:@grid_xs_end){
 				&.col-xs-12 {
