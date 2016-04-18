@@ -1,4 +1,6 @@
 # Implementation
 
-All core settings are in file **/lui/less/router.less** this file should be also included in your project before your own styles.
+include **router.less** before your project styles, customize what you need in **config.less** and you're ready!
+
+**DOES NOT CONTAIN PRE-COMPILED STYLES**
 
