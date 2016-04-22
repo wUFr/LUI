@@ -273,6 +273,16 @@ FORMS
 					color: black;
 					border-color: #c0c0c0;
 				}
+				
+				&[disabled],
+				&[readonly]{
+					background:#f7f7f7;
+					color: #5a5a5a;
+
+					&:focus {
+						color: #5a5a5a;
+					}
+				}
 			}
 		}
 	}

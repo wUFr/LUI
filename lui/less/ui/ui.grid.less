@@ -70,6 +70,10 @@
 	margin: 0 auto;
 	padding: 0 @spacing_container;
 	
+	&.nospace {
+		padding: 0;
+	}
+	
 	/* XS IS NOT SPECIFIED CUZ CONTAINER IS 100% - DEFAULT VALUE */
 	
 	@media (min-width:@grid_sm_start){
@@ -111,6 +115,8 @@
 	&.fluid {
 		width: 100%;
 	}
+	
+	
 }
 
 .container-fluid,
