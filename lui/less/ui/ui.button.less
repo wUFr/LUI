@@ -52,7 +52,7 @@ BUTTON
 	}
 
 	&:hover,
-	&:before {
+	&:not(.noicon):before {
 		background: darken(@btn_color_default,10%);
 	}
 
@@ -100,8 +100,8 @@ BUTTON
 		background: @btn_color_info;
 
 		&:not(.inactive):hover,
-		&:before,
-		&:after {
+		&:not(.noicon):before,
+		&:not(.noicon):after {
 			background: darken(@btn_color_info,10%);
 		}
 	}
@@ -110,8 +110,8 @@ BUTTON
 		background: @btn_color_confirm;
 
 		&:not(.inactive):hover,
-		&:before,
-		&:after {
+		&:not(.noicon):before,
+		&:not(.noicon):after {
 			background: darken(@btn_color_confirm,10%);
 		}
 	}
@@ -121,8 +121,8 @@ BUTTON
 		background: @btn_color_edit;
 
 		&:not(.inactive):hover,
-		&:before,
-		&:after {
+		&:not(.noicon):before,
+		&:not(.noicon):after {
 			background: darken(@btn_color_edit,10%);
 		}
 	}
@@ -131,8 +131,8 @@ BUTTON
 		background: @btn_color_delete;
 
 		&:not(.inactive):hover,
-		&:before,
-		&:after {
+		&:not(.noicon):before,
+		&:not(.noicon):after {
 			background: darken(@btn_color_delete,10%);
 		}
 	}
@@ -141,8 +141,8 @@ BUTTON
 		background: @btn_color_dark;
 
 		&:not(.inactive):hover,
-		&:before,
-		&:after {
+		&:not(.noicon):before,
+		&:not(.noicon):after {
 			background: darken(@btn_color_dark,10%);
 		}
 	}
@@ -156,7 +156,7 @@ BUTTON
 		pointer-events: none;
 	}
 
-	&:before {
+	&:not(.noicon):before {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -168,19 +168,19 @@ BUTTON
 		font-family: FontAwesome;
 	}
 
-	&.small:before {
+	&:not(.noicon).small:before {
 		line-height: 25px;
 		font-size: 10px;
 	}
 
 	@media (max-width:@grid_sm_end){
-		&.mobile_big:before when (@responsive = true){
+		&:not(.noicon).mobile_big:before when (@responsive = true){
 			height: @btn_mobile_height;
 			line-height: @btn_mobile_height;
 		}
 	}
 
-	&:after {
+	&:not(.noicon):after {
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -192,13 +192,13 @@ BUTTON
 		font-family: FontAwesome;
 	}
 
-	&.small:after {
+	&:not(.noicon).small:after {
 		line-height: 25px;
 		font-size: 10px;
 	}
 
 	@media (max-width:@grid_sm_end){
-		&.mobile_big:after when (@responsive = true){
+		&:not(.noicon).mobile_big:after when (@responsive = true){
 			height: @btn_mobile_height;
 			line-height: @btn_mobile_height;
 		}
