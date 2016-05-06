@@ -1,0 +1,10 @@
+{
+    "name": "wurf/lui",
+    "description": "Front-end development framework",
+    "type": "library",
+    "keywords": ["less", "ui", "framework"],
+    "homepage": "https://github.com/wUFr/LUI",
+    "support": {
+        "source": "https://github.com/wUFr/LUI"
+    }
+}
