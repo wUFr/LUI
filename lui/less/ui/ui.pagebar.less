@@ -1,19 +1,11 @@
-/*
-
-PAGEBAR
-
-TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
-
-*/
-
-
+// 
+// PAGEBAR
+//
 
 .lui_pagebar {
 	.lui.box-sizing.border-box();
-	
 	.lui.clear.before();
 	.lui.clear.after();
-
 	.lui.flexbox.block();
 	.lui.flexbox.flex-direction(row);
 	.lui.flexbox.flex-wrap(wrap);
@@ -21,7 +13,6 @@ TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
 	list-style: none; // IN CASE OF UL
 	font-size: 14px;
 	line-height: 14px;
-
 
 	&.va-top {
 		.lui.flexbox.align-content(flex-start);
@@ -54,7 +45,7 @@ TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
 		.lui.flexbox.justify-content(center);
 		.lui.flexbox.align-content(flex-start);
 	}
-	
+
 	@media (max-width:@grid_sm_end){
 		& when (@responsive = true){ 
 			.lui.flexbox.justify-content(~"space-between !important");
@@ -107,29 +98,29 @@ TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
 			background: @pgb_default_bg;
 			border-radius: 5px;
 		}
-		
+
 		&.input {
 			background: none;
 			border-radius: 5px;
 			height: 34px;
 			line-height: 14px;
 			padding: 10px 15px 10px 10px;
-			
+
 			@media (max-width:@grid_sm_end){
 				& when (@responsive = true){ 
 					padding: 10px 15px 10px 0;
 				}
 			}
-			
+
 			label {
 				margin-right: 14px;
 				padding-right: 14px;
 			}
-			
+
 			input {
+				.lui.box-sizing.border-box();
 				display: block;
 				float: right;
-				.lui.box-sizing.border-box();
 				width: 60px;
 				height: 34px;
 				border: 1px solid darken(@pgb_default_bg, 10%);
@@ -140,14 +131,12 @@ TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
 				outline: none;
 				border-radius: 5px;
 				box-shadow: inset 1px 1px 3px rgba(0,0,0,0.07);
-				
-				
+
 				&:focus {
 					border: 1px solid darken(@pgb_default_bg, 30%);
 					color: black;
 				}
 			}
-
 		}
 
 		&:not(.inactive) > a {
@@ -161,8 +150,6 @@ TODO: USE FLEXBOX TO ALIGN NUMBERS (PAGES)
 		&.inactive > a {
 			cursor: default;
 		}
-		
-		
 	}
 
 	&.dark > * {

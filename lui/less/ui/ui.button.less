@@ -1,8 +1,6 @@
-/*
-
-BUTTON
-
-*/
+//
+// BUTTON
+//
 
 .lui_button {
 	.lui.box-sizing.border-box();
@@ -146,8 +144,6 @@ BUTTON
 			background: darken(@btn_color_dark,10%);
 		}
 	}
-	
-	
 
 	&.inactive {
 		opacity: 0.5;
@@ -156,6 +152,7 @@ BUTTON
 		pointer-events: none;
 	}
 
+	// IF WANT TO USE :BEFORE/:AFTER FOR SOMETHING ELSE THAN FONTAWESOME ICON
 	&:not(.noicon):before {
 		position: absolute;
 		top: 0;

@@ -1,8 +1,6 @@
-/*
-
-FORMS
-
-*/
+//
+// FORMS
+//
 
 .lui_form {
 	hr {
@@ -27,57 +25,55 @@ FORMS
 				content:" *";
 			}
 		}
-		
+
 		div {
 			
 			.make.block-label {
 				text-align: left;
 				padding: 7px 0;
 			}
-			
-			
+
 			@media (max-width:@grid_2k_end){
 				.label.k2-block {
 					.make.block-label();
 				}
 			}
-			
+
 			@media (max-width:@grid_hd_end){
 				.label.hd-block {
 					.make.block-label();
 				}
 			}
-			
+
 			@media (max-width:@grid_xl_end){
 				.label.xl-block {
 					.make.block-label();
 				}
 			}
-			
+
 			@media (max-width:@grid_lg_end){
 				.label.lg-block {
 					.make.block-label();
 				}
 			}
-	
+
 			@media (max-width:@grid_md_end){
 				.label.md-block {
 					.make.block-label();
 				}
 			}
-			
+
 			@media (max-width:@grid_sm_end){
 				.label.sm-block {
 					.make.block-label();
 				}
 			}
-			
+
 			@media (max-width:@grid_xs_end){
 				.label.xs-block {
 					.make.block-label();
 				}
 			}
-			
 		}
 
 		div.info {
@@ -86,23 +82,23 @@ FORMS
 			font-size: 12px;
 			color: gray;
 			padding-left: 0;
-			
+
 			&.error {
 				color: @color_delete;
 			}
-			
+
 			&.confirm {
 				color: @color_confirm;
 			}
-			
+
 			&.warning {
 				color: @color_edit;
 			}
-			
+
 			&:before {
 				padding-right: 7px;
 			}
-			
+
 			&:after {
 				padding-left: 7px;
 			}
@@ -113,36 +109,42 @@ FORMS
 					padding-top: 4px;
 				}
 			}
+
 			@media (min-width:@grid_sm_start){
 				&.col-sm-12 {
 					padding-left: 15px;
 					padding-top: 4px;
 				}
 			}
+
 			@media (min-width:@grid_md_start){
 				&.col-md-12 {
 					padding-left: 15px;
 					padding-top: 4px;
 				}
 			}
+
 			@media (min-width:@grid_lg_start){
 				&.col-lg-12 {
 					padding-left: 15px;
 					padding-top: 4px;
 				}
 			}
+
 			@media (min-width:@grid_xl_start){
 				&.col-xl-12 {
 					padding-left: 15px;
 					padding-top: 4px;
 				}
 			}
+
 			@media (min-width:@grid_hd_start){
 				&.col-hd-12 {
 					padding-left: 15px;
 					padding-top: 4px;
 				}
 			}
+
 			@media (min-width:@grid_2k_start){
 				&.col-2k-12 {
 					padding-left: 15px;
@@ -273,7 +275,7 @@ FORMS
 					color: black;
 					border-color: #c0c0c0;
 				}
-				
+
 				&[disabled],
 				&[readonly]{
 					background:#f7f7f7;
@@ -288,11 +290,9 @@ FORMS
 	}
 }
 
-/*
-
-UI INPUT RANGE (number from-to)
-
-*/
+//
+// UI INPUT RANGE (number from-to)
+// 
 .lui_input_range {
 	.lui.box-sizing.border-box();
 	position: relative;
@@ -352,11 +352,9 @@ UI INPUT RANGE (number from-to)
 	}
 }
 
-/*
-
-UI CHECKBOX (standalone style - can be used everywhere)
-
-*/
+//
+// UI CHECKBOX (standalone style - can be used everywhere)
+//
 .lui_check {
 	position: relative;
 	display: inline-block;
@@ -376,7 +374,7 @@ UI CHECKBOX (standalone style - can be used everywhere)
 		height: 0;
 	}
 
-	/* SPAN MUST USED AT ALL TIME */
+	// SPAN MUST USED AT ALL TIME
 	span {
 		line-height: 30px;
 		margin-right: 5px;
@@ -454,11 +452,11 @@ UI CHECKBOX (standalone style - can be used everywhere)
 	margin-left: -7px;
 }
 
-/*
 
-UI CHECK LIST
+//
+// UI CHECK LIST
 // if you need more checks in 1 form item
-*/
+//
 .lui_check_list {
 	padding: 8px 0;
 
@@ -477,12 +475,10 @@ UI CHECK LIST
 	}
 }
 
-/*
-
-UI RADIO (standalone style - can be used everywhere)
+//
+// UI RADIO (standalone style - can be used everywhere)
 // basicaly same as lui_checkbox
-
-*/
+//
 .lui_radio {
 	position: relative;
 	display: inline-block;
@@ -502,7 +498,7 @@ UI RADIO (standalone style - can be used everywhere)
 		height: 0;
 	}
 
-	/* SPAN MUST USED AT ALL TIME */
+	// SPAN MUST USED AT ALL TIME
 	span {
 		line-height: 30px;
 		margin-right: 5px;
@@ -580,18 +576,16 @@ UI RADIO (standalone style - can be used everywhere)
 	margin-left: -7px;
 }
 
-/*
-
-UI RADIO LIST
+//
+// UI RADIO LIST
 // if you need more checks in 1 form item
-*/
+//
 .lui_radio_list {
 	padding: 8px 0;
 
 	&.inline {
 		.lui.clear.after();
 		padding: 0 0 8px 0;
-		
 	}
 
 	& > div {
