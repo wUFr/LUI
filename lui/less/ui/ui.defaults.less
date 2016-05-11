@@ -1,0 +1,61 @@
+//
+// GLOBAL DEFAULT STYLE
+//
+
+& when(@style_defaults = true){
+	// FORM ELEMENTS
+	input {
+		.lui.form.input(auto);
+	}
+
+	textarea {
+		.lui.form.textarea(auto);
+	}
+
+	select {
+		.lui.form.select(auto);
+	}
+
+	button {
+		.lui_button();
+	}
+
+	input[type="button"]{
+		.lui_button();
+	}
+
+	input[type="submit"]{
+		.lui_button();
+		.lui_button.confirm();
+	}
+
+	input[type="reset"]{
+		.lui_button();
+		.lui_button.delete();
+	}
+
+	// SPECIAL STYLES FOR COLOR PICKER
+	// TODO: USE JS UI wrapper - color picker is not really supported
+	input[type="color"]{
+		width: 25px;
+		height: 25px;
+		padding: 0px;
+		background: transparent;
+		cursor: pointer;
+		
+		&:disabled {
+			cursor: default;
+		}
+	}
+
+	// SPECIAL STYLES FOR RANGE input
+	// TODO: USE JS UI wrapper - default range looks different per browser + support
+	input[type="range"]{
+		width: 200px;
+		height: auto;
+		padding: 0;
+		border: 0;
+	}
+
+	/*--------------------------------------*/
+}
