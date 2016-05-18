@@ -116,7 +116,14 @@
 
 .container-fluid,
 .container.fluid {
+	.lui.box-sizing.border-box();
 	width: 100%;
+	margin: 0 auto;
+	padding: 0 @spacing_container;
+	
+	&.nospace {
+		padding: 0;
+	}
 
 	&.max_xs {max-width: @cnt_xs_w;}
 	&.max_sm {max-width: @cnt_sm_w;}
