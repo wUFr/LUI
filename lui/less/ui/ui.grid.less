@@ -65,11 +65,15 @@
 .container {
 	.lui.box-sizing.border-box();
 	width: @cnt_xs_w;
-	margin: 0 auto;
-	padding: 0 @spacing_container;
+	
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: @spacing_container;
+	padding-right: @spacing_container;;
 	
 	&.nospace {
-		padding: 0;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	
 	/* XS IS NOT SPECIFIED CUZ CONTAINER IS 100% - DEFAULT VALUE */
@@ -118,11 +122,15 @@
 .container.fluid {
 	.lui.box-sizing.border-box();
 	width: 100%;
-	margin: 0 auto;
-	padding: 0 @spacing_container;
+
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: @spacing_container;
+	padding-right: @spacing_container;;
 	
 	&.nospace {
-		padding: 0;
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	&.max_xs {max-width: @cnt_xs_w;}
@@ -189,7 +197,8 @@
 
 [class*="col-"] {
 	.lui.box-sizing.border-box();
-	padding: 0 @spacing_rows;
+	padding-left: @spacing_rows;
+	padding-right: @spacing_rows;
 }
 
 // NON-RESPONSIVE COLS
