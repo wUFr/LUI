@@ -2,9 +2,7 @@
 // GLOBAL DEFAULT STYLE
 //
 
-& when(@style_defaults = true){
-	// FORM ELEMENTS
-	
+& when(@lui_style_all_input = true){
 	input[type="text"],
 	input[type="date"],
 	input[type="datetime"],
@@ -19,15 +17,21 @@
 	input[type="week"] {
 		.lui.form.input(auto);
 	}
+}
 
+& when(@lui_style_all_textarea = true){
 	textarea {
 		.lui.form.textarea(auto);
 	}
+}
 
+& when(@lui_style_all_select = true){
 	select {
 		.lui.form.select(auto);
 	}
+}
 
+& when(@lui_style_all_button = true){
 	button {
 		.lui_button();
 	}
@@ -45,29 +49,4 @@
 		.lui_button();
 		.lui_button.delete();
 	}
-
-	// SPECIAL STYLES FOR COLOR PICKER
-	// TODO: USE JS UI wrapper - color picker is not really supported
-	input[type="color"]{
-		width: 25px;
-		height: 25px;
-		padding: 0px;
-		background: transparent;
-		cursor: pointer;
-		
-		&:disabled {
-			cursor: default;
-		}
-	}
-
-	// SPECIAL STYLES FOR RANGE input
-	// TODO: USE JS UI wrapper - default range looks different per browser + support
-	input[type="range"]{
-		width: 200px;
-		height: auto;
-		padding: 0;
-		border: 0;
-	}
-
-	/*--------------------------------------*/
 }

@@ -1,26 +1,57 @@
+// ---------------------------------------------------
 
 
-//	DEBUG MODE
-//	Will enable some debug features:
-//	- Visible actual col-width used, aka "col-xs-12" 
-//    on phones (since you cant really open console on phone and look)
+//  THIS FILE CONTAINS COMPLETE CONFIGURATION FOR LUI FRAMEWORK
+//     if you're using composer to download actual version, copy 
+//     variables you want to change into your own project config file 
+
+
+// ---------------------------------------------------
+
+
+//  DEBUG MODE
+//     Will enable some debug features:
+//     Visible actual col-width used, aka "col-xs-12" 
+//     on phones (since you cant really open console on phone and look)
 @debug: false;
 
+
+
 //	TURN ON/OFF RESPONSIVE
-//	This will disable or enable responsive UI elements
-//	FEATURE STILL WORK IN PROGRES - MAY NOT WORK ON EVERYTHING
+//     This will disable or enable responsive UI elements
 @responsive: true;
 
-//  LUI LOCATION (SUBDIR)
-//  subdirectory where "lui" repo is located - used for working SRC (fonts, ..)
-@dir: "/lui";
 
-//  THIS WILL APPLY UI STYLES TO ELEMENTS LIKE: SELECT, INPUT, TEXTAREA, ..
-//  if you want to use your own UI / style, set it to "false"
-@style_defaults: true;
+
+//  LUI FONTS LOCATION
+//     full path example:
+//     src: url(@{lui_fonts_dir}FontAwesome-4.6.1/fontawesome-webfont.eot);
+@lui_fonts_dir: "/lui/lui/fonts/";
+
+
+
+
+//  APPLY LUI STYLES TO THESE ELEMENTS GLOBALY
+//     when "false" styles will be applied only inside certaing elements
+//     example: .lui_form containing text inputs
+@lui_style_all_input: true;
+@lui_style_all_textarea: true;
+@lui_style_all_select: true;
+@lui_style_all_button: true;
+
+
+
 
 //	UI MESSAGES
-//	just basic status messages and their colors
+//     just basic status messages and their colors
+
+
+// TODO:
+
+/*
+
+NOT YET IMPLEMENTED
+
 @default_ui_message_confirm_bg:		#cdf6bf;
 @default_ui_message_confirm_color:	#11420e;
 @default_ui_message_error_bg:		#f6bfbf;
@@ -30,12 +61,33 @@
 @default_ui_message_info_bg:		#bfe6f6;
 @default_ui_message_info_color:		#0e3542;
 @default_ui_form_required_color:	#AE0000;
+*/
+
 
 // GLOBAL STATUS COLORS	
+
 @color_confirm:	#45bd0a;
 @color_info:	#34aaed;
 @color_edit:	#ee8e04;
 @color_delete:	#e60d0d;
+
+
+
+// BUTTONS
+@btn_color_default:		silver;
+@btn_color_confirm:		@color_confirm;
+@btn_color_info:		@color_info;
+@btn_color_edit:		@color_edit;
+@btn_color_delete:		@color_delete;
+@btn_color_dark:		#373737;
+@btn_mobile_height:		42px; // BUTTON HEIGHT ON MOBILE
+
+
+// PAGEBAR
+@pgb_default_bg:	#f2f2f2; // LIGHT VERSION
+@pgb_dark_bg:		#515a5e; // DARK VERSION
+
+
 
 //	COLS MIN/MAX WIDTHS
 //	what is used and when
@@ -61,19 +113,66 @@
 @grid_2k_end: 	9999px; // LETS CALL THIS INFINITE
 
 
-// BUTTONS
-@btn_color_default:		silver;
-@btn_color_confirm:		#45bd0a;
-@btn_color_info:		#34aaed;
-@btn_color_edit:		#ee8e04;
-@btn_color_delete:		#e60d0d;
-@btn_color_dark:		#373737;
-@btn_mobile_height:		42px; // BUTTON HEIGHT ON MOBILE
+// GRID HORIZONTAL SPACING
+// DEFAULT: 15px
+@lui_container_padding:		 15px;
+@lui_row_margin: 			-15px;
+@lui_col_padding: 			 15px;
+
+// DIMENSIONS
+@lui_col_1_width:	8.333%;
+@lui_col_2_width:	16.666%;
+@lui_col_3_width:	25%;
+@lui_col_4_width:	33.333%;
+@lui_col_5_width:	41.666%;
+@lui_col_6_width:	50%;
+@lui_col_7_width:	58.33%;
+@lui_col_8_width:	66.66%;
+@lui_col_9_width:	75%;
+@lui_col_10_width:	83.33%;
+@lui_col_11_width:	91.66%;
+@lui_col_12_width:	100%;
+
+// MARGIN LEFT FOR SPACE BETWEEN COLS
+@lui_ml_1_width:	8.333%;
+@lui_ml_2_width:	16.666%;
+@lui_ml_3_width:	25%;
+@lui_ml_4_width:	33.333%;
+@lui_ml_5_width:	41.666%;
+@lui_ml_6_width:	50%;
+@lui_ml_7_width:	58.33%;
+@lui_ml_8_width:	66.66%;
+@lui_ml_9_width:	75%;
+@lui_ml_10_width:	83.33%;
+@lui_ml_11_width:	91.66%;
+@lui_ml_12_width:	100%;
+
+// MARGIN RIGHT FOR SPACE BETWEEN COLS
+@lui_mr_1_width:	8.333%;
+@lui_mr_2_width:	16.666%;
+@lui_mr_3_width:	25%;
+@lui_mr_4_width:	33.333%;
+@lui_mr_5_width:	41.666%;
+@lui_mr_6_width:	50%;
+@lui_mr_7_width:	58.33%;
+@lui_mr_8_width:	66.66%;
+@lui_mr_9_width:	75%;
+@lui_mr_10_width:	83.33%;
+@lui_mr_11_width:	91.66%;
+@lui_mr_12_width:	100%;
+
+// CONTAINER WIDTHS
+@lui_container_xs_width: 100%;
+@lui_container_sm_width: 470px;
+@lui_container_md_width: 735px;
+@lui_container_lg_width: 970px;
+@lui_container_xl_width: 1150px;
+@lui_container_hd_width: 1450px;
+@lui_container_2k_width: 1950px;
 
 
-// PAGEBAR
-@pgb_default_bg:	#f2f2f2; // LIGHT VERSION
-@pgb_dark_bg:		#515a5e; // DARK VERSION
+
+
 
 
 // BOX
