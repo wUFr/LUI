@@ -11,7 +11,7 @@
 	overflow: hidden;
 
 	@media (min-width:@grid_lg_start){
-		& when (@responsive = true){
+		& when (@lui_responsive = true){
 			background: white;
 			border-radius: 5px;
 		}
@@ -19,7 +19,7 @@
 
 	thead {
 		@media (max-width:@grid_md_end){
-			& when (@responsive = true){
+			& when (@lui_responsive = true){
 				display: none;
 			}
 		}
@@ -43,7 +43,7 @@
 			border-bottom: 1px solid #F3F3F3;
 
 			@media (max-width:@grid_md_end){
-				& when (@responsive = true){
+				& when (@lui_responsive = true){
 					border-bottom-width: 0;
 				}
 			}
@@ -54,7 +54,7 @@
 
 				/* MOBILE VERSION */
 				@media (max-width:@grid_md_end){
-					& when (@responsive = true){
+					& when (@lui_responsive = true){
 						background: #fcfcfc;
 						border: 1px solid #ebebeb;
 						display: block;
@@ -62,24 +62,24 @@
 						margin-bottom: -1px;
 					}
 
-					&:last-child when (@responsive = true){
+					&:last-child when (@lui_responsive = true){
 						border-bottom-width: 15px;
 					}
 
 					/* LABEL TEXTS ON MOBILE VERSION <3 CSS3 */
-					&:before when (@responsive = true){
+					&:before when (@lui_responsive = true){
 						content:attr(data-title) " ";
 						font-weight: bold;
 					}
 
-					&.block_title:before when (@responsive = true){
+					&.block_title:before when (@lui_responsive = true){
 						display: block;
 					}
 				}
 
 				/* TABLET+ */
 				@media (min-width:@grid_lg_start){
-					&.options when (@responsive = true){
+					&.options when (@lui_responsive = true){
 						padding: 6px 10px 0 10px;
 						text-align: right;
 						white-space: nowrap;
@@ -87,7 +87,7 @@
 					}
 				}
 
-				&.options when (@responsive = false){
+				&.options when (@lui_responsive = false){
 					padding: 6px 10px 0 10px;
 					text-align: right;
 					white-space: nowrap;
@@ -103,15 +103,15 @@
 			}
 
 			@media (max-width:@grid_md_end){
-				&:nth-child(even) td when (@responsive = true) {
+				&:nth-child(even) td when (@lui_responsive = true) {
 					background: #fcfcfc;
 				}
 
-				&:hover > td when (@responsive = true) {
+				&:hover > td when (@lui_responsive = true) {
 					background: #fcfcfc;
 				}
 
-				&:last-child td:last-child when (@responsive = true){
+				&:last-child td:last-child when (@lui_responsive = true){
 					border-bottom: 1px solid #ebebeb;
 					margin-bottom: 0;
 				}

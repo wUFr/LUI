@@ -13,13 +13,13 @@
 //     Will enable some debug features:
 //     Visible actual col-width used, aka "col-xs-12" 
 //     on phones (since you cant really open console on phone and look)
-@debug: false;
+@lui_debug: false;
 
 
 
 //	TURN ON/OFF RESPONSIVE
 //     This will disable or enable responsive UI elements
-@responsive: true;
+@lui_responsive: true;
 
 
 
@@ -38,6 +38,11 @@
 @lui_style_all_textarea: true;
 @lui_style_all_select: true;
 @lui_style_all_button: true;
+
+@lui_style_typo_headings: true;
+@lui_style_typo_basic_texts: true;
+
+@lui_style_typo_extra: true;
 
 
 
@@ -65,7 +70,6 @@ NOT YET IMPLEMENTED
 
 
 // GLOBAL STATUS COLORS	
-
 @color_confirm:	#45bd0a;
 @color_info:	#34aaed;
 @color_edit:	#ee8e04;
@@ -74,13 +78,28 @@ NOT YET IMPLEMENTED
 
 
 // BUTTONS
-@btn_color_default:		silver;
-@btn_color_confirm:		@color_confirm;
-@btn_color_info:		@color_info;
-@btn_color_edit:		@color_edit;
-@btn_color_delete:		@color_delete;
-@btn_color_dark:		#373737;
-@btn_mobile_height:		42px; // BUTTON HEIGHT ON MOBILE
+@lui_button_default:silver;
+@lui_button_primary:#34aaed;
+@lui_button_info: 	#75C1EA;
+@lui_button_success:#45bd0a;
+@lui_button_danger: #e60d0d;
+@lui_button_warning:#ee8e04;
+@lui_button_dark: 	#373737;
+
+// SMALL
+@lui_button_small_height: 26px;
+@lui_buttom_small_font-size: 12px;
+
+// NORMAL
+@lui_button_normal_height: 32px;
+@lui_button_normal_font-size: 13px;
+
+// BIG
+@lui_button_big_height: 38px;
+@lui_button_big_font-size: 15px;
+
+
+
 
 
 // PAGEBAR

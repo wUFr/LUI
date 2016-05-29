@@ -7,24 +7,31 @@
 	display: inline-block;
 	text-decoration: none;
 	position: relative;
-	line-height: 32px;
-	height: 32px;
+	line-height: @lui_button_normal_height;
+	height: @lui_button_normal_height;
 	padding: 0 15px;
 	margin: 0 2px 5px 0;
 	border: 0;
 	border-radius: 3px;
 	cursor: pointer;
 	font-family: inherit;
-	font-size: 13px;
+	font-size: @lui_button_normal_font-size;
 	overflow: hidden;
-	background: @btn_color_default;
+	background: @lui_button_default;
 	color: white;
 
 	&.small {
 		padding: 0 10px;
-		line-height: 25px;
-		height: 25px;
-		font-size: 12px;
+		line-height: @lui_button_small_height;
+		height: @lui_button_small_height;
+		font-size: @lui_buttom_small_font-size;
+	}
+	
+	&.big {
+		padding: 0 10px;
+		line-height: @lui_button_big_height;
+		height: @lui_button_big_height;
+		font-size: @lui_button_big_font-size;
 	}
 	
 	&.a-left {
@@ -45,11 +52,11 @@
 	}
 	
 	@media (max-width:@grid_sm_end){
-		&.mobile_big when (@responsive = true){
+		&.mobile_big when (@lui_responsive = true){
 			display: block;
 			width: 100%;
-			line-height: @btn_mobile_height;
-			height: @btn_mobile_height;
+			line-height: @lui_button_big_height;
+			height: @lui_button_big_height;
 			padding: 0 15px;
 			font-size: 15px;
 			text-align: center;
@@ -58,14 +65,14 @@
 
 	&:hover,
 	&:not(.noicon):before {
-		background: darken(@btn_color_default,10%);
+		background: darken(@lui_button_default,10%);
 	}
 
 	&[class*="fa_b_"] {
 		padding-left: 45px;
 		
 		@media (max-width:@grid_sm_end){
-			&.mobile_big when (@responsive = true){
+			&.mobile_big when (@lui_responsive = true){
 				padding-right: 45px;
 			}
 		}
@@ -75,7 +82,7 @@
 		padding-left: 40px;
 		
 		@media (max-width:@grid_sm_end){
-			&.mobile_big when (@responsive = true){
+			&.mobile_big when (@lui_responsive = true){
 				padding-right: 40px;
 			}
 		}
@@ -85,7 +92,7 @@
 		padding-right: 45px;
 
 		@media (max-width:@grid_sm_end){
-			&.mobile_big when (@responsive = true){
+			&.mobile_big when (@lui_responsive = true){
 				padding-left: 45px;
 			}
 		}
@@ -95,60 +102,72 @@
 		padding-right: 40px;
 
 		@media (max-width:@grid_sm_end){
-			&.mobile_big when (@responsive = true){
+			&.mobile_big when (@lui_responsive = true){
 				padding-left: 40px;
 			}
 		}
 	}
 
 	&.info {
-		background: @btn_color_info;
+		background: @lui_button_info;
 
 		&:not(.inactive):hover,
 		&:not(.noicon):before,
 		&:not(.noicon):after {
-			background: darken(@btn_color_info,10%);
+			background: darken(@lui_button_info,10%);
 		}
 	}
 
-	&.confirm {
-		background: @btn_color_confirm;
+	&.confirm,
+	&.success {
+		background: @lui_button_success;
 
 		&:not(.inactive):hover,
 		&:not(.noicon):before,
 		&:not(.noicon):after {
-			background: darken(@btn_color_confirm,10%);
+			background: darken(@lui_button_success,10%);
 		}
 	}
 
 	&.edit,
 	&.warning {
-		background: @btn_color_edit;
+		background: @lui_button_warning;
 
 		&:not(.inactive):hover,
 		&:not(.noicon):before,
 		&:not(.noicon):after {
-			background: darken(@btn_color_edit,10%);
+			background: darken(@lui_button_warning,10%);
 		}
 	}
 
-	&.delete {
-		background: @btn_color_delete;
+	&.delete,
+	&.danger {
+		background: @lui_button_danger;
 
 		&:not(.inactive):hover,
 		&:not(.noicon):before,
 		&:not(.noicon):after {
-			background: darken(@btn_color_delete,10%);
+			background: darken(@lui_button_danger,10%);
 		}
 	}
 
 	&.primary {
-		background: @btn_color_dark;
+		background: @lui_button_primary;
 
 		&:not(.inactive):hover,
 		&:not(.noicon):before,
 		&:not(.noicon):after {
-			background: darken(@btn_color_dark,10%);
+			background: darken(@lui_button_primary,10%);
+		}
+	}
+	
+	&.dark {
+		background: @lui_button_dark;
+
+		&:not(.inactive):hover,
+		&:not(.noicon):before,
+		&:not(.noicon):after {
+			background: darken(@lui_button_dark,10%);
 		}
 	}
 
@@ -166,21 +185,29 @@
 		left: 0;
 		bottom: 0;
 		width: 30px;
-		height: 32px;
-		line-height: 32px;
+		height: @lui_button_normal_height;
+		line-height: @lui_button_normal_height;
 		text-align: center;
 		font-family: FontAwesome;
+		font-size: @lui_button_normal_font-size;
 	}
 
 	&:not(.noicon).small:before {
-		line-height: 25px;
-		font-size: 10px;
+		height: @lui_button_small_height;
+		line-height: @lui_button_small_height;
+		font-size: @lui_buttom_small_font-size;
+	}
+	
+	&:not(.noicon).big:before {
+		height: @lui_button_big_height;
+		line-height: @lui_button_big_height;
+		font-size: @lui_button_big_font-size;
 	}
 
 	@media (max-width:@grid_sm_end){
-		&:not(.noicon).mobile_big:before when (@responsive = true){
-			height: @btn_mobile_height;
-			line-height: @btn_mobile_height;
+		&:not(.noicon).mobile_big:before when (@lui_responsive = true){
+			height: @lui_button_big_height;
+			line-height: @lui_button_big_height;
 		}
 	}
 
@@ -194,17 +221,25 @@
 		line-height: 32px;
 		text-align: center;
 		font-family: FontAwesome;
+		font-size: @lui_button_normal_font-size;
 	}
 
 	&:not(.noicon).small:after {
-		line-height: 25px;
-		font-size: 10px;
+		height: @lui_button_small_height;
+		line-height: @lui_button_small_height;
+		font-size: @lui_buttom_small_font-size;
+	}
+	
+	&:not(.noicon).big:after {
+		height: @lui_button_big_height;
+		line-height: @lui_button_big_height;
+		font-size: @lui_button_big_font-size;
 	}
 
 	@media (max-width:@grid_sm_end){
-		&:not(.noicon).mobile_big:after when (@responsive = true){
-			height: @btn_mobile_height;
-			line-height: @btn_mobile_height;
+		&:not(.noicon).mobile_big:after when (@lui_responsive = true){
+			height: @lui_button_big_height;
+			line-height: @lui_button_big_height;
 		}
 	}
 }
