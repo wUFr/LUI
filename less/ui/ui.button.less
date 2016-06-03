@@ -170,6 +170,17 @@
 			background: darken(@lui_button_dark,10%);
 		}
 	}
+	
+	&.transparent {
+		background: transparent;
+		color: black;
+
+		&:not(.inactive):hover,
+		&:not(.noicon):before,
+		&:not(.noicon):after {
+			background: rgba(0,0,0,0.1);
+		}
+	}
 
 	&.inactive {
 		opacity: 0.5;
