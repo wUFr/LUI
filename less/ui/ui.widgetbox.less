@@ -1,0 +1,95 @@
+// 
+// WIDGET
+// 
+.lui_widget {
+	padding: 15px 20px 20px 20px;
+	margin: 15px 0;
+	background: white;
+	border-radius: 5px;
+
+	&.dark {
+		background: #1b1b1b;
+		color: #d9d9d9;
+	}
+
+	&.blue {
+		background: #34aaed;
+		color: white;
+	}
+
+	.lui.clear.after();
+
+	& > header {
+
+		.lui.clear.after();
+		
+		h1,
+		h2,
+		h3,
+		h4,
+		h5 {
+			padding: 0;
+			margin: 0;
+			font-size: 17px;
+			line-height: 30px;
+			font-weight: bold;
+			float: left;
+			color: inherit;
+		}
+
+		.actions {
+			float: right;
+
+			& > a {
+				display: block;
+				float: left;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				text-decoration: none;
+				color: #c8c8c8;
+
+				&:hover {
+					color: inherit;
+					background: rgba(0,0,0,0.05);
+					border-radius: 3px;
+				}
+
+				&.toggle {
+					.lui.transition.this(300ms transform);
+					cursor: pointer;
+					
+					&:before {
+						font-family: FontAwesome;
+						content: "\f078";
+					}
+				}
+
+				&.toggle.active {
+					.lui.transform.rotate(180deg);
+				}
+			}
+		}
+	}
+
+	&.dark > header > .actions > a:hover {
+		background: rgba(255,255,255,0.1);
+		color: white;
+	}
+
+	&.blue > header > .actions > a {
+		color: white;
+	}
+
+	& > .content {
+		font-size: 14px;
+		padding: 10px 0 0 0;
+
+		.lui.clear.after();
+	}
+
+	&.closed > .content {
+		display: none;
+	}
+}
