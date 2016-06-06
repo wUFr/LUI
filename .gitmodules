@@ -1,0 +1,3 @@
+[submodule "fonts/fontawesome"]
+	path = fonts/fontawesome
+	url = https://github.com/wUFr/Font-Awesome.git
