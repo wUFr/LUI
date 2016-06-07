@@ -2,38 +2,43 @@
 
 
 //  THIS FILE CONTAINS COMPLETE CONFIGURATION FOR LUI FRAMEWORK
-//     if you're using composer to download actual version, copy 
-//     variables you want to change into your own project config file 
+//  if you're using composer to download actual version, copy 
+//  variables you want to change into your own project config file 
 
 
 // ---------------------------------------------------
 
 
 //  DEBUG MODE
-//     Will enable some debug features:
-//     Visible actual col-width used, aka "col-xs-12" 
-//     on phones (since you cant really open console on phone and look)
+//  Will enable some debug features:
+//  Visible actual col-width used, aka "col-xs-12" 
+//  on phones (since you cant really open console on phone and look)
 @lui_debug: false;
 
 
+// ---------------------------------------------------
+
 
 //	TURN ON/OFF RESPONSIVE
-//     This will disable or enable responsive UI elements
+//  This will disable or enable responsive UI elements
 @lui_responsive: true;
 
 
+// ---------------------------------------------------
+
 
 //  LUI FONTS LOCATION
-//     full path example:
-//     src: url(@{lui_fonts_dir}FontAwesome-4.6.1/fontawesome-webfont.eot);
+//  full path example:
+//  src: url(@{lui_fonts_dir}FontAwesome-4.6.1/fontawesome-webfont.eot);
 @lui_fonts_dir: "/lui/fonts/";
 
 
+// ---------------------------------------------------
 
 
 //  APPLY LUI STYLES TO THESE ELEMENTS GLOBALY
-//     when "false" styles will be applied only inside certaing elements
-//     example: .lui_form containing text inputs
+//  when "false" styles will be applied only inside certaing elements
+//  example: .lui_form containing text inputs
 @lui_style_all_input: true;
 @lui_style_all_textarea: true;
 @lui_style_all_select: true;
@@ -45,98 +50,50 @@
 @lui_style_typo_extra: true;
 
 
+// ---------------------------------------------------
 
+//  LUI GRID SYSTEM
+@grid_xs_enable: 			true;
+@grid_xs_start: 			0;
+@grid_xs_end: 				500px;
+@lui_container_xs_width: 	100%;
 
-//	UI MESSAGES
-//     just basic status messages and their colors
+@grid_sm_enable: 			false;
+@grid_sm_start: 			501px;
+@grid_sm_end: 				767px;
+@lui_container_sm_width: 	470px;
 
+@grid_md_enable: 			true;
+@grid_md_start: 			768px;
+@grid_md_end: 				991px;
+@lui_container_md_width: 	735px;
 
-// TODO:
+@grid_lg_enable: 			true;
+@grid_lg_start: 			992px;
+@grid_lg_end: 				1199px;
+@lui_container_lg_width: 	970px;
 
-/*
+@grid_xl_enable: 			true;
+@grid_xl_start: 			1200px;
+@grid_xl_end: 				1499px;
+@lui_container_xl_width: 	1150px;
 
-NOT YET IMPLEMENTED
+@grid_hd_enable: 			true;
+@grid_hd_start: 			1500px;
+@grid_hd_end: 				1999px;
+@lui_container_hd_width: 	1450px;
 
-@default_ui_message_confirm_bg:		#cdf6bf;
-@default_ui_message_confirm_color:	#11420e;
-@default_ui_message_error_bg:		#f6bfbf;
-@default_ui_message_error_color:	#420e0e;
-@default_ui_message_warning_bg:		#f6e6bf;
-@default_ui_message_warning_color:	#42360e;
-@default_ui_message_info_bg:		#bfe6f6;
-@default_ui_message_info_color:		#0e3542;
-@default_ui_form_required_color:	#AE0000;
-*/
+@grid_2k_enable: 			true;
+@grid_2k_start: 			2000px;
+@grid_2k_end: 				9999px; // LETS CALL THIS INFINITE
+@lui_container_2k_width: 	1950px;
 
-
-// GLOBAL STATUS COLORS	
-@color_confirm:	#45bd0a;
-@color_info:	#34aaed;
-@color_edit:	#ee8e04;
-@color_delete:	#e60d0d;
-
-
-
-// BUTTONS
-@lui_button_default:silver;
-@lui_button_primary:#34aaed;
-@lui_button_info: 	#75C1EA;
-@lui_button_success:#45bd0a;
-@lui_button_danger: #e60d0d;
-@lui_button_warning:#ee8e04;
-@lui_button_dark: 	#373737;
-
-// SMALL
-@lui_button_small_height: 26px;
-@lui_buttom_small_font-size: 12px;
-
-// NORMAL
-@lui_button_normal_height: 32px;
-@lui_button_normal_font-size: 13px;
-
-// BIG
-@lui_button_big_height: 38px;
-@lui_button_big_font-size: 15px;
-
-
-
-
-
-// PAGEBAR
-@pgb_default_bg:	#f2f2f2; // LIGHT VERSION
-@pgb_dark_bg:		#515a5e; // DARK VERSION
-
-
-
-//	COLS MIN/MAX WIDTHS
-//	what is used and when
-@grid_xs_start: 0;
-@grid_xs_end: 	500px;
-
-@grid_sm_start: 501px;
-@grid_sm_end: 	767px;
-
-@grid_md_start: 768px;
-@grid_md_end: 	991px;
-
-@grid_lg_start: 992px;
-@grid_lg_end: 	1199px;
-
-@grid_xl_start: 1200px;
-@grid_xl_end: 	1499px;
-
-@grid_hd_start: 1500px;
-@grid_hd_end: 	1999px;
-
-@grid_2k_start: 2000px;
-@grid_2k_end: 	9999px; // LETS CALL THIS INFINITE
-
+@grid_print_enable: 		true;
 
 // GRID HORIZONTAL SPACING
-// DEFAULT: 15px
-@lui_container_padding:		 15px;
-@lui_row_margin: 			-15px;
-@lui_col_padding: 			 15px;
+@lui_container_padding:	 15px;
+@lui_row_margin: 		-15px;
+@lui_col_padding: 		 15px;
 
 // DIMENSIONS
 @lui_col_1_width:	8.333%;
@@ -180,19 +137,74 @@ NOT YET IMPLEMENTED
 @lui_mr_11_width:	91.66%;
 @lui_mr_12_width:	100%;
 
-// CONTAINER WIDTHS
-@lui_container_xs_width: 100%;
-@lui_container_sm_width: 470px;
-@lui_container_md_width: 735px;
-@lui_container_lg_width: 970px;
-@lui_container_xl_width: 1150px;
-@lui_container_hd_width: 1450px;
-@lui_container_2k_width: 1950px;
+
+// ---------------------------------------------------
 
 
+//	UI MESSAGES
+//     just basic status messages and their colors
 
 
+// TODO:
+
+/*
+
+NOT YET IMPLEMENTED
+
+@default_ui_message_confirm_bg:		#cdf6bf;
+@default_ui_message_confirm_color:	#11420e;
+@default_ui_message_error_bg:		#f6bfbf;
+@default_ui_message_error_color:	#420e0e;
+@default_ui_message_warning_bg:		#f6e6bf;
+@default_ui_message_warning_color:	#42360e;
+@default_ui_message_info_bg:		#bfe6f6;
+@default_ui_message_info_color:		#0e3542;
+@default_ui_form_required_color:	#AE0000;
+*/
 
 
-// BOX
+// ---------------------------------------------------
+
+
+//  GLOBAL COLOR SETTINGS
+@color_confirm:	#45bd0a;
+@color_info:	#34aaed;
+@color_edit:	#ee8e04;
+@color_delete:	#e60d0d;
+
+
+// ---------------------------------------------------
+
+
+//  BUTTONS
+@lui_button_default: 	silver;
+@lui_button_primary: 	#34aaed;
+@lui_button_info: 		#75C1EA;
+@lui_button_success: 	#45bd0a;
+@lui_button_danger: 	#e60d0d;
+@lui_button_warning: 	#ee8e04;
+@lui_button_dark: 		#373737;
+
+@lui_button_small_height: 		26px;
+@lui_buttom_small_font-size: 	12px;
+
+@lui_button_normal_height: 		32px;
+@lui_button_normal_font-size: 	13px;
+
+@lui_button_big_height: 		38px;
+@lui_button_big_font-size: 		15px;
+
+
+// -------------------------------------
+
+
+//  PAGEBAR
+@pgb_default_bg:	#f2f2f2; // LIGHT VERSION
+@pgb_dark_bg:		#515a5e; // DARK VERSION
+
+
+// ---------------------------------------------------
+
+
+//  BOX
 @box_default:	#34aaed; // DEFAULT HEADER COLOR
