@@ -28,7 +28,7 @@
 	}
 	
 	&.big {
-		padding: 0 10px;
+		padding: 0 20px;
 		line-height: @lui_button_big_height;
 		height: @lui_button_big_height;
 		font-size: @lui_button_big_font-size;
@@ -68,8 +68,8 @@
 		background: darken(@lui_button_default,10%);
 	}
 
-	&[class*="fa_b_"] {
-		padding-left: 45px;
+	&[class*="fa_b"] {
+		padding-left: 40px;
 		
 		@media (max-width:@grid_sm_end){
 			&.mobile_big when (@lui_responsive = true){
@@ -78,7 +78,7 @@
 		}
 	}
 
-	&[class*="fa_b_"].small {
+	&[class*="fa_b"].small {
 		padding-left: 40px;
 		
 		@media (max-width:@grid_sm_end){
@@ -88,8 +88,18 @@
 		}
 	}
 
-	&[class*="fa_a_"] {
-		padding-right: 45px;
+	&[class*="fa_b"].big {
+		padding-left: 45px;
+		
+		@media (max-width:@grid_sm_end){
+			&.mobile_big when (@lui_responsive = true){
+				padding-right: 45px;
+			}
+		}
+	}
+
+	&[class*="fa_a"] {
+		padding-right: 40px;
 
 		@media (max-width:@grid_sm_end){
 			&.mobile_big when (@lui_responsive = true){
@@ -98,12 +108,22 @@
 		}
 	}
 
-	&[class*="fa_a_"].small {
+	&[class*="fa_a"].small {
 		padding-right: 40px;
 
 		@media (max-width:@grid_sm_end){
 			&.mobile_big when (@lui_responsive = true){
 				padding-left: 40px;
+			}
+		}
+	}
+
+	&[class*="fa_a"].big {
+		padding-right: 45px;
+
+		@media (max-width:@grid_sm_end){
+			&.mobile_big when (@lui_responsive = true){
+				padding-left: 45px;
 			}
 		}
 	}
