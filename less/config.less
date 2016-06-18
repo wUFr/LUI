@@ -27,10 +27,37 @@
 // ---------------------------------------------------
 
 
-//  LUI FONTS LOCATION
-//  full path example:
-//  src: url(@{lui_fonts_dir}FontAwesome-4.6.1/fontawesome-webfont.eot);
-@lui_fonts_dir: "/lui/fonts/";
+//  DISABLE OR ENABLE UI COMPONENTS
+//  true - will include; false - wont include
+//  WARNING: some components may depends on each other (mixins)
+
+//  BASIC CSS RESET - if you use your own, you can turn this off
+@lui_component_css_reset: true;
+
+//  DEFAULT GLOBAL STYLES
+//  additional configuration below (@lui_style_)
+@lui_component_defaults: true;
+
+//  FontAwesome icon fonts used mostly in buttons
+@lui_component_fontawesome: true;
+
+//  LUI GRID SYSTEM
+@lui_component_grid: true;
+
+//  BUTTONS
+@lui_component_button: true;
+
+//  FORMS
+@lui_component_form: true;
+
+//  PAGEBAR
+@lui_component_pagebar: true;
+
+//  RESPONSIVE TABLE - if you dont plan to use responsive friendly tables, turn them off
+@lui_component_responsive_table: true;
+
+//  UI_BOX
+@lui_component_box: true;
 
 
 // ---------------------------------------------------
@@ -39,15 +66,27 @@
 //  APPLY LUI STYLES TO THESE ELEMENTS GLOBALY
 //  when "false" styles will be applied only inside certaing elements
 //  example: .lui_form containing text inputs
-@lui_style_all_input: true;
-@lui_style_all_textarea: true;
-@lui_style_all_select: true;
-@lui_style_all_button: true;
 
-@lui_style_typo_headings: true;
-@lui_style_typo_basic_texts: true;
+//  SETS DEFAULT STYLES FOR "INPUT" ELEMENTS (text inputs only)
+@lui_style_all_input: 			true;
 
-@lui_style_typo_extra: true;
+//  DEFAULT STYLES FOR "TEXTAREA"
+@lui_style_all_textarea: 		true;
+
+//  DEFAULT STYLES FOR "SELECT"
+@lui_style_all_select: 			true;
+
+//  DEFAULT STYLES FOR "BUTTON" AND "INPUT[SUBMIT] + INPUT[RESET]"
+@lui_style_all_button: 			true;
+
+//  DEFAULT STYLES FOR "H1 - H6"
+@lui_style_typo_headings: 		true;
+
+//  DEFAULT STYLES FOR "P, UL, OL, HR"
+@lui_style_typo_basic_texts: 	true;
+
+//  DEFAULT STZLES FOR "PRE" (still WIP)
+@lui_style_typo_extra: 			true;
 
 
 // ---------------------------------------------------
@@ -58,7 +97,7 @@
 @grid_xs_end: 				500px;
 @lui_container_xs_width: 	100%;
 
-@grid_sm_enable: 			false;
+@grid_sm_enable: 			true;
 @grid_sm_start: 			501px;
 @grid_sm_end: 				767px;
 @lui_container_sm_width: 	470px;

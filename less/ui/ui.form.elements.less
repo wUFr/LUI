@@ -147,100 +147,102 @@ JQUERY UI
 */
 
 // select
-.ui-widget.ui-selectmenu-button {
-	position: relative;
-	display: block;
-	.lui.form.select();
-	padding-right: 45px;
-	cursor: pointer;
-	
-	
-	&.ui-selectmenu-disabled {
-		background:#f7f7f7;
-		cursor: text;
-		color: #5a5a5a;
-		cursor: default;
-		pointer-events: none;
-	}
-	
-	& > .ui-icon {
-		display: inline-block;
-		position: absolute;
-		top: 50%;
-		right: 15px;
-		height: 20px;
-		line-height: 20px;
-		margin-top: -10px;
+& when (@lui_component_form = true){
+	.ui-widget.ui-selectmenu-button {
+		position: relative;
+		display: block;
+		.lui.form.select();
+		padding-right: 45px;
+		cursor: pointer;
 		
-		&:before {
-			font-family: FontAwesome;
-			content: "\f0d7";
+		
+		&.ui-selectmenu-disabled {
+			background:#f7f7f7;
+			cursor: text;
+			color: #5a5a5a;
+			cursor: default;
+			pointer-events: none;
 		}
-	}
-	
-	& > .ui-selectmenu-text {
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-	
-	&.ui-state-focus {
+		
 		& > .ui-icon {
-			.lui.transform.rotate(180deg);
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			height: 20px;
+			line-height: 20px;
+			margin-top: -10px;
+			
+			&:before {
+				font-family: FontAwesome;
+				content: "\f0d7";
+			}
+		}
+		
+		& > .ui-selectmenu-text {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		
+		&.ui-state-focus {
+			& > .ui-icon {
+				.lui.transform.rotate(180deg);
+			}
+		}
+
+	}
+
+	// SELECT DROPDOWN
+
+	// WRAPPER
+	.ui-js-dropdown {
+		position: relative;
+		z-index: 20;
+		
+		& > .inside {
+			position: absolute;
 		}
 	}
 
-}
-
-// SELECT DROPDOWN
-
-// WRAPPER
-.ui-js-dropdown {
-	position: relative;
-	z-index: 20;
-	
-	& > .inside {
-		position: absolute;
-	}
-}
 
 
-
-.ui-selectmenu-menu {
-	display: none;
-	border: 1px solid silver;
-	background: white;
-	
-
-	&.ui-selectmenu-open {
-		display: block;
-	}
-
-	& > ul {
-		display: block;
-		max-width: 100%;
-		list-style: none;
-		padding: 0;
-		margin: 0;
+	.ui-selectmenu-menu {
+		display: none;
+		border: 1px solid silver;
+		background: white;
 		
-		& > li {
+
+		&.ui-selectmenu-open {
+			display: block;
+		}
+
+		& > ul {
 			display: block;
 			max-width: 100%;
-			padding: 7px;
-			font-size: 14px;
-			cursor: pointer;
-			white-space: normal;
-			color: #2e2e2e;
+			list-style: none;
+			padding: 0;
+			margin: 0;
 			
-			&:hover {
-				background: rgba(0,0,0,0.05);
+			& > li {
+				display: block;
+				max-width: 100%;
+				padding: 7px;
+				font-size: 14px;
+				cursor: pointer;
+				white-space: normal;
+				color: #2e2e2e;
+				
+				&:hover {
+					background: rgba(0,0,0,0.05);
+				}
+				
+				.ui-state-active {
+					color: #108de6;
+				}
 			}
 			
-			.ui-state-active {
-				color: #108de6;
-			}
 		}
-		
 	}
 }
 

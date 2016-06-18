@@ -1,89 +1,90 @@
 //
 // LUI CSS RESET
 //
-
-* {
-	.lui.box-sizing.border-box(); /* EXPERIMENTAL */
-	margin: 0;
-	padding: 0;
-}
-
-// HTML 5 Elements
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section,
-summary {
-    display: block;
-}
-
-audio,
-canvas,
-progress,
-video {
-	display: inline-block;
-	vertical-align: baseline;
-}
-
-// DEFAULT HYPERLINKS
-a {
-	color: inherit;
-
-	&:focus {
-		outline: thin dotted;
+& when (@lui_component_css_reset = true){
+	* {
+		.lui.box-sizing.border-box(); /* EXPERIMENTAL */
+		margin: 0;
+		padding: 0;
 	}
 
-	&:active,
-	&:hover {
-		outline: 0;
-		text-decoration: none;
+	// HTML 5 Elements
+	article,
+	aside,
+	details,
+	figcaption,
+	figure,
+	footer,
+	header,
+	hgroup,
+	nav,
+	section,
+	summary {
+		display: block;
 	}
 
-	img {
-		border: 0;
+	audio,
+	canvas,
+	progress,
+	video {
+		display: inline-block;
+		vertical-align: baseline;
 	}
-}
 
-// NO SCROLLBAR IN IE/EDGE
-textarea {
-	overflow: auto;
-}
+	// DEFAULT HYPERLINKS
+	a {
+		color: inherit;
 
-// PLACEHOLDER COLORFIX
-input::placeholder {
-	color: inherit !important;
-}
+		&:focus {
+			outline: thin dotted;
+		}
 
-input::-moz-placeholder {
-	color: inherit !important;
-}
+		&:active,
+		&:hover {
+			outline: 0;
+			text-decoration: none;
+		}
 
-input:-ms-input-placeholder {
-	color: inherit !important;
-}
+		img {
+			border: 0;
+		}
+	}
 
-input::-webkit-input-placeholder {
-	color: inherit !important;
-}
+	// NO SCROLLBAR IN IE/EDGE
+	textarea {
+		overflow: auto;
+	}
 
-textarea::placeholder {
-	color: inherit !important;
-}
+	// PLACEHOLDER COLORFIX
+	input::placeholder {
+		color: inherit !important;
+	}
 
-textarea::-moz-placeholder {
-	color: inherit !important;
-}
+	input::-moz-placeholder {
+		color: inherit !important;
+	}
 
-textarea:-ms-input-placeholder {
-	color: inherit !important;
-}
+	input:-ms-input-placeholder {
+		color: inherit !important;
+	}
 
-textarea::-webkit-input-placeholder {
-	color: inherit !important;
+	input::-webkit-input-placeholder {
+		color: inherit !important;
+	}
+
+	textarea::placeholder {
+		color: inherit !important;
+	}
+
+	textarea::-moz-placeholder {
+		color: inherit !important;
+	}
+
+	textarea:-ms-input-placeholder {
+		color: inherit !important;
+	}
+
+	textarea::-webkit-input-placeholder {
+		color: inherit !important;
+	}
 }

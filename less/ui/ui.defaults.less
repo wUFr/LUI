@@ -3,32 +3,38 @@
 //
 
 & when(@lui_style_all_input = true){
-	input[type="text"],
-	input[type="password"],
-	input[type="date"],
-	input[type="datetime"],
-	input[type="datetime-local"],
-	input[type="email"],
-	input[type="month"],
-	input[type="number"],
-	input[type="search"],
-	input[type="tel"],
-	input[type="time"],
-	input[type="url"],
-	input[type="week"] {
-		.lui.form.input(auto);
+	& when (@lui_component_form = true){
+		input[type="text"],
+		input[type="password"],
+		input[type="date"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="email"],
+		input[type="month"],
+		input[type="number"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="time"],
+		input[type="url"],
+		input[type="week"] {
+			.lui.form.input(auto);
+		}
 	}
 }
 
 & when(@lui_style_all_textarea = true){
-	textarea {
-		.lui.form.textarea(auto);
+	& when (@lui_component_form = true){
+		textarea {
+			.lui.form.textarea(auto);
+		}
 	}
 }
 
 & when(@lui_style_all_select = true){
-	select {
-		.lui.form.select(auto);
+	& when (@lui_component_form = true){
+		select {
+			.lui.form.select(auto);
+		}
 	}
 }
 
@@ -41,14 +47,19 @@
 		.lui_button();
 	}
 
-	input[type="submit"]{
+	input[type="submit"],
+	button[type="submit"]{
 		.lui_button();
-		.lui_button.confirm();
+		& when (@lui_component_button = true){
+			.lui_button.confirm();
+		}
 	}
 
 	input[type="reset"]{
 		.lui_button();
-		.lui_button.delete();
+		& when (@lui_component_button = true){
+			.lui_button.delete();
+		}
 	}
 }
 

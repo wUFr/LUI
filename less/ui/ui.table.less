@@ -3,117 +3,120 @@
 // - Responsive table
 // 
 
-.lui_table {
-	
-	border-collapse: collapse;
-	width: 100%;
-	padding: 5px;
-	overflow: hidden;
+& when (@lui_component_responsive_table = true){
 
-	@media (min-width:@grid_lg_start){
-		& when (@lui_responsive = true){
-			background: white;
-			border-radius: 5px;
-		}
-	}
+	.lui_table {
+		
+		border-collapse: collapse;
+		width: 100%;
+		padding: 5px;
+		overflow: hidden;
 
-	thead {
-		@media (max-width:@grid_md_end){
+		@media (min-width:@grid_lg_start){
 			& when (@lui_responsive = true){
-				display: none;
+				background: white;
+				border-radius: 5px;
 			}
 		}
 
-		tr {
-			th {
-				text-align: left;
-				font-size: 14px;
-				padding: 10px;
-				border-bottom: 1px solid #F3F3F3;
-
-				&.options {
-					text-align: right;
-				}
-			}
-		}
-	}
-
-	tbody {
-		tr {
-			border-bottom: 1px solid #F3F3F3;
-
+		thead {
 			@media (max-width:@grid_md_end){
 				& when (@lui_responsive = true){
-					border-bottom-width: 0;
+					display: none;
 				}
 			}
 
-			td {
-				padding: 10px;
-				text-align: left;
+			tr {
+				th {
+					text-align: left;
+					font-size: 14px;
+					padding: 10px;
+					border-bottom: 1px solid #F3F3F3;
 
-				/* MOBILE VERSION */
+					&.options {
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		tbody {
+			tr {
+				border-bottom: 1px solid #F3F3F3;
+
 				@media (max-width:@grid_md_end){
 					& when (@lui_responsive = true){
-						background: #fcfcfc;
-						border: 1px solid #ebebeb;
-						display: block;
-						padding: 15px;
-						margin-bottom: -1px;
-					}
-
-					&:last-child when (@lui_responsive = true){
-						border-bottom-width: 15px;
-					}
-
-					/* LABEL TEXTS ON MOBILE VERSION <3 CSS3 */
-					&:before when (@lui_responsive = true){
-						content:attr(data-title) " ";
-						font-weight: bold;
-					}
-
-					&.block_title:before when (@lui_responsive = true){
-						display: block;
+						border-bottom-width: 0;
 					}
 				}
 
-				/* TABLET+ */
-				@media (min-width:@grid_lg_start){
-					&.options when (@lui_responsive = true){
+				td {
+					padding: 10px;
+					text-align: left;
+
+					/* MOBILE VERSION */
+					@media (max-width:@grid_md_end){
+						& when (@lui_responsive = true){
+							background: #fcfcfc;
+							border: 1px solid #ebebeb;
+							display: block;
+							padding: 15px;
+							margin-bottom: -1px;
+						}
+
+						&:last-child when (@lui_responsive = true){
+							border-bottom-width: 15px;
+						}
+
+						/* LABEL TEXTS ON MOBILE VERSION <3 CSS3 */
+						&:before when (@lui_responsive = true){
+							content:attr(data-title) " ";
+							font-weight: bold;
+						}
+
+						&.block_title:before when (@lui_responsive = true){
+							display: block;
+						}
+					}
+
+					/* TABLET+ */
+					@media (min-width:@grid_lg_start){
+						&.options when (@lui_responsive = true){
+							padding: 6px 10px 0 10px;
+							text-align: right;
+							white-space: nowrap;
+							
+						}
+					}
+
+					&.options when (@lui_responsive = false){
 						padding: 6px 10px 0 10px;
 						text-align: right;
 						white-space: nowrap;
-						
 					}
 				}
 
-				&.options when (@lui_responsive = false){
-					padding: 6px 10px 0 10px;
-					text-align: right;
-					white-space: nowrap;
-				}
-			}
+				&:nth-child(even) td{
+					background: #f8fbfd;
+				}	
 
-			&:nth-child(even) td{
-				background: #f8fbfd;
-			}	
-
-			&:hover > td {
-				background: #f2f6fa;
-			}
-
-			@media (max-width:@grid_md_end){
-				&:nth-child(even) td when (@lui_responsive = true) {
-					background: #fcfcfc;
+				&:hover > td {
+					background: #f2f6fa;
 				}
 
-				&:hover > td when (@lui_responsive = true) {
-					background: #fcfcfc;
-				}
+				@media (max-width:@grid_md_end){
+					&:nth-child(even) td when (@lui_responsive = true) {
+						background: #fcfcfc;
+					}
 
-				&:last-child td:last-child when (@lui_responsive = true){
-					border-bottom: 1px solid #ebebeb;
-					margin-bottom: 0;
+					&:hover > td when (@lui_responsive = true) {
+						background: #fcfcfc;
+					}
+
+					&:last-child td:last-child when (@lui_responsive = true){
+						border-bottom: 1px solid #ebebeb;
+						margin-bottom: 0;
+					}
 				}
 			}
 		}
