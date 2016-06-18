@@ -16,6 +16,18 @@ $(document).ready(function () {
 		$(this).toggleClass('active');
 	});
 
+	// WIDGET BOX
+	$(".lui_widget .actions .toggle").click(function () {
+		$(this).closest(".lui_widget").toggleClass('closed');
+		$(this).toggleClass('active');
+	});
+	
+	
+	// UI MESSAGE CLOSE-OPEN TOGGLE
+	$(".lui_message .close").click(function () {
+		$(this).parent(".lui_message").remove();
+	});
+
 
 	// FORM PREFIX / POSTFIX
 
