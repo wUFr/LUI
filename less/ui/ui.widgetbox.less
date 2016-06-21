@@ -1,20 +1,21 @@
 // 
 // WIDGET
 // 
-.lui_widget {
+.lui_widget when (@lui_component_widgets = true){
 	padding: 15px 20px 20px 20px;
 	margin: 15px 0;
-	background: white;
+	background: @lui_widget_default_bg;
 	border-radius: 5px;
+	color: @lui_widget_default_text; 
 
 	&.dark {
-		background: #1b1b1b;
-		color: #d9d9d9;
+		background: @lui_widget_dark_bg;
+		color: @lui_widget_dark_text;
 	}
 
-	&.blue {
-		background: #34aaed;
-		color: white;
+	&.primary {
+		background: @lui_widget_primary_bg;
+		color: @lui_widget_primary_text;
 	}
 
 	.lui.clear.after();
@@ -75,11 +76,11 @@
 
 	&.dark > header > .actions > a:hover {
 		background: rgba(255,255,255,0.1);
-		color: white;
+		color: @lui_widget_dark_text;
 	}
 
-	&.blue > header > .actions > a {
-		color: white;
+	&.primary > header > .actions > a {
+		color: @lui_widget_primary_text;
 	}
 
 	& > .content {

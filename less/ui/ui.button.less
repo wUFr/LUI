@@ -4,280 +4,279 @@
 
 
 
-.lui_button {
-	& when (@lui_component_button = true){
-		.lui.box-sizing.border-box();
-		display: inline-block;
-		text-decoration: none;
-		position: relative;
-		line-height: @lui_button_normal_height;
-		height: @lui_button_normal_height;
-		padding: 0 15px;
-		margin: 0 2px 5px 0;
-		border: 0;
-		border-radius: 3px;
-		cursor: pointer;
-		font-family: inherit;
-		font-size: @lui_button_normal_font-size;
-		overflow: hidden;
-		background: @lui_button_default;
-		color: white;
+.lui_button when (@lui_component_button = true){
+	.lui.box-sizing.border-box();
+	display: inline-block;
+	text-decoration: none;
+	position: relative;
+	line-height: @lui_button_normal_height;
+	height: @lui_button_normal_height;
+	padding: 0 15px;
+	margin: 0 2px 5px 0;
+	border: 0;
+	border-radius: 3px;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: @lui_button_normal_font-size;
+	overflow: hidden;
+	background: @lui_button_default;
+	color: white;
 
-		&.small {
-			padding: 0 10px;
-			line-height: @lui_button_small_height;
-			height: @lui_button_small_height;
-			font-size: @lui_buttom_small_font-size;
-		}
-		
-		&.big {
-			padding: 0 20px;
+	&.small {
+		padding: 0 10px;
+		line-height: @lui_button_small_height;
+		height: @lui_button_small_height;
+		font-size: @lui_buttom_small_font-size;
+	}
+	
+	&.big {
+		padding: 0 20px;
+		line-height: @lui_button_big_height;
+		height: @lui_button_big_height;
+		font-size: @lui_button_big_font-size;
+	}
+	
+	&.a-left {
+		text-align: left;
+	}
+
+	&.a-right {
+		text-align: right;
+	}
+
+	&.a-center {
+		text-align: center;
+	}
+	
+	&:disabled {
+		cursor: default;
+		pointer-events: none;
+	}
+	
+	@media (max-width:@grid_sm_end){
+		&.mobile_big when (@lui_responsive = true){
+			display: block;
+			width: 100%;
 			line-height: @lui_button_big_height;
 			height: @lui_button_big_height;
-			font-size: @lui_button_big_font-size;
-		}
-		
-		&.a-left {
-			text-align: left;
-		}
-
-		&.a-right {
-			text-align: right;
-		}
-
-		&.a-center {
+			padding: 0 15px;
+			font-size: 15px;
 			text-align: center;
 		}
-		
-		&:disabled {
-			cursor: default;
-			pointer-events: none;
-		}
+	}
+
+	&:hover,
+	&:not(.noicon):before {
+		background: darken(@lui_button_default,10%);
+	}
+
+	&[class*="fa_b"] {
+		padding-left: 40px;
 		
 		@media (max-width:@grid_sm_end){
 			&.mobile_big when (@lui_responsive = true){
-				display: block;
-				width: 100%;
-				line-height: @lui_button_big_height;
-				height: @lui_button_big_height;
-				padding: 0 15px;
-				font-size: 15px;
-				text-align: center;
-			}
-		}
-
-		&:hover,
-		&:not(.noicon):before {
-			background: darken(@lui_button_default,10%);
-		}
-
-		&[class*="fa_b"] {
-			padding-left: 40px;
-			
-			@media (max-width:@grid_sm_end){
-				&.mobile_big when (@lui_responsive = true){
-					padding-right: 45px;
-				}
-			}
-		}
-
-		&[class*="fa_b"].small {
-			padding-left: 40px;
-			
-			@media (max-width:@grid_sm_end){
-				&.mobile_big when (@lui_responsive = true){
-					padding-right: 40px;
-				}
-			}
-		}
-
-		&[class*="fa_b"].big {
-			padding-left: 45px;
-			
-			@media (max-width:@grid_sm_end){
-				&.mobile_big when (@lui_responsive = true){
-					padding-right: 45px;
-				}
-			}
-		}
-
-		&[class*="fa_a"] {
-			padding-right: 40px;
-
-			@media (max-width:@grid_sm_end){
-				&.mobile_big when (@lui_responsive = true){
-					padding-left: 45px;
-				}
-			}
-		}
-
-		&[class*="fa_a"].small {
-			padding-right: 40px;
-
-			@media (max-width:@grid_sm_end){
-				&.mobile_big when (@lui_responsive = true){
-					padding-left: 40px;
-				}
-			}
-		}
-
-		&[class*="fa_a"].big {
-			padding-right: 45px;
-
-			@media (max-width:@grid_sm_end){
-				&.mobile_big when (@lui_responsive = true){
-					padding-left: 45px;
-				}
-			}
-		}
-
-		&.info {
-			background: @lui_button_info;
-
-			&:not(.inactive):hover,
-			&:not(.noicon):before,
-			&:not(.noicon):after {
-				background: darken(@lui_button_info,10%);
-			}
-		}
-
-		&.confirm,
-		&.success {
-			background: @lui_button_success;
-
-			&:not(.inactive):hover,
-			&:not(.noicon):before,
-			&:not(.noicon):after {
-				background: darken(@lui_button_success,10%);
-			}
-		}
-
-		&.edit,
-		&.warning {
-			background: @lui_button_warning;
-
-			&:not(.inactive):hover,
-			&:not(.noicon):before,
-			&:not(.noicon):after {
-				background: darken(@lui_button_warning,10%);
-			}
-		}
-
-		&.delete,
-		&.danger {
-			background: @lui_button_danger;
-
-			&:not(.inactive):hover,
-			&:not(.noicon):before,
-			&:not(.noicon):after {
-				background: darken(@lui_button_danger,10%);
-			}
-		}
-
-		&.primary {
-			background: @lui_button_primary;
-
-			&:not(.inactive):hover,
-			&:not(.noicon):before,
-			&:not(.noicon):after {
-				background: darken(@lui_button_primary,10%);
-			}
-		}
-		
-		&.dark {
-			background: @lui_button_dark;
-
-			&:not(.inactive):hover,
-			&:not(.noicon):before,
-			&:not(.noicon):after {
-				background: darken(@lui_button_dark,10%);
-			}
-		}
-		
-		&.transparent {
-			background: transparent;
-			color: black;
-
-			&:not(.inactive):hover,
-			&:not(.noicon):before,
-			&:not(.noicon):after {
-				background: rgba(0,0,0,0.1);
-			}
-		}
-
-		&.inactive {
-			opacity: 0.5;
-			cursor: default;
-			outline: none;
-			pointer-events: none;
-		}
-
-		// IF WANT TO USE :BEFORE/:AFTER FOR SOMETHING ELSE THAN FONTAWESOME ICON
-		&:not(.noicon):before {
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			width: 30px;
-			height: @lui_button_normal_height;
-			line-height: @lui_button_normal_height;
-			text-align: center;
-			font-family: FontAwesome;
-			font-size: @lui_button_normal_font-size;
-		}
-
-		&:not(.noicon).small:before {
-			height: @lui_button_small_height;
-			line-height: @lui_button_small_height;
-			font-size: @lui_buttom_small_font-size;
-		}
-		
-		&:not(.noicon).big:before {
-			height: @lui_button_big_height;
-			line-height: @lui_button_big_height;
-			font-size: @lui_button_big_font-size;
-		}
-
-		@media (max-width:@grid_sm_end){
-			&:not(.noicon).mobile_big:before when (@lui_responsive = true){
-				height: @lui_button_big_height;
-				line-height: @lui_button_big_height;
-			}
-		}
-
-		&:not(.noicon):after {
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			width: 30px;
-			height: 32px;
-			line-height: 32px;
-			text-align: center;
-			font-family: FontAwesome;
-			font-size: @lui_button_normal_font-size;
-		}
-
-		&:not(.noicon).small:after {
-			height: @lui_button_small_height;
-			line-height: @lui_button_small_height;
-			font-size: @lui_buttom_small_font-size;
-		}
-		
-		&:not(.noicon).big:after {
-			height: @lui_button_big_height;
-			line-height: @lui_button_big_height;
-			font-size: @lui_button_big_font-size;
-		}
-
-		// TODO base this on actual grid commentions. 
-		// .xs-big / .xs-small / .xs-large
-		// .xs-block(full line width) / .xs-inline-block (auto width)
-		@media (max-width:@grid_sm_end){
-			&:not(.noicon).mobile_big:after when (@lui_responsive = true){
-				height: @lui_button_big_height;
-				line-height: @lui_button_big_height;
+				padding-right: 45px;
 			}
 		}
 	}
+
+	&[class*="fa_b"].small {
+		padding-left: 40px;
+		
+		@media (max-width:@grid_sm_end){
+			&.mobile_big when (@lui_responsive = true){
+				padding-right: 40px;
+			}
+		}
+	}
+
+	&[class*="fa_b"].big {
+		padding-left: 45px;
+		
+		@media (max-width:@grid_sm_end){
+			&.mobile_big when (@lui_responsive = true){
+				padding-right: 45px;
+			}
+		}
+	}
+
+	&[class*="fa_a"] {
+		padding-right: 40px;
+
+		@media (max-width:@grid_sm_end){
+			&.mobile_big when (@lui_responsive = true){
+				padding-left: 45px;
+			}
+		}
+	}
+
+	&[class*="fa_a"].small {
+		padding-right: 40px;
+
+		@media (max-width:@grid_sm_end){
+			&.mobile_big when (@lui_responsive = true){
+				padding-left: 40px;
+			}
+		}
+	}
+
+	&[class*="fa_a"].big {
+		padding-right: 45px;
+
+		@media (max-width:@grid_sm_end){
+			&.mobile_big when (@lui_responsive = true){
+				padding-left: 45px;
+			}
+		}
+	}
+
+	&.info {
+		background: @lui_button_info;
+
+		&:not(.inactive):hover,
+		&:not(.noicon):before,
+		&:not(.noicon):after {
+			background: darken(@lui_button_info,10%);
+		}
+	}
+
+	&.confirm,
+	&.success {
+		background: @lui_button_success;
+
+		&:not(.inactive):hover,
+		&:not(.noicon):before,
+		&:not(.noicon):after {
+			background: darken(@lui_button_success,10%);
+		}
+	}
+
+	&.edit,
+	&.warning {
+		background: @lui_button_warning;
+
+		&:not(.inactive):hover,
+		&:not(.noicon):before,
+		&:not(.noicon):after {
+			background: darken(@lui_button_warning,10%);
+		}
+	}
+
+	&.delete,
+	&.danger {
+		background: @lui_button_danger;
+
+		&:not(.inactive):hover,
+		&:not(.noicon):before,
+		&:not(.noicon):after {
+			background: darken(@lui_button_danger,10%);
+		}
+	}
+
+	&.primary {
+		background: @lui_button_primary;
+
+		&:not(.inactive):hover,
+		&:not(.noicon):before,
+		&:not(.noicon):after {
+			background: darken(@lui_button_primary,10%);
+		}
+	}
+	
+	&.dark {
+		background: @lui_button_dark;
+
+		&:not(.inactive):hover,
+		&:not(.noicon):before,
+		&:not(.noicon):after {
+			background: darken(@lui_button_dark,10%);
+		}
+	}
+	
+	&.transparent {
+		background: transparent;
+		color: black;
+
+		&:not(.inactive):hover,
+		&:not(.noicon):before,
+		&:not(.noicon):after {
+			background: rgba(0,0,0,0.1);
+		}
+	}
+
+	&.inactive {
+		opacity: 0.5;
+		cursor: default;
+		outline: none;
+		pointer-events: none;
+	}
+
+	// IF WANT TO USE :BEFORE/:AFTER FOR SOMETHING ELSE THAN FONTAWESOME ICON
+	&:not(.noicon):before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 30px;
+		height: @lui_button_normal_height;
+		line-height: @lui_button_normal_height;
+		text-align: center;
+		font-family: FontAwesome;
+		font-size: @lui_button_normal_font-size;
+	}
+
+	&:not(.noicon).small:before {
+		height: @lui_button_small_height;
+		line-height: @lui_button_small_height;
+		font-size: @lui_buttom_small_font-size;
+	}
+	
+	&:not(.noicon).big:before {
+		height: @lui_button_big_height;
+		line-height: @lui_button_big_height;
+		font-size: @lui_button_big_font-size;
+	}
+
+	@media (max-width:@grid_sm_end){
+		&:not(.noicon).mobile_big:before when (@lui_responsive = true){
+			height: @lui_button_big_height;
+			line-height: @lui_button_big_height;
+		}
+	}
+
+	&:not(.noicon):after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 30px;
+		height: 32px;
+		line-height: 32px;
+		text-align: center;
+		font-family: FontAwesome;
+		font-size: @lui_button_normal_font-size;
+	}
+
+	&:not(.noicon).small:after {
+		height: @lui_button_small_height;
+		line-height: @lui_button_small_height;
+		font-size: @lui_buttom_small_font-size;
+	}
+	
+	&:not(.noicon).big:after {
+		height: @lui_button_big_height;
+		line-height: @lui_button_big_height;
+		font-size: @lui_button_big_font-size;
+	}
+
+	// TODO base this on actual grid commentions. 
+	// .xs-big / .xs-small / .xs-large
+	// .xs-block(full line width) / .xs-inline-block (auto width)
+	@media (max-width:@grid_sm_end){
+		&:not(.noicon).mobile_big:after when (@lui_responsive = true){
+			height: @lui_button_big_height;
+			line-height: @lui_button_big_height;
+		}
+	}
+
 }

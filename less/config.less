@@ -32,32 +32,67 @@
 //  WARNING: some components may depends on each other (mixins)
 
 //  BASIC CSS RESET - if you use your own, you can turn this off
-@lui_component_css_reset: true;
+@lui_component_css_reset: 			true;
 
 //  DEFAULT GLOBAL STYLES
 //  additional configuration below (@lui_style_)
-@lui_component_defaults: true;
+@lui_component_defaults: 			true;
 
 //  FontAwesome icon fonts used mostly in buttons
-@lui_component_fontawesome: true;
+@lui_component_fontawesome: 		true;
 
 //  LUI GRID SYSTEM
-@lui_component_grid: true;
+@lui_component_grid: 				true;
 
 //  BUTTONS
-@lui_component_button: true;
+@lui_component_button: 				true;
 
 //  FORMS
-@lui_component_form: true;
+//  disables all .lui_form styles, even inputs fields
+//  WARNING: will disable default styles as well
+@lui_component_form: 				true;
+
+//  FORM LABEL AND INPUT FIELDS
+@lui_component_form_label: 			true;
+
+//  CONFIRM/ERROR/INFO/WARNING TEXTS (can be used for form validation)
+@lui_component_form_info: 			true;
+
+//  TEXT INPUTS, SELECT, TEXTAREA
+//  WARNING: will disable styles for all "lui_component_form_inputs_[]"
+@lui_component_form_inputs: 		true;
+@lui_component_form_inputs_text: 	true;
+@lui_component_form_inputs_prefix: 	true;
+@lui_component_form_inputs_postfix: true;
+@lui_component_form_inputs_textarea:true;
+@lui_component_form_inputs_select: 	true;
+@lui_component_form_select_jquery: 	true;
+
+//  LUI CHECKBOX (.lui_check)
+//  custom styled checkbox, can be used outside .lui_form
+@lui_component_check: 				true;
+
+//  LUI RADIO (.lui_radio)
+//  custom styled radio, can be used outside .lui_form
+@lui_component_radio: 				true;
 
 //  PAGEBAR
-@lui_component_pagebar: true;
+@lui_component_pagebar: 			true;
 
 //  RESPONSIVE TABLE - if you dont plan to use responsive friendly tables, turn them off
-@lui_component_responsive_table: true;
+@lui_component_responsive_table: 	true;
 
 //  UI_BOX
-@lui_component_box: true;
+@lui_component_box: 				true;
+
+//  MESSAGES
+//  big confirm/warning/error/info text "boxes"
+//  can be used outside .lui_form
+@lui_component_messages: 			true;
+
+//  WIDGETBOX
+//  small box with icons in header - for text info or different stuff
+@lui_component_widgets: 			true;
 
 
 // ---------------------------------------------------
@@ -180,36 +215,46 @@
 // ---------------------------------------------------
 
 
-//	UI MESSAGES
-//     just basic status messages and their colors
-
-
-// TODO:
-
-/*
-
-NOT YET IMPLEMENTED
-
-@default_ui_message_confirm_bg:		#cdf6bf;
-@default_ui_message_confirm_color:	#11420e;
-@default_ui_message_error_bg:		#f6bfbf;
-@default_ui_message_error_color:	#420e0e;
-@default_ui_message_warning_bg:		#f6e6bf;
-@default_ui_message_warning_color:	#42360e;
-@default_ui_message_info_bg:		#bfe6f6;
-@default_ui_message_info_color:		#0e3542;
-@default_ui_form_required_color:	#AE0000;
-*/
-
-
-// ---------------------------------------------------
-
-
 //  GLOBAL COLOR SETTINGS
 @color_confirm:	#45bd0a;
 @color_info:	#34aaed;
 @color_edit:	#ee8e04;
 @color_delete:	#e60d0d;
+
+
+// ---------------------------------------------------
+
+
+//  MESSAGES
+//  big status messages showing mostly confirm/error after sending forms
+@lui_message_default_bg: 	#f2f2f2;
+@lui_message_default_text: 	inherit;
+
+@lui_message_info_bg: 		#34aaed;
+@lui_message_info_text: 	white;
+
+@lui_message_warning_bg: 	#ee8e04;
+@lui_message_warning_text:	white;
+
+@lui_message_error_bg: 		#e60d0d;
+@lui_message_error_text:	white;
+
+@lui_message_success_bg: 	#45bd0a;
+@lui_message_success_text:	white;
+
+
+// ---------------------------------------------------
+
+
+//  WIDGETS
+@lui_widget_default_bg: #f2f2f2;
+@lui_widget_default_text: inherit;
+
+@lui_widget_dark_bg: 	#1b1b1b;
+@lui_widget_dark_text: 	#d9d9d9;
+
+@lui_widget_primary_bg: 	#34aaed;;
+@lui_widget_primary_text: 	white;
 
 
 // ---------------------------------------------------

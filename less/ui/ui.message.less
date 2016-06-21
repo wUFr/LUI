@@ -1,13 +1,14 @@
 // 
 // MESSAGE
 // 
-.lui_message {
+.lui_message when (@lui_component_messages = true){
 	position: relative;
 	margin: 10px 0;
 	padding: 15px 15px 15px 20px;
-	background: white;
+	background: @lui_message_default_bg;
 	overflow: hidden;
 	border-radius: 5px;
+	color: @lui_message_default_text;
 
 	&:before {
 		position: absolute;
@@ -18,13 +19,13 @@
 		.lui.transform.this(rotate(-45deg));
 		content: "";
 	}
-	
+
 	& > .title {
 		font-size: 16px;
 		font-weight: bold;
 		padding: 0 0 5px 0;
 	}
-	
+
 	& > a.close {
 		position: absolute;
 		top: 10px;
@@ -50,15 +51,15 @@
 	}
 
 	&.info {
-		background: @color_info;
-		
+		background: @lui_message_info_bg;
+
 		& > .title {
-			color: white;
+			color: @lui_message_info_text;
 		}
-		
+
 		& > a.close {
-			color: white;
-			
+			color: @lui_message_info_text;
+
 			&:hover {
 				background:rgba(0,0,0,0.1);
 			}
@@ -66,15 +67,15 @@
 	}
 
 	&.warning {
-		background: @color_edit;
-		
+		background: @lui_message_warning_bg;
+
 		& > .title {
-			color: white;
+			color: @lui_message_info_text;
 		}
-		
+
 		& > a.close {
-			color: white;
-			
+			color: @lui_message_warning_text;
+
 			&:hover {
 				background:rgba(0,0,0,0.1);
 			}
@@ -82,15 +83,15 @@
 	}
 
 	&.error {
-		background: @color_delete;
-		
+		background: @lui_message_error_bg;
+
 		& > .title {
-			color: white;
+			color: @lui_message_error_text;
 		}
-		
+
 		& > a.close {
-			color: white;
-			
+			color: @lui_message_error_text;
+
 			&:hover {
 				background:rgba(0,0,0,0.1);
 			}
@@ -98,19 +99,18 @@
 	}
 
 	&.confirm {
-		background: @color_confirm;
-		
+		background: @lui_message_success_bg;
+
 		& > .title {
-			color: white;
+			color: @lui_message_success_text;
 		}
-		
+
 		& > a.close {
-			color: white;
-			
+			color: @lui_message_success_text;
+
 			&:hover {
 				background:rgba(0,0,0,0.1);
 			}
 		}
 	}
 }
-

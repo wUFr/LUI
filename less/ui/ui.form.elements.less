@@ -3,7 +3,22 @@
 //
 
 
+
+// DEFAULTS
+/*
+.lui.form {
+	.input(@width:100px){}
+	.prefix(){}
+	.postfix(){}
+	.textarea(@width:100%,@height:100px,@max-width:100%,@max-height:500px){}
+	.select(@width:100%){}
+	.select-jquery(){}
+}*/
+
+
+
 // INPUT
+
 .lui.form {
 	
 	// STANDARD INPUT
@@ -39,6 +54,7 @@
 		}
 	}
 	
+	
 	// PREFIX FOR INPUT (currency for example)
 	.prefix(){
 		.lui.box-sizing.border-box();
@@ -57,6 +73,7 @@
 		color: gray;
 		border-radius: 3px 0 0 3px;
 	}
+	
 	
 	
 	// POSTFIX FOR INPUT (currency for example)
@@ -138,17 +155,9 @@
 			}
 		}
 	}
-}
 
-/*
-
-JQUERY UI
-
-*/
-
-// select
-& when (@lui_component_form = true){
-	.ui-widget.ui-selectmenu-button {
+	// SELECT JQUERY
+	.select-jquery(){
 		position: relative;
 		display: block;
 		.lui.form.select();
@@ -190,13 +199,27 @@ JQUERY UI
 				.lui.transform.rotate(180deg);
 			}
 		}
+	}
+}
 
+
+
+/*
+
+JQUERY UI
+
+*/
+
+// select
+& when (@lui_component_form = true){
+	.ui-widget.ui-selectmenu-button when (@lui_component_form_select_jquery = true){
+		.lui.form.select-jquery();
 	}
 
 	// SELECT DROPDOWN
 
 	// WRAPPER
-	.ui-js-dropdown {
+	.ui-js-dropdown when (@lui_component_form_select_jquery = true){
 		position: relative;
 		z-index: 20;
 		
@@ -205,13 +228,10 @@ JQUERY UI
 		}
 	}
 
-
-
-	.ui-selectmenu-menu {
+	.ui-selectmenu-menu when (@lui_component_form_select_jquery = true){
 		display: none;
 		border: 1px solid silver;
 		background: white;
-		
 
 		&.ui-selectmenu-open {
 			display: block;
@@ -241,7 +261,6 @@ JQUERY UI
 					color: #108de6;
 				}
 			}
-			
 		}
 	}
 }

@@ -3,120 +3,118 @@
 // - Responsive table
 // 
 
-& when (@lui_component_responsive_table = true){
 
-	.lui_table {
-		
-		border-collapse: collapse;
-		width: 100%;
-		padding: 5px;
-		overflow: hidden;
+.lui_table when (@lui_component_responsive_table = true){
+	
+	border-collapse: collapse;
+	width: 100%;
+	padding: 5px;
+	overflow: hidden;
 
-		@media (min-width:@grid_lg_start){
+	@media (min-width:@grid_lg_start){
+		& when (@lui_responsive = true){
+			background: white;
+			border-radius: 5px;
+		}
+	}
+
+	thead {
+		@media (max-width:@grid_md_end){
 			& when (@lui_responsive = true){
-				background: white;
-				border-radius: 5px;
+				display: none;
 			}
 		}
 
-		thead {
-			@media (max-width:@grid_md_end){
-				& when (@lui_responsive = true){
-					display: none;
-				}
-			}
-
-			tr {
-				th {
-					text-align: left;
-					font-size: 14px;
-					padding: 10px;
-					border-bottom: 1px solid #F3F3F3;
-
-					&.options {
-						text-align: right;
-					}
-				}
-			}
-		}
-
-		tbody {
-			tr {
+		tr {
+			th {
+				text-align: left;
+				font-size: 14px;
+				padding: 10px;
 				border-bottom: 1px solid #F3F3F3;
 
+				&.options {
+					text-align: right;
+				}
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			border-bottom: 1px solid #F3F3F3;
+
+			@media (max-width:@grid_md_end){
+				& when (@lui_responsive = true){
+					border-bottom-width: 0;
+				}
+			}
+
+			td {
+				padding: 10px;
+				text-align: left;
+
+				/* MOBILE VERSION */
 				@media (max-width:@grid_md_end){
 					& when (@lui_responsive = true){
-						border-bottom-width: 0;
+						background: #fcfcfc;
+						border: 1px solid #ebebeb;
+						display: block;
+						padding: 15px;
+						margin-bottom: -1px;
+					}
+
+					&:last-child when (@lui_responsive = true){
+						border-bottom-width: 15px;
+					}
+
+					/* LABEL TEXTS ON MOBILE VERSION <3 CSS3 */
+					&:before when (@lui_responsive = true){
+						content:attr(data-title) " ";
+						font-weight: bold;
+					}
+
+					&.block_title:before when (@lui_responsive = true){
+						display: block;
 					}
 				}
 
-				td {
-					padding: 10px;
-					text-align: left;
-
-					/* MOBILE VERSION */
-					@media (max-width:@grid_md_end){
-						& when (@lui_responsive = true){
-							background: #fcfcfc;
-							border: 1px solid #ebebeb;
-							display: block;
-							padding: 15px;
-							margin-bottom: -1px;
-						}
-
-						&:last-child when (@lui_responsive = true){
-							border-bottom-width: 15px;
-						}
-
-						/* LABEL TEXTS ON MOBILE VERSION <3 CSS3 */
-						&:before when (@lui_responsive = true){
-							content:attr(data-title) " ";
-							font-weight: bold;
-						}
-
-						&.block_title:before when (@lui_responsive = true){
-							display: block;
-						}
-					}
-
-					/* TABLET+ */
-					@media (min-width:@grid_lg_start){
-						&.options when (@lui_responsive = true){
-							padding: 6px 10px 0 10px;
-							text-align: right;
-							white-space: nowrap;
-							
-						}
-					}
-
-					&.options when (@lui_responsive = false){
+				/* TABLET+ */
+				@media (min-width:@grid_lg_start){
+					&.options when (@lui_responsive = true){
 						padding: 6px 10px 0 10px;
 						text-align: right;
 						white-space: nowrap;
+						
 					}
 				}
 
-				&:nth-child(even) td{
-					background: #f8fbfd;
-				}	
+				&.options when (@lui_responsive = false){
+					padding: 6px 10px 0 10px;
+					text-align: right;
+					white-space: nowrap;
+				}
+			}
 
-				&:hover > td {
-					background: #f2f6fa;
+			&:nth-child(even) td{
+				background: #f8fbfd;
+			}	
+
+			&:hover > td {
+				background: #f2f6fa;
+			}
+
+			@media (max-width:@grid_md_end){
+				&:nth-child(even) td when (@lui_responsive = true) {
+					background: #fcfcfc;
 				}
 
-				@media (max-width:@grid_md_end){
-					&:nth-child(even) td when (@lui_responsive = true) {
-						background: #fcfcfc;
-					}
+				&:hover > td when (@lui_responsive = true) {
+					background: #fcfcfc;
+				}
 
-					&:hover > td when (@lui_responsive = true) {
-						background: #fcfcfc;
-					}
-
-					&:last-child td:last-child when (@lui_responsive = true){
-						border-bottom: 1px solid #ebebeb;
-						margin-bottom: 0;
-					}
+				&:last-child td:last-child when (@lui_responsive = true){
+					border-bottom: 1px solid #ebebeb;
+					margin-bottom: 0;
 				}
 			}
 		}
