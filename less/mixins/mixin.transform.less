@@ -28,8 +28,28 @@
 		.this(rotate(@deg));
 	}
 
+	.skew(@deg){
+		.this(skew(@deg));
+	}
+
+	.skew-x(@deg){
+		.this(skewX(@deg));
+	}
+
+	.skew-y(@deg){
+		.this(skewY(@deg));
+	}
+
 	.scale(@scale){
 		.this(scale(@scale));
+	}
+
+	.scale-x(@scale){
+		.this(scaleX(@scale));
+	}
+
+	.scale-y(@scale){
+		.this(scaleY(@scale));
 	}
 
 	.translate(@x,@y){
@@ -47,4 +67,5 @@
 	.translate3d(@x,@y,@z) {
 		.this(translate3d(@x,@y,@z));
 	}
+	
 }
