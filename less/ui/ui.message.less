@@ -4,7 +4,7 @@
 .lui_message when (@lui_component_messages = true){
 	position: relative;
 	margin: 10px 0;
-	padding: 15px 15px 15px 20px;
+	padding: 15px;
 	background: @lui_message_default_bg;
 	overflow: hidden;
 	border-radius: 5px;
@@ -21,7 +21,7 @@
 	}
 
 	& > .title {
-		font-size: 16px;
+		font-size: 18px;
 		font-weight: bold;
 		padding: 0 0 5px 0;
 	}
@@ -50,8 +50,27 @@
 		}
 	}
 
+	p {
+		padding: 0 0 15px 0;
+
+		&:last-child {
+			padding: 0;
+		}
+	}
+
+	ul,
+	ol {
+		padding: 0;
+		margin: 0 0 15px 20px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
 	&.info {
 		background: @lui_message_info_bg;
+		color: @lui_message_info_text;
 
 		& > .title {
 			color: @lui_message_info_text;
@@ -68,6 +87,7 @@
 
 	&.warning {
 		background: @lui_message_warning_bg;
+		color: @lui_message_info_text;
 
 		& > .title {
 			color: @lui_message_info_text;
@@ -84,6 +104,7 @@
 
 	&.error {
 		background: @lui_message_error_bg;
+		color: @lui_message_info_text;
 
 		& > .title {
 			color: @lui_message_error_text;
@@ -100,6 +121,7 @@
 
 	&.confirm {
 		background: @lui_message_success_bg;
+		color: @lui_message_info_text;
 
 		& > .title {
 			color: @lui_message_success_text;
