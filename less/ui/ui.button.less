@@ -23,17 +23,11 @@
 	color: white;
 
 	&.small {
-		padding: 0 10px;
-		line-height: @lui_button_small_height;
-		height: @lui_button_small_height;
-		font-size: @lui_buttom_small_font-size;
+		.small();
 	}
 	
 	&.big {
-		padding: 0 20px;
-		line-height: @lui_button_big_height;
-		height: @lui_button_big_height;
-		font-size: @lui_button_big_font-size;
+		.big();
 	}
 	
 	&.a-left {
@@ -52,83 +46,27 @@
 		cursor: default;
 		pointer-events: none;
 	}
-	
-	@media (max-width:@grid_sm_end){
-		&.mobile_big when (@lui_responsive = true){
-			display: block;
-			width: 100%;
-			line-height: @lui_button_big_height;
-			height: @lui_button_big_height;
-			padding: 0 15px;
-			font-size: 15px;
-			text-align: center;
-		}
+
+	// HAS ICON
+	&[class*="fa_b"] {
+		padding-left: 40px;
 	}
 
+	&[class*="fa_a"] {
+		padding-right: 40px;
+	}
+
+	// STATES AND TYPES
 	&:hover,
 	&:not(.noicon):before {
 		background: darken(@lui_button_default,10%);
 	}
 
-	&[class*="fa_b"] {
-		padding-left: 40px;
-		
-		@media (max-width:@grid_sm_end){
-			&.mobile_big when (@lui_responsive = true){
-				padding-right: 45px;
-			}
-		}
-	}
+	// RESPONSIVE BREAKPOINTS
 
-	&[class*="fa_b"].small {
-		padding-left: 40px;
-		
-		@media (max-width:@grid_sm_end){
-			&.mobile_big when (@lui_responsive = true){
-				padding-right: 40px;
-			}
-		}
-	}
 
-	&[class*="fa_b"].big {
-		padding-left: 45px;
-		
-		@media (max-width:@grid_sm_end){
-			&.mobile_big when (@lui_responsive = true){
-				padding-right: 45px;
-			}
-		}
-	}
+	
 
-	&[class*="fa_a"] {
-		padding-right: 40px;
-
-		@media (max-width:@grid_sm_end){
-			&.mobile_big when (@lui_responsive = true){
-				padding-left: 45px;
-			}
-		}
-	}
-
-	&[class*="fa_a"].small {
-		padding-right: 40px;
-
-		@media (max-width:@grid_sm_end){
-			&.mobile_big when (@lui_responsive = true){
-				padding-left: 40px;
-			}
-		}
-	}
-
-	&[class*="fa_a"].big {
-		padding-right: 45px;
-
-		@media (max-width:@grid_sm_end){
-			&.mobile_big when (@lui_responsive = true){
-				padding-left: 45px;
-			}
-		}
-	}
 
 	&.info {
 		background: @lui_button_info;
@@ -237,12 +175,6 @@
 		font-size: @lui_button_big_font-size;
 	}
 
-	@media (max-width:@grid_sm_end){
-		&:not(.noicon).mobile_big:before when (@lui_responsive = true){
-			height: @lui_button_big_height;
-			line-height: @lui_button_big_height;
-		}
-	}
 
 	&:not(.noicon):after {
 		position: absolute;
@@ -267,6 +199,55 @@
 		height: @lui_button_big_height;
 		line-height: @lui_button_big_height;
 		font-size: @lui_button_big_font-size;
+	}
+
+	.small(){
+		padding: 0 10px;
+		height: @lui_button_small_height;
+		line-height: @lui_button_small_height;
+		font-size: @lui_buttom_small_font-size;
+
+		&[class*="fa_a"]{
+			padding-right: 40px;
+		}
+
+		&[class*="fa_b"]{
+			padding-left: 40px;
+		}
+	}
+
+	.big(){
+		padding: 0 20px;
+		height: @lui_button_big_height;
+		line-height: @lui_button_big_height;
+		font-size: @lui_button_big_font-size;
+
+		&[class*="fa_a"]{
+			padding-right: 45px;
+		}
+
+		&[class*="fa_b"]{
+			padding-left: 45px;
+		}
+	}
+
+	.block(){
+		display: block;
+		width: 100%;
+		height: @lui_button_big_height;
+		line-height: @lui_button_big_height;
+		font-size: @lui_button_big_font-size;
+		text-align: center;
+
+		&[class*="fa_a"]{
+			padding-right: 45px;
+			padding-left: 45px;
+		}
+
+		&[class*="fa_b"]{
+			padding-left: 45px;
+			padding-right: 45px;
+		}
 	}
 
 	// TODO base this on actual grid commentions. 
