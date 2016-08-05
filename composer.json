@@ -1,10 +1,10 @@
 {
-    "name": "wufr/lui",
+    "name": "Foreveryone-cz/lui",
     "description": "Front-end development framework",
     "type": "library",
     "keywords": ["less", "ui", "framework"],
-    "homepage": "https://github.com/wUFr/LUI",
+    "homepage": "https://github.com/Foreveryone-cz/LUI",
     "support": {
-        "source": "https://github.com/wUFr/LUI"
+        "source": "https://github.com/Foreveryone-cz/LUI"
     }
 }
