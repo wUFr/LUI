@@ -60,5 +60,5 @@ http://master.less-ui.net/
 
 **Supported/tested browsers:**
 
-IE10+, Google Chrome 49, Firefox 45, Opera 35, Safari 8 (OSX version), Yandex 14.12
+Check WIKI for all supported browsers https://github.com/wUFr/LUI/wiki
 
