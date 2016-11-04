@@ -2,8 +2,6 @@
 // BUTTON
 //
 
-
-
 .lui_button when (@lui_component_button = true){
 	.lui.box-sizing.border-box();
 	display: inline-block;
@@ -61,12 +59,6 @@
 	&:not(.noicon):before {
 		background: darken(@lui_button_default,10%);
 	}
-
-	// RESPONSIVE BREAKPOINTS
-
-
-	
-
 
 	&.info {
 		background: @lui_button_info;
@@ -175,7 +167,6 @@
 		font-size: @lui_button_big_font-size;
 	}
 
-
 	&:not(.noicon):after {
 		position: absolute;
 		top: 0;
@@ -250,14 +241,10 @@
 		}
 	}
 
-	// TODO base this on actual grid commentions. 
-	// .xs-big / .xs-small / .xs-large
-	// .xs-block(full line width) / .xs-inline-block (auto width)
 	@media (max-width:@grid_sm_end){
 		&:not(.noicon).mobile_big:after when (@lui_responsive = true){
 			height: @lui_button_big_height;
 			line-height: @lui_button_big_height;
 		}
 	}
-
 }

@@ -1,81 +1,12 @@
 //
-// FORMS
+// FORM
 //
-
-
-
 
 .lui_form when (@lui_component_form = true){
 	.item {
 		.lui.clear.after();
 		padding: 7.5px 0;
 		margin: 0 -15px;
-
-		.label when (@lui_component_form_label = true){
-			display: block;
-			text-align: right;
-			padding: 7px 15px;
-			font-size: 14px;
-
-			&.required:after {
-				color: @color_delete;
-				content:" *";
-			}
-
-			.make.block-label {
-				text-align: left;
-				padding: 7px 0;
-			}
-
-			&.block {
-				.make.block-label();
-			}
-
-			// TODO MOBILE FIRST VERSION
-			// AFTER 1.0 RELEASE
-			@media (max-width:@grid_2k_end){
-				&.2k-block when (@grid_2k_enable = true){
-					.make.block-label();
-				}
-			}
-
-			@media (max-width:@grid_hd_end){
-				&.hd-block when (@grid_hd_enable = true){
-					.make.block-label();
-				}
-			}
-			
-			@media (max-width:@grid_xl_end){
-				&.xl-block when (@grid_xl_enable = true){
-					.make.block-label();
-				}
-			}
-
-			@media (max-width:@grid_lg_end){
-				&.lg-block when (@grid_lg_enable = true) {
-					.make.block-label();
-				}
-			}
-
-			@media (max-width:@grid_md_end){
-				&.md-block when (@grid_md_enable = true){
-					.make.block-label();
-				}
-			}
-
-			@media (max-width:@grid_sm_end){
-				&.sm-block when (@grid_sm_enable = true){
-					.make.block-label();
-				}
-			}
-
-			@media (max-width:@grid_xs_end){
-				&.xs-block when (@grid_xs_enable = true){
-					.make.block-label();
-				}
-			}
-		}
-
 
 		div.info when (@lui_component_form_info = true){
 			padding: 11px 15px;
@@ -104,7 +35,6 @@
 				padding-left: 7px;
 			}
 
-			
 			@media (max-width:@grid_xs_end){
 				&.col-xs-12 when (@grid_xs_enable = true){
 					padding-left: 15px;
@@ -132,8 +62,7 @@
 					padding-top: 4px;
 				}
 			}
-			
-
+	
 			@media (min-width:@grid_xl_start){
 				&.col-xl-12 when (@grid_xl_enable = true){
 					padding-left: 15px;
@@ -154,7 +83,6 @@
 					padding-top: 4px;
 				}
 			}
-			
 		}
 
 		.input {
@@ -207,7 +135,6 @@
 		}
 	}
 }
-
 
 //
 // UI INPUT RANGE (number from-to)
@@ -370,7 +297,6 @@
 .lui_form .item .lui_check when (@lui_component_check = true) {
 	margin-left: -7px;
 }
-
 
 //
 // UI CHECK LIST

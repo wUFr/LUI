@@ -1,11 +1,8 @@
 // 
 // TABLE
-// - Responsive table
 // 
 
-
 .lui_table when (@lui_component_responsive_table = true){
-	
 	border-collapse: collapse;
 	width: 100%;
 	padding: 5px;
@@ -78,13 +75,11 @@
 					}
 				}
 
-				/* TABLET+ */
 				@media (min-width:@grid_lg_start){
 					&.options when (@lui_responsive = true){
 						padding: 6px 10px 0 10px;
 						text-align: right;
 						white-space: nowrap;
-						
 					}
 				}
 
@@ -97,7 +92,7 @@
 
 			&:nth-child(even) td{
 				background: #f8fbfd;
-			}	
+			}
 
 			&:hover > td {
 				background: #f2f6fa;
