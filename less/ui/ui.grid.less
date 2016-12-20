@@ -80,6 +80,13 @@
 		&.fluid {
 			width: 100%;
 		}
+
+		& when (@grid_print_enable = true){
+			@media print {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
 	}
 
 	.container-fluid,
@@ -117,6 +124,12 @@
 		}
 		& when (@grid_2k_enable = true){
 			&.max_2k {max-width: @lui_container_2k_width;}
+		}
+		& when (@grid_print_enable = true){
+			@media print {
+				width: 100%;
+				max-width: 100%;
+			}
 		}
 	}
 
