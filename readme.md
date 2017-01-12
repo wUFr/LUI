@@ -1,7 +1,9 @@
 # LUI - Less UI
 LUI or "Less UI" is front-end framework made to make your coding easier. If you dont need all the stuff around you can just use our grid and mixins. Other UI stuff like forms/tables will be as "extra" package in the future
 
-**LUI-2 currently under development here: https://github.com/foreveryone-cz/lui-2**
+**DISCONTINUED - only bug fixes will be released**
+
+LUI-3 - completely modular framework is now in making: https://github.com/LUI-3
 
 ---
 
